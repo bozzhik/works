@@ -1,4 +1,4 @@
-# MBOZHIK - a project of my `CODE` and `DESIGN` portfolio 👨‍💻
+# MBozhik - a project of my `CODE` and `DESIGN` portfolio 👨‍💻
 <pre>
 This project closes my need for a portfolio and pumps my knowledge of <kbd>CSS GRID</kbd>
 </pre>
