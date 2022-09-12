@@ -1,0 +1,71 @@
+body {
+    background-color: #0A0A0A;
+}
+.container {
+    margin: 0 auto;
+    max-width: 97%;
+}
+
+/* <>-<>-<>-<>-<> header-grid <>-<>-<>-<>-<> */
+
+.header-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+.header-menu {
+    text-align: center;
+    border: 2px dashed purple;
+    color: azure;
+    padding: 0.1rem;
+}
+
+/* <>-<>-<>-<>-<> item-grid <>-<>-<>-<>-<> */
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "skull nft"
+                         "geek usb"
+                         "promo inter"
+                         "anim smpl"
+                         "star marshal"
+                         "comp comp";
+}
+.item-grid div {
+    text-align: center;
+    border: 2px dashed rgb(109, 167, 21);
+    color: azure;
+    padding: 200px;
+}
+.item-skull {
+    grid-area: skull;
+}
+.item-nft {
+    grid-area: nft;
+}
+.item-geek {
+    grid-area: geek;
+}
+.item-usb {
+    grid-area: usb;
+}
+.item-inter {
+    grid-area: inter;
+}
+.item-anim {
+    grid-area: anim;
+}
+.item-smpl {
+    grid-area: smpl;
+}
+.item-star {
+    grid-area: star;
+}
+.item-mashal {
+    grid-area: marshal;
+}
+.item-comp {
+    grid-area: comp;
+}
