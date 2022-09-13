@@ -1,6 +1,6 @@
 @import 'reboot.css';
 @import 'index.css';
-
+@import 'responsive.css';
 @font-face {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;

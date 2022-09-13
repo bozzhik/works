@@ -1,0 +1,24 @@
+@media (max-width: 900px) {
+    html { font-size: 10px; }
+  }
+  @media (max-width: 400px) {
+    html { font-size: 5px; }
+  }
+
+  /* @media (min-width: 85rem) {
+    .container {
+      width: 65rem;
+    }
+  } */
+
+  /* html {
+    font-size: 62.5%;
+    font-family: Arial, sans-serif;
+    
+    @media(min-width: 400px) {
+      font-size: 100%;
+    }
+    @media(min-width: 800px) {
+      font-size: 150%;
+    }
+  } */
