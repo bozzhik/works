@@ -1,15 +1,37 @@
+@media (max-width: 1920px) {
+  html { font-size: 16px; }
+  body {background-color: rgb(38, 148, 148);}
+}
+@media (max-width: 1366px) {
+  html { font-size: 13px; }
+  body {background-color: rgb(255, 0, 179);}
+}
 @media (max-width: 900px) {
-    html { font-size: 10px; }
-  }
-  @media (max-width: 400px) {
-    html { font-size: 5px; }
-  }
+  html { font-size: 10px; }
+}
+@media (max-width: 768px) {
+  html { font-size: 10px; }
+  body {background-color: rgb(255, 102, 0);}
+  .item-grid {
+    display: flex;
+    flex-direction: column;}
 
-  /* @media (min-width: 85rem) {
-    .container {
-      width: 65rem;
-    }
-  } */
+    .item-grid div {
+      padding-bottom: 5px;
+      max-width: 100%; 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
   /* html {
     font-size: 62.5%;

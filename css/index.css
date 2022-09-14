@@ -9,12 +9,16 @@ body h1 {
     font-weight: 400;
     font-size: 390%;
     padding-top: 0rem;
+    max-width: 50%;
+    margin-right: 0;
 }
 body h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 1.3rem;
     margin-top: -1.5rem;
+    max-width: 70%;
+    margin-right: 0;
 }
 body img {
     max-width: 100%;
@@ -69,7 +73,7 @@ body img {
 
 .item-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas: "skull nft"
                          "geek usb"
@@ -78,7 +82,7 @@ body img {
                          "star marshal"
                          "comp comp";
     grid-column-gap: 0.8rem;
-    grid-row-gap: 2.1rem;
+    grid-row-gap: 1rem;
 }
 .item-grid div {
     /* border: 2px dashed rgb(109, 167, 21); */
