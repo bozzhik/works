@@ -4,32 +4,20 @@ body {
 body a:hover{
     color: #5D5D5D;
 }
-body h1 {
+body h4 {
+    color: #DADADA;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 390%;
-    padding-top: 0rem;
-    max-width: 50%;
-    margin-right: 0;
-}
-body h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 1.3rem;
-    margin-top: -1.5rem;
-    max-width: 90%;
-    margin-right: 0;
-}
-body img {
-    max-width: 100%;
+    font-size: 3rem;
+    margin-top: -1rem;
 }
 .header {
     margin: 0 auto;
     max-width: 99%;
 }
-.item {
+.point {
     margin: 0 auto;
-    max-width: 98%;
+    max-width: 99%;
 }
 .footer {
     margin: 0 auto;
@@ -46,26 +34,25 @@ body img {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 }
-/* .header-grid a {
+
+.header-bozhik3 { 
     color: #DADADA;
-} */
-.header-bozhik { 
     padding-top: 0.7rem;
     padding-left: 0.5rem;
     font-size: 1.4rem;
 }
-.header-bozhik a { 
+.header-bozhik3 a { 
     color: #DADADA;
 }
-.header-bozhik span{
+.header-bozhik3 span{
     position: relative;  
     transition: .1s;
     user-select: none;
   }
-.header-bozhik span:hover{
+.header-bozhik3 span:hover{
     color:transparent;
   }
-.header-bozhik span:before{
+.header-bozhik3 span:before{
     position: absolute;
     left:0;
     width:100%;
@@ -74,76 +61,50 @@ body img {
     color:transparent;
     transition:.1s;
   }
-.header-bozhik span:hover:before{
+.header-bozhik3 span:hover:before{
     color: #5D5D5D;
   }
-.header-works {
+
+.header-works3 {
     padding: 0.7rem;
     padding-left: 20rem;
     font-size: 1.4rem;
 }
-.header-works a { 
+.header-works3 a { 
     color: #DADADA;
 }
-.header-cv {
+.header-cv3 {
     text-align: right;
     padding: 0.7rem;
     font-size: 1.4rem;
 }
-.header-cv a { 
-    color: #DADADA;
+.header-cv3 a { 
+    color: #5D5D5D;
 }
 
-/* <>-<>-<>-<>-<> item-grid <>-<>-<>-<>-<> */
+/* <>-<>-<>-<>-<> task-grid <>-<>-<>-<>-<> */
 
-.item-grid {
+.point-grid {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: "skull nft"
-                         "geek usb"
-                         "promo inter"
-                         "anim smpl"
-                         "star marshal"
-                         "comp comp";
-    grid-column-gap: 0.8rem;
-    grid-row-gap: 1rem;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: repeat(1, 1.5rem);
+    border: 2px dashed rgb(165, 143, 70);
 }
-.item-grid div {
-    /* border: 2px dashed rgb(109, 167, 21); */
-    color: #DADADA;
+.point-grid-design {
+    display: grid;
+    grid-template-columns: 50% 20% 25%;
+    grid-template-rows: repeat(1, 0.5rem);
+    border: 2px dashed rgb(165, 143, 70);
 }
-.item-skull {
-    grid-area: skull;
+.point div {
+    border: 2px dashed rgb(160, 17, 216);
 }
-.item-nft {
-    grid-area: nft;
+.point hr {
+    background: rgba(127, 127, 127, 0.2);
+    border: 0;
+    height: 1px;
+    display: block;
 }
-.item-geek {
-    grid-area: geek;
-}
-.item-usb {
-    grid-area: usb;
-}
-.item-inter {
-    grid-area: inter;
-}
-.item-anim {
-    grid-area: anim;
-}
-.item-smpl {
-    grid-area: smpl;
-}
-.item-star {
-    grid-area: star;
-}
-.item-marshal {
-    grid-area: marshal;
-}
-.item-comp {
-    grid-area: comp;
-}
-
 /* <>-<>-<>-<>-<> footer-grid <>-<>-<>-<>-<> */
 
 .footer-grid {
