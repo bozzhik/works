@@ -1,5 +1,8 @@
 @import 'reboot.css';
 @import 'index.css';
+@import 'works.css';
+@import 'cv.css';
+@import 'item.css';
 @import 'responsive.css';
 @font-face {
     font-family: 'Montserrat', sans-serif;

@@ -4,32 +4,21 @@ body {
 body a:hover{
     color: #5D5D5D;
 }
-body h1 {
+body h3 {
+    color: #DADADA;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 390%;
+    font-size: 1rem;
     padding-top: 0rem;
-    max-width: 50%;
     margin-right: 0;
-}
-body h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 1.3rem;
-    margin-top: -1.5rem;
-    max-width: 90%;
-    margin-right: 0;
-}
-body img {
-    max-width: 100%;
 }
 .header {
     margin: 0 auto;
     max-width: 99%;
 }
-.item {
+.task {
     margin: 0 auto;
-    max-width: 98%;
+    max-width: 99%;
 }
 .footer {
     margin: 0 auto;
@@ -49,80 +38,54 @@ body img {
 /* .header-grid a {
     color: #DADADA;
 } */
-.header-bozhik { 
+.header-bozhik2 { 
+    color: #DADADA;
     padding-top: 0.7rem;
     padding-left: 0.5rem;
     font-size: 1.4rem;
 }
-.header-bozhik a { 
+.header-bozhik2 a { 
     color: #DADADA;
 }
-.header-works {
+.header-works2 {
     padding: 0.7rem;
     padding-left: 20rem;
     font-size: 1.4rem;
 }
-.header-works a { 
-    color: #DADADA;
+.header-works2 a { 
+    color: #5D5D5D;
 }
-.header-cv {
+.header-cv2 {
     text-align: right;
     padding: 0.7rem;
     font-size: 1.4rem;
 }
-.header-cv a { 
+.header-cv2 a { 
     color: #DADADA;
 }
 
-/* <>-<>-<>-<>-<> item-grid <>-<>-<>-<>-<> */
+/* <>-<>-<>-<>-<> task-grid <>-<>-<>-<>-<> */
 
-.item-grid {
+.task-grid {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: "skull nft"
-                         "geek usb"
-                         "promo inter"
-                         "anim smpl"
-                         "star marshal"
-                         "comp comp";
-    grid-column-gap: 0.8rem;
-    grid-row-gap: 1rem;
+    grid-template-columns: 10% 20% 40% 23% 7%;
+    grid-template-rows: repeat(11, 0.5rem);
+    border: 2px dashed rgb(165, 143, 70);
+    height: 38rem;
 }
-.item-grid div {
-    /* border: 2px dashed rgb(109, 167, 21); */
-    color: #DADADA;
+.task div {
+    border: 2px dashed rgba(167, 133, 21, 0);
 }
-.item-skull {
-    grid-area: skull;
+.task hr {
+    background: rgba(127, 127, 127, 0.2);
+    border: 0;
+    height: 1px;
+    display: block;
 }
-.item-nft {
-    grid-area: nft;
-}
-.item-geek {
-    grid-area: geek;
-}
-.item-usb {
-    grid-area: usb;
-}
-.item-inter {
-    grid-area: inter;
-}
-.item-anim {
-    grid-area: anim;
-}
-.item-smpl {
-    grid-area: smpl;
-}
-.item-star {
-    grid-area: star;
-}
-.item-marshal {
-    grid-area: marshal;
-}
-.item-comp {
-    grid-area: comp;
-}
+/* .task-grid-title a:hover {
+
+} */
+
 
 /* <>-<>-<>-<>-<> footer-grid <>-<>-<>-<>-<> */
 
