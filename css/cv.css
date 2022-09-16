@@ -11,6 +11,12 @@ body h4 {
     font-size: 3rem;
     margin-top: -1rem;
 }
+.hr {
+    background: rgba(127, 127, 127, 0.2);
+    border: 0;
+    height: 1px;
+    display: block;
+}
 .header {
     margin: 0 auto;
     max-width: 99%;
@@ -84,20 +90,22 @@ body h4 {
 
 /* <>-<>-<>-<>-<> task-grid <>-<>-<>-<>-<> */
 
+
 .point-grid {
     display: grid;
     grid-template-columns: 25% 25% 50%;
-    grid-template-rows: repeat(1, 1.5rem);
+    grid-template-rows: repeat(11, 0.5rem);
     border: 2px dashed rgb(165, 143, 70);
 }
-.point-grid-design {
+.point-gridd {
     display: grid;
-    grid-template-columns: 50% 20% 25%;
-    grid-template-rows: repeat(1, 0.5rem);
+    grid-template-columns: 25% 25% 15% 35%;
+    grid-template-rows: repeat(11, 0.5rem);
     border: 2px dashed rgb(165, 143, 70);
+    height: 38rem;
 }
 .point div {
-    border: 2px dashed rgb(160, 17, 216);
+    border: 2px dashed rgba(167, 133, 21, 0);
 }
 .point hr {
     background: rgba(127, 127, 127, 0.2);
@@ -105,9 +113,23 @@ body h4 {
     height: 1px;
     display: block;
 }
+.h3 {
+    height: 4.5rem;
+}
+.point-grid div {
+    height: 4.5rem;
+}
+@media (min-width: 1054px) {
+    .point-grid div { padding-bottom: 5.5rem; }
+  }
+
+.hide {
+    opacity: 0;
+    
+}
 /* <>-<>-<>-<>-<> footer-grid <>-<>-<>-<>-<> */
 
-.footer-grid {
+.footer-grid-cv {
     padding-top: 3.5rem;
     display: grid;
     grid-template-columns: 0.3fr 0.2fr 0.1fr 0.5fr;
@@ -119,7 +141,7 @@ body h4 {
 /* .footer-grid div {
     border: 2px dashed rgb(109, 167, 21);
 } */
-.footer-grid a {
+.footer-grid-cv a {
     color: #DADADA;
 }
 .footer-link {

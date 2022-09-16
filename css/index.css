@@ -149,28 +149,19 @@ body img {
 .footer-grid {
     padding-top: 3.5rem;
     display: grid;
-    grid-template-columns: 0.3fr 0.2fr 0.1fr 0.5fr;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 1fr;
     margin-bottom: 0.9rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
-/* .footer-grid div {
+.footer-grid div {
     border: 2px dashed rgb(109, 167, 21);
-} */
+}
 .footer-grid a {
     color: #DADADA;
 }
-.footer-link {
-    padding-top: 1rem;
-}
-.footer-mail {
-    padding-top: 1rem;
-}
-.footer-telegram {
-    padding-top: 1rem;
-    padding-left: 10rem;
-}
+
 .footer-cv {
     padding-top: 1rem;
     text-align: right;
