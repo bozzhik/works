@@ -155,9 +155,9 @@ body img {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
-.footer-grid div {
+/* .footer-grid div {
     border: 2px dashed rgb(109, 167, 21);
-}
+} */
 .footer-grid a {
     color: #DADADA;
 }
