@@ -1,0 +1,91 @@
+body {
+    background-color: #0A0A0A;
+}
+body a:hover{
+    color: #5D5D5D;
+}
+body h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 390%;
+    padding-top: 0rem;
+    max-width: 50%;
+    margin-right: 0;
+}
+body h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-top: -1rem; 
+    max-width: 90%;
+    margin-right: 0;
+}
+body img {
+    max-width: 100%;
+}
+.header {
+    margin: 0 auto;
+    max-width: 99%;
+}
+.about {
+    margin: 0 auto;
+    max-width: 99%;
+}
+.item {
+    margin: 0 auto;
+    max-width: 98%;
+}
+.footer {
+    margin: 0 auto;
+    max-width: 98%;
+}
+
+/* <>-<>-<>-<>-<> about-grid <>-<>-<>-<>-<> */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 25% 25% 15% 35%;
+    grid-template-rows: repeat(11, 0.5rem);
+    border: 2px dashed rgb(165, 143, 70);
+    height: 38rem;
+}
+.about div {
+    border: 2px dashed rgba(167, 133, 21, 0);
+}
+.about hr {
+    background: rgba(127, 127, 127, 0.2);
+    border: 0;
+    height: 1px;
+    display: block;
+}
+
+/* <>-<>-<>-<>-<> item-grid <>-<>-<>-<>-<> */
+
+
+
+
+
+
+
+
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "skull nft"
+                         "geek usb"
+                         "promo inter"
+                         "anim smpl"
+                         "star marshal"
+                         "comp comp";
+    grid-column-gap: 0.8rem;
+    grid-row-gap: 1rem;
+}
+.item-grid div {
+    /* border: 2px dashed rgb(109, 167, 21); */
+    color: #DADADA;
+}
+.item-skull {
+    grid-area: skull;
+}
