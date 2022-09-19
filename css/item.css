@@ -67,6 +67,12 @@ body a:hover{
 .geek8 {
     grid-area: geek8;
 }
+.geek8 img {
+    transition: all .1s ease;    
+}     
+.geek8 img:hover {
+    outline: 3px solid #1e7db8; /* Ширина, вид и цвет рамки */
+}
 .geek9 {
     grid-area: geek9;
 }
@@ -78,6 +84,12 @@ body a:hover{
 }
 .geek12 {
     grid-area: geek12;
+}
+.geek12 img {
+    transition: all .1s ease;    
+}     
+.geek12 img:hover {
+    outline: 3px solid #FD4E2B; /* Ширина, вид и цвет рамки */
 }
 .geek13 {
     grid-area: geek13;

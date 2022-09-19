@@ -113,6 +113,12 @@ body img {
     /* border: 2px dashed rgb(109, 167, 21); */
     color: #DADADA;
 }
+.item-grid img {
+    transition: all .1s ease; 
+}     
+.item-grid img:hover {
+    outline: 2px solid #ffffff3d; /* Ширина, вид и цвет рамки */
+}
 .item-skull {
     grid-area: skull;
 }
