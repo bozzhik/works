@@ -27,11 +27,7 @@ body img {
     margin: 0 auto;
     max-width: 99%;
 }
-.about {
-    margin: 0 auto;
-    max-width: 99%;
-}
-.item {
+.subject {
     margin: 0 auto;
     max-width: 98%;
 }
@@ -40,19 +36,19 @@ body img {
     max-width: 98%;
 }
 
-/* <>-<>-<>-<>-<> about-grid <>-<>-<>-<>-<> */
+/* <>-<>-<>-<>-<> geek-grid <>-<>-<>-<>-<> */
 
-.about-grid {
+.intro-grid {
     display: grid;
-    grid-template-columns: 25% 25% 15% 35%;
+    grid-template-columns: 25% 25% 45%;
     grid-template-rows: repeat(11, 0.5rem);
     border: 2px dashed rgb(165, 143, 70);
-    height: 38rem;
+    padding-bottom: -1rem;
 }
-.about div {
+.intro div {
     border: 2px dashed rgba(167, 133, 21, 0);
 }
-.about hr {
+.intro hr {
     background: rgba(127, 127, 127, 0.2);
     border: 0;
     height: 1px;
