@@ -12,6 +12,9 @@
   .geek-grid {
     grid-column-gap: 9px;
     grid-row-gap: 9px;}
+  .comp-grid {
+    grid-column-gap: 9px;
+    grid-row-gap: 9px;}
   /* body {background-color: rgb(255, 0, 179);} */
 }
 @media (max-width: 768px) {
@@ -44,9 +47,12 @@
   .footer-grid-works {
     padding-top: 10.5rem;
 }
-.geek-grid {
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;}
+  .geek-grid {
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;}
+  .comp-grid {
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;}
 }
 @media (max-width: 400px) {
   html { font-size: 5px; }
@@ -64,6 +70,9 @@
     font-size: 1.4rem;
   }
   .geek-grid {
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;}
+  .comp-grid {
     grid-column-gap: 4px;
     grid-row-gap: 4px;}
 }
