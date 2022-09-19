@@ -95,3 +95,37 @@ body a:hover{
 /* .geek-grid div {
     border: 2px dashed rgb(170, 65, 196);
 } */
+
+/* <>-<>-<>-<>-<> comp-grid <>-<>-<>-<>-<> */
+
+.comp-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: repeat(3, 0.5fr);
+    /* border: 2px dashed rgb(255, 255, 255); */
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas: "comp1 comp1"
+                         "comp3 comp4"
+                         "comp5 comp6"
+                        ;
+}
+.comp1 {
+    grid-area: comp1;
+}
+.comp3 {
+    grid-area: comp3;
+}
+.comp4 {
+    grid-area: comp4;
+}
+.comp5 {
+    grid-area: comp5;
+}
+.comp6 {
+    grid-area: comp6;
+}
+
+.comp-grid div {
+    border: 2px dashed rgb(170, 65, 196);
+}
