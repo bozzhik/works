@@ -4,29 +4,6 @@ body {
 body a:hover{
     color: #5D5D5D;
 }
-body h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 390%;
-    padding-top: 0rem;
-    max-width: 50%;
-    margin-right: 0;
-}
-body h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 1.3rem;
-    margin-top: -1rem; 
-    max-width: 90%;
-    margin-right: 0;
-}
-body img {
-    max-width: 100%;
-}
-.header {
-    margin: 0 auto;
-    max-width: 99%;
-}
 .subject {
     margin: 0 auto;
     max-width: 98%;
@@ -35,53 +12,132 @@ body img {
     margin: 0 auto;
     max-width: 98%;
 }
-
-/* <>-<>-<>-<>-<> geek-grid <>-<>-<>-<>-<> */
-
-.intro-grid {
-    display: grid;
-    grid-template-columns: 25% 25% 45%;
-    grid-template-rows: repeat(11, 0.5rem);
-    border: 2px dashed rgb(165, 143, 70);
-    padding-bottom: -1rem;
-}
-.intro div {
-    border: 2px dashed rgba(167, 133, 21, 0);
-}
-.intro hr {
+.hr {
     background: rgba(127, 127, 127, 0.2);
     border: 0;
     height: 1px;
     display: block;
 }
 
-/* <>-<>-<>-<>-<> item-grid <>-<>-<>-<>-<> */
+/* <>-<>-<>-<>-<> geek-grid <>-<>-<>-<>-<> */
 
-
-
-
-
-
-
-
-
-.item-grid {
+.geek-grid {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: "skull nft"
-                         "geek usb"
-                         "promo inter"
-                         "anim smpl"
-                         "star marshal"
-                         "comp comp";
-    grid-column-gap: 0.8rem;
-    grid-row-gap: 1rem;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: repeat(3, 0.5fr);
+    /* border: 2px dashed rgb(255, 255, 255); */
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas: "geek1 geek1"
+                         "geek2 geek2"
+                         "geek5 geek5"
+                         "geek3 geek4"
+                         "geek6 geek6"
+                         "geek7 geek7"
+                         "geek10 geek11"
+                         "geek8 geek9"
+                         "geek12 geek12"
+                         "geek13 geek13"
+                         "geek14 geek14"
+                         "geek15 geek15"
+                         "geek16 geek16"
+                        ;
 }
-.item-grid div {
-    /* border: 2px dashed rgb(109, 167, 21); */
-    color: #DADADA;
+.geek1 {
+    grid-area: geek1;
 }
-.item-skull {
-    grid-area: skull;
+.geek2 {
+    grid-area: geek2;
 }
+.geek3 {
+    grid-area: geek3;
+}
+.geek4 {
+    grid-area: geek4;
+}
+.geek5 {
+    grid-area: geek5;
+}
+.geek6 {
+    grid-area: geek6;
+}
+.geek7 {
+    grid-area: geek7;
+}
+.geek8 {
+    grid-area: geek8;
+}
+.geek8 img {
+    transition: all .1s ease;    
+}     
+.geek8 img:hover {
+    outline: 3px solid #1e7db8; /* Ширина, вид и цвет рамки */
+}
+.geek9 {
+    grid-area: geek9;
+}
+.geek10 {
+    grid-area: geek10;
+}
+.geek11 {
+    grid-area: geek11;
+}
+.geek12 {
+    grid-area: geek12;
+}
+.geek12 img {
+    transition: all .1s ease;    
+}     
+.geek12 img:hover {
+    outline: 3px solid #FD4E2B; /* Ширина, вид и цвет рамки */
+}
+.geek13 {
+    grid-area: geek13;
+}
+.geek14 {
+    grid-area: geek14;
+}
+.geek15 {
+    grid-area: geek15;
+}
+.geek16 {
+    grid-area: geek16;
+}
+
+/* .geek-grid div {
+    border: 2px dashed rgb(170, 65, 196);
+} */
+
+/* <>-<>-<>-<>-<> comp-grid <>-<>-<>-<>-<> */
+
+.comp-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: repeat(3, 0.5fr);
+    /* border: 2px dashed rgb(255, 255, 255); */
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas: "comp1 comp1"
+                         "comp3 comp4"
+                         "comp5 comp6"
+                        ;
+}
+.comp1 {
+    grid-area: comp1;
+}
+.comp3 {
+    grid-area: comp3;
+}
+.comp4 {
+    grid-area: comp4;
+}
+.comp5 {
+    grid-area: comp5;
+}
+.comp6 {
+    grid-area: comp6;
+}
+
+/* .comp-grid div {
+    border: 2px dashed rgb(170, 65, 196);
+} */
