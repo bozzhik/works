@@ -152,9 +152,10 @@ body a:hover{
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     grid-template-areas: "mrhl1 mrhl1"
+                         "mrhl6 mrhl6"
                          "mrhl2 mrhl3"
                          "mrhl4 mrhl5"
-                         "mrhl6 mrhl6"
+                         
                         ;
 }
 .mrhl1 {
