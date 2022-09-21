@@ -71,7 +71,7 @@ body a:hover{
     transition: all .1s ease;    
 }     
 .geek8 img:hover {
-    outline: 3px solid #1e7db8; /* Ширина, вид и цвет рамки */
+    outline: 3px solid #1e7db8;
 }
 .geek9 {
     grid-area: geek9;
@@ -89,7 +89,7 @@ body a:hover{
     transition: all .1s ease;    
 }     
 .geek12 img:hover {
-    outline: 3px solid #FD4E2B; /* Ширина, вид и цвет рамки */
+    outline: 3px solid #FD4E2B;
 }
 .geek13 {
     grid-area: geek13;
@@ -141,3 +141,45 @@ body a:hover{
 /* .comp-grid div {
     border: 2px dashed rgb(170, 65, 196);
 } */
+
+/* <>-<>-<>-<>-<> comp-grid <>-<>-<>-<>-<> */
+
+.mrhl-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: repeat(3, 0.5fr);
+    /* border: 2px dashed rgb(255, 255, 255); */
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas: "mrhl1 mrhl1"
+                         "mrhl2 mrhl3"
+                         "mrhl4 mrhl5"
+                         "mrhl6 mrhl6"
+                        ;
+}
+.mrhl1 {
+    grid-area: mrhl1;
+}
+.mrhl2 {
+    grid-area: mrhl2;
+}
+.mrhl3 {
+    grid-area: mrhl3;
+}
+.mrhl4 {
+    grid-area: mrhl4;
+}
+.mrhl5 {
+    grid-area: mrhl5;
+}
+.mrhl6 {
+    grid-area: mrhl6;
+}
+
+
+.geek8 img {
+    transition: all .1s ease;    
+}     
+.geek8 img:hover {
+    outline: 3px solid #1e7db8;
+}
