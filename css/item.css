@@ -142,6 +142,40 @@ body a:hover{
     border: 2px dashed rgb(170, 65, 196);
 } */
 
+/* <>-<>-<>-<>-<> mrhl-grid <>-<>-<>-<>-<> */
+
+.mrhl-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: repeat(3, 0.5fr);
+    /* border: 2px dashed rgb(255, 255, 255); */
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas: "mrhl1 mrhl1"
+                         "mrhl6 mrhl6"
+                         "mrhl2 mrhl3"
+                         "mrhl4 mrhl5"
+                        ;
+}
+.mrhl1 {
+    grid-area: mrhl1;
+}
+.mrhl2 {
+    grid-area: mrhl2;
+}
+.mrhl3 {
+    grid-area: mrhl3;
+}
+.mrhl4 {
+    grid-area: mrhl4;
+}
+.mrhl5 {
+    grid-area: mrhl5;
+}
+.mrhl6 {
+    grid-area: mrhl6;
+}
+
 /* <>-<>-<>-<>-<> star-grid <>-<>-<>-<>-<> */
 
 .star-grid {
