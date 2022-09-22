@@ -18,7 +18,9 @@ body a:hover{
     height: 1px;
     display: block;
 }
-
+.subject {
+    margin-top: 1.1rem;
+}
 /* <>-<>-<>-<>-<> geek-grid <>-<>-<>-<>-<> */
 
 .geek-grid {
