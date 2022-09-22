@@ -152,10 +152,14 @@ body a:hover{
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     grid-template-areas: "star1 star1"
-                         "star6 star6"
                          "star2 star3"
-                         "star4 star5"
-                         
+                         "star4 star4"
+                         "star5 star6"
+                         "star7 star7"
+                         "star8 star9"
+                         "star12 star12"
+                         "star10 star11"
+                         "star13 star13"
                         ;
 }
 .star1 {
@@ -175,4 +179,25 @@ body a:hover{
 }
 .star6 {
     grid-area: star6;
+}
+.star7 {
+    grid-area: star7;
+}
+.star8 {
+    grid-area: star8;
+}
+.star9 {
+    grid-area: star9;
+}
+.star10 {
+    grid-area: star10;
+}
+.star11 {
+    grid-area: star11;
+}
+.star12 {
+    grid-area: star12;
+}
+.star13 {
+    grid-area: star13;
 }
