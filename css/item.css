@@ -157,6 +157,7 @@ body a:hover{
                          "mrhl6 mrhl6"
                          "mrhl2 mrhl3"
                          "mrhl4 mrhl5"
+                         "mrhl8 mrhl7"
                         ;
 }
 .mrhl1 {
@@ -176,6 +177,12 @@ body a:hover{
 }
 .mrhl6 {
     grid-area: mrhl6;
+}
+.mrhl7 {
+    grid-area: mrhl7;
+}
+.mrhl8 {
+    grid-area: mrhl8;
 }
 
 /* <>-<>-<>-<>-<> star-grid <>-<>-<>-<>-<> */
