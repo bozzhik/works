@@ -255,10 +255,10 @@ body a:hover{
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     grid-template-areas: "usb1 usb1"
-                         "usb2 mrhl3"
-                         "usb4 mrhl4"
-                         "usb5 mrhl6"
-                         "usb8 mrhl8"
+                         "usb2 usb3"
+                         "usb4 usb5"
+                         "usb6 usb6"
+                         "usb7 usb7"
                         ;
 }
 .usb1 {

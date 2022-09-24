@@ -29,7 +29,8 @@ body img {
 }
 .item {
     margin: 0 auto;
-    max-width: 98%;
+    padding-right: 10px;
+    max-width: 97.7%;
 }
 .footer {
     margin: 0 auto;
