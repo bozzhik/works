@@ -244,3 +244,44 @@ body a:hover{
 .star13 {
     grid-area: star13;
 }
+
+/* <>-<>-<>-<>-<> usb-grid <>-<>-<>-<>-<> */
+
+.usb-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: repeat(3, 0.5fr);
+    /* border: 2px dashed rgb(255, 255, 255); */
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas: "usb1 usb1"
+                         "usb2 mrhl3"
+                         "usb4 mrhl5"
+                         "usb6 mrhl7"
+                         "usb8 mrhl8"
+                        ;
+}
+.usb1 {
+    grid-area: usb1;
+}
+.usb2 {
+    grid-area: usb2;
+}
+.usb3 {
+    grid-area: usb3;
+}
+.usb4 {
+    grid-area: usb4;
+}
+.usb5 {
+    grid-area: usb5;
+}
+.usb6 {
+    grid-area: usb6;
+}
+.usb7 {
+    grid-area: usb7;
+}
+.usb8 {
+    grid-area: usb8;
+}
