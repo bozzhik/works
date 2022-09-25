@@ -257,8 +257,11 @@ body a:hover{
     grid-template-areas: "usb1 usb1"
                          "usb2 usb3"
                          "usb4 usb5"
-                         "usb6 usb6"
-                         "usb7 usb7"
+                         "usb6 usb7"
+                         "usb12 usb12"
+                         "usb8 usb9"
+                         "usb10 usb11"
+                         "usb13 usb13"
                         ;
 }
 .usb1 {
@@ -284,4 +287,19 @@ body a:hover{
 }
 .usb8 {
     grid-area: usb8;
+}
+.usb9 {
+    grid-area: usb9;
+}
+.usb10 {
+    grid-area: usb10;
+}
+.usb11 {
+    grid-area: usb11;
+}
+.usb12 {
+    grid-area: usb12;
+}
+.usb13 {
+    grid-area: usb13;
 }
