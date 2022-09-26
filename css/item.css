@@ -262,6 +262,7 @@ body a:hover{
                          "usb8 usb9"
                          "usb10 usb11"
                          "usb13 usb13"
+                         "usb15 usb14"
                         ;
 }
 .usb1 {
@@ -303,3 +304,10 @@ body a:hover{
 .usb13 {
     grid-area: usb13;
 }
+.usb14 {
+    grid-area: usb14;
+}
+.usb15 {
+    grid-area: usb15;
+}
+
