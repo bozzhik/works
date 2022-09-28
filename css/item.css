@@ -23,6 +23,11 @@ body a:hover{
 }
 /* <>-<>-<>-<>-<> geek-grid <>-<>-<>-<>-<> */
 
+.geek-grid img{
+    max-width: 100%;
+    display: block;
+    width: 100%;
+}
 .geek-grid {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
