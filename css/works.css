@@ -1,135 +1,133 @@
 body {
-    background-color: #0A0A0A;
+   background-color: #0a0a0a;
 }
-body a:hover{
-    color: #5D5D5D;
+body a:hover {
+   color: #5d5d5d;
 }
 body h3 {
-    color: #DADADA;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    padding-top: 0rem;
-    margin-right: 0;
+   color: #dadada;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   font-size: 1rem;
+   padding-top: 0rem;
+   margin-right: 0;
 }
 .header {
-    margin: 0 auto;
-    max-width: 99%;
+   margin: 0 auto;
+   max-width: 99%;
 }
 .task {
-    margin: 0 auto;
-    max-width: 99%;
+   margin: 0 auto;
+   max-width: 99%;
 }
 .footer {
-    margin: 0 auto;
-    max-width: 98%;
+   margin: 0 auto;
+   max-width: 98%;
 }
 
 /* <>-<>-<>-<>-<> header-grid <>-<>-<>-<>-<> */
 
 .header-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    margin-bottom: 0.9rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: 1fr;
+   margin-bottom: 0.9rem;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
 }
 /* .header-grid a {
     color: #DADADA;
 } */
-.header-bozhik2 { 
-    color: #DADADA;
-    padding-top: 0.7rem;
-    padding-left: 0.5rem;
-    font-size: 1.4rem;
+.header-bozhik2 {
+   color: #dadada;
+   padding-top: 0.7rem;
+   padding-left: 0.5rem;
+   font-size: 1.4rem;
 }
-.header-bozhik2 a { 
-    color: #DADADA;
+.header-bozhik2 a {
+   color: #dadada;
 }
-.header-bozhik2 span{
-    position: relative;  
-    transition: .1s;
-    user-select: none;
-  }
-.header-bozhik2 span:hover{
-    color:transparent;
-  }
-.header-bozhik2 span:before{
-    position: absolute;
-    left:0;
-    width:100%;
-    height:100%;
-    content:attr(data-replace);
-    color:transparent;
-    transition:.1s;
-  }
-.header-bozhik2 span:hover:before{
-    color: #5D5D5D;
-  }
+.header-bozhik2 span {
+   position: relative;
+   transition: 0.1s;
+   user-select: none;
+}
+.header-bozhik2 span:hover {
+   color: transparent;
+}
+.header-bozhik2 span:before {
+   position: absolute;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   content: attr(data-replace);
+   color: transparent;
+   transition: 0.1s;
+}
+.header-bozhik2 span:hover:before {
+   color: #5d5d5d;
+}
 .header-works2 {
-    padding: 0.7rem;
-    padding-left: 20rem;
-    font-size: 1.4rem;
+   padding: 0.7rem;
+   padding-left: 20rem;
+   font-size: 1.4rem;
 }
-.header-works2 a { 
-    color: #5D5D5D;
+.header-works2 a {
+   color: #5d5d5d;
 }
 .header-cv2 {
-    text-align: right;
-    padding: 0.7rem;
-    font-size: 1.4rem;
+   text-align: right;
+   padding: 0.7rem;
+   font-size: 1.4rem;
 }
-.header-cv2 a { 
-    color: #DADADA;
+.header-cv2 a {
+   color: #dadada;
 }
 
 /* <>-<>-<>-<>-<> task-grid <>-<>-<>-<>-<> */
 
 .task-grid-works {
-    display: grid;
-    grid-template-columns: 10% 20% 40% 23% 7%;
-    grid-template-rows: repeat(11, 0.5rem);
-    border: 2px dashed rgb(165, 143, 70);
-    height: 38rem;
+   display: grid;
+   grid-template-columns: 10% 20% 40% 23% 7%;
+   grid-template-rows: repeat(11, 0.5rem);
+   border: 2px dashed rgb(165, 143, 70);
+   height: 38rem;
 }
 .task div {
-    border: 2px dashed rgba(167, 133, 21, 0);
+   border: 2px dashed rgba(167, 133, 21, 0);
 }
 .task hr {
-    background: rgba(127, 127, 127, 0.2);
-    border: 0;
-    height: 1px;
-    display: block;
+   background: rgba(127, 127, 127, 0.2);
+   border: 0;
+   height: 1px;
+   display: block;
 }
 .task-grid-title h3:hover {
-    color: #FF00B3;
-    /* text-transform: uppercase; */
-    -webkit-transition: all .5s ease;
-            transition: all .5s ease
+   color: #ff00b3;
+   /* text-transform: uppercase; */
+   -webkit-transition: all 0.5s ease;
+   transition: all 0.5s ease;
 }
-
 
 /* <>-<>-<>-<>-<> footer-grid <>-<>-<>-<>-<> */
 
 .footer-grid-works {
-    padding-top: 3.5rem;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr;
-    margin-bottom: 0.9rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+   padding-top: 3.5rem;
+   display: grid;
+   grid-template-columns: 50% 50%;
+   grid-template-rows: 1fr;
+   margin-bottom: 0.9rem;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
 }
 /* .footer-grid-works div {
     border: 2px dashed rgb(109, 167, 21);
 } */
 .footer-grid-works a {
-    color: #DADADA;
+   color: #dadada;
 }
 
 .footer-cv {
-    padding-top: 1rem;
-    text-align: right;
+   padding-top: 1rem;
+   text-align: right;
 }
-

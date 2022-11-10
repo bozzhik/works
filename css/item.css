@@ -1,114 +1,114 @@
 body {
-    background-color: #0A0A0A;
+   background-color: #0a0a0a;
 }
-body a:hover{
-    color: #5D5D5D;
+body a:hover {
+   color: #5d5d5d;
 }
 .subject {
-    margin: 0 auto;
-    max-width: 98%;
+   margin: 0 auto;
+   max-width: 98%;
 }
 .footer {
-    margin: 0 auto;
-    max-width: 98%;
+   margin: 0 auto;
+   max-width: 98%;
 }
 .hr {
-    background: rgba(127, 127, 127, 0.2);
-    border: 0;
-    height: 1px;
-    display: block;
+   background: rgba(127, 127, 127, 0.2);
+   border: 0;
+   height: 1px;
+   display: block;
 }
 .subject {
-    margin-top: 1.1rem;
+   margin-top: 1.1rem;
 }
 /* <>-<>-<>-<>-<> geek-grid <>-<>-<>-<>-<> */
 
-.geek-grid img{
-    max-width: 100%;
-    display: block;
-    width: 100%;
+.geek-grid img {
+   max-width: 100%;
+   display: block;
+   width: 100%;
 }
 .geek-grid {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-    grid-template-rows: repeat(3, 0.5fr);
-    /* border: 2px dashed rgb(255, 255, 255); */
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    grid-template-areas: "geek1 geek1"
-                         "geek2 geek2"
-                         "geek5 geek5"
-                         "geek3 geek4"
-                         "geek6 geek6"
-                         "geek7 geek7"
-                         "geek10 geek11"
-                         "geek8 geek9"
-                         "geek12 geek12"
-                         "geek13 geek13"
-                         "geek14 geek14"
-                         "geek15 geek15"
-                         "geek16 geek16"
-                        ;
+   display: grid;
+   grid-template-columns: 0.5fr 0.5fr;
+   grid-template-rows: repeat(3, 0.5fr);
+   /* border: 2px dashed rgb(255, 255, 255); */
+   grid-column-gap: 10px;
+   grid-row-gap: 10px;
+   grid-template-areas:
+      'geek1 geek1'
+      'geek2 geek2'
+      'geek5 geek5'
+      'geek3 geek4'
+      'geek6 geek6'
+      'geek7 geek7'
+      'geek10 geek11'
+      'geek8 geek9'
+      'geek12 geek12'
+      'geek13 geek13'
+      'geek14 geek14'
+      'geek15 geek15'
+      'geek16 geek16';
 }
 .geek1 {
-    grid-area: geek1;
+   grid-area: geek1;
 }
 .geek2 {
-    grid-area: geek2;
+   grid-area: geek2;
 }
 .geek3 {
-    grid-area: geek3;
+   grid-area: geek3;
 }
 .geek4 {
-    grid-area: geek4;
+   grid-area: geek4;
 }
 .geek5 {
-    grid-area: geek5;
+   grid-area: geek5;
 }
 .geek6 {
-    grid-area: geek6;
+   grid-area: geek6;
 }
 .geek7 {
-    grid-area: geek7;
+   grid-area: geek7;
 }
 .geek8 {
-    grid-area: geek8;
+   grid-area: geek8;
 }
 .geek8 img {
-    transition: all .1s ease;    
-}     
+   transition: all 0.1s ease;
+}
 .geek8 img:hover {
-    outline: 3px solid #1e7db8;
+   outline: 3px solid #1e7db8;
 }
 .geek9 {
-    grid-area: geek9;
+   grid-area: geek9;
 }
 .geek10 {
-    grid-area: geek10;
+   grid-area: geek10;
 }
 .geek11 {
-    grid-area: geek11;
+   grid-area: geek11;
 }
 .geek12 {
-    grid-area: geek12;
+   grid-area: geek12;
 }
 .geek12 img {
-    transition: all .1s ease;    
-}     
+   transition: all 0.1s ease;
+}
 .geek12 img:hover {
-    outline: 3px solid #FD4E2B;
+   outline: 3px solid #fd4e2b;
 }
 .geek13 {
-    grid-area: geek13;
+   grid-area: geek13;
 }
 .geek14 {
-    grid-area: geek14;
+   grid-area: geek14;
 }
 .geek15 {
-    grid-area: geek15;
+   grid-area: geek15;
 }
 .geek16 {
-    grid-area: geek16;
+   grid-area: geek16;
 }
 
 /* .geek-grid div {
@@ -118,31 +118,31 @@ body a:hover{
 /* <>-<>-<>-<>-<> comp-grid <>-<>-<>-<>-<> */
 
 .comp-grid {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-    grid-template-rows: repeat(3, 0.5fr);
-    /* border: 2px dashed rgb(255, 255, 255); */
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    grid-template-areas: "comp1 comp1"
-                         "comp3 comp4"
-                         "comp5 comp6"
-                        ;
+   display: grid;
+   grid-template-columns: 0.5fr 0.5fr;
+   grid-template-rows: repeat(3, 0.5fr);
+   /* border: 2px dashed rgb(255, 255, 255); */
+   grid-column-gap: 10px;
+   grid-row-gap: 10px;
+   grid-template-areas:
+      'comp1 comp1'
+      'comp3 comp4'
+      'comp5 comp6';
 }
 .comp1 {
-    grid-area: comp1;
+   grid-area: comp1;
 }
 .comp3 {
-    grid-area: comp3;
+   grid-area: comp3;
 }
 .comp4 {
-    grid-area: comp4;
+   grid-area: comp4;
 }
 .comp5 {
-    grid-area: comp5;
+   grid-area: comp5;
 }
 .comp6 {
-    grid-area: comp6;
+   grid-area: comp6;
 }
 
 /* .comp-grid div {
@@ -152,167 +152,166 @@ body a:hover{
 /* <>-<>-<>-<>-<> mrhl-grid <>-<>-<>-<>-<> */
 
 .mrhl-grid {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-    grid-template-rows: repeat(3, 0.5fr);
-    /* border: 2px dashed rgb(255, 255, 255); */
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    grid-template-areas: "mrhl1 mrhl1"
-                         "mrhl6 mrhl6"
-                         "mrhl2 mrhl3"
-                         "mrhl4 mrhl5"
-                         "mrhl8 mrhl7"
-                        ;
+   display: grid;
+   grid-template-columns: 0.5fr 0.5fr;
+   grid-template-rows: repeat(3, 0.5fr);
+   /* border: 2px dashed rgb(255, 255, 255); */
+   grid-column-gap: 10px;
+   grid-row-gap: 10px;
+   grid-template-areas:
+      'mrhl1 mrhl1'
+      'mrhl6 mrhl6'
+      'mrhl2 mrhl3'
+      'mrhl4 mrhl5'
+      'mrhl8 mrhl7';
 }
 .mrhl1 {
-    grid-area: mrhl1;
+   grid-area: mrhl1;
 }
 .mrhl2 {
-    grid-area: mrhl2;
+   grid-area: mrhl2;
 }
 .mrhl3 {
-    grid-area: mrhl3;
+   grid-area: mrhl3;
 }
 .mrhl4 {
-    grid-area: mrhl4;
+   grid-area: mrhl4;
 }
 .mrhl5 {
-    grid-area: mrhl5;
+   grid-area: mrhl5;
 }
 .mrhl6 {
-    grid-area: mrhl6;
+   grid-area: mrhl6;
 }
 .mrhl7 {
-    grid-area: mrhl7;
+   grid-area: mrhl7;
 }
 .mrhl8 {
-    grid-area: mrhl8;
+   grid-area: mrhl8;
 }
 
 /* <>-<>-<>-<>-<> star-grid <>-<>-<>-<>-<> */
 
 .star-grid {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-    grid-template-rows: repeat(3, 0.5fr);
-    /* border: 2px dashed rgb(255, 255, 255); */
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    grid-template-areas: "star1 star1"
-                         "star2 star3"
-                         "star4 star4"
-                         "star5 star6"
-                         "star7 star7"
-                         "star8 star9"
-                         "star12 star12"
-                         "star10 star11"
-                         "star13 star13"
-                        ;
+   display: grid;
+   grid-template-columns: 0.5fr 0.5fr;
+   grid-template-rows: repeat(3, 0.5fr);
+   /* border: 2px dashed rgb(255, 255, 255); */
+   grid-column-gap: 10px;
+   grid-row-gap: 10px;
+   grid-template-areas:
+      'star1 star1'
+      'star2 star3'
+      'star4 star4'
+      'star5 star6'
+      'star7 star7'
+      'star8 star9'
+      'star12 star12'
+      'star10 star11'
+      'star13 star13';
 }
 .star1 {
-    grid-area: star1;
+   grid-area: star1;
 }
 .star2 {
-    grid-area: star2;
+   grid-area: star2;
 }
 .star3 {
-    grid-area: star3;
+   grid-area: star3;
 }
 .star4 {
-    grid-area: star4;
+   grid-area: star4;
 }
 .star5 {
-    grid-area: star5;
+   grid-area: star5;
 }
 .star6 {
-    grid-area: star6;
+   grid-area: star6;
 }
 .star7 {
-    grid-area: star7;
+   grid-area: star7;
 }
 .star8 {
-    grid-area: star8;
+   grid-area: star8;
 }
 .star9 {
-    grid-area: star9;
+   grid-area: star9;
 }
 .star10 {
-    grid-area: star10;
+   grid-area: star10;
 }
 .star11 {
-    grid-area: star11;
+   grid-area: star11;
 }
 .star12 {
-    grid-area: star12;
+   grid-area: star12;
 }
 .star13 {
-    grid-area: star13;
+   grid-area: star13;
 }
 
 /* <>-<>-<>-<>-<> usb-grid <>-<>-<>-<>-<> */
 
 .usb-grid {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-    grid-template-rows: repeat(3, 0.5fr);
-    /* border: 2px dashed rgb(255, 255, 255); */
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    grid-template-areas: "usb1 usb1"
-                         "usb2 usb3"
-                         "usb4 usb5"
-                         "usb6 usb7"
-                         "usb12 usb12"
-                         "usb8 usb9"
-                         "usb10 usb11"
-                         "usb13 usb13"
-                         "usb15 usb14"
-                        ;
+   display: grid;
+   grid-template-columns: 0.5fr 0.5fr;
+   grid-template-rows: repeat(3, 0.5fr);
+   /* border: 2px dashed rgb(255, 255, 255); */
+   grid-column-gap: 10px;
+   grid-row-gap: 10px;
+   grid-template-areas:
+      'usb1 usb1'
+      'usb2 usb3'
+      'usb4 usb5'
+      'usb6 usb7'
+      'usb12 usb12'
+      'usb8 usb9'
+      'usb10 usb11'
+      'usb13 usb13'
+      'usb15 usb14';
 }
 .usb1 {
-    grid-area: usb1;
+   grid-area: usb1;
 }
 .usb2 {
-    grid-area: usb2;
+   grid-area: usb2;
 }
 .usb3 {
-    grid-area: usb3;
+   grid-area: usb3;
 }
 .usb4 {
-    grid-area: usb4;
+   grid-area: usb4;
 }
 .usb5 {
-    grid-area: usb5;
+   grid-area: usb5;
 }
 .usb6 {
-    grid-area: usb6;
+   grid-area: usb6;
 }
 .usb7 {
-    grid-area: usb7;
+   grid-area: usb7;
 }
 .usb8 {
-    grid-area: usb8;
+   grid-area: usb8;
 }
 .usb9 {
-    grid-area: usb9;
+   grid-area: usb9;
 }
 .usb10 {
-    grid-area: usb10;
+   grid-area: usb10;
 }
 .usb11 {
-    grid-area: usb11;
+   grid-area: usb11;
 }
 .usb12 {
-    grid-area: usb12;
+   grid-area: usb12;
 }
 .usb13 {
-    grid-area: usb13;
+   grid-area: usb13;
 }
 .usb14 {
-    grid-area: usb14;
+   grid-area: usb14;
 }
 .usb15 {
-    grid-area: usb15;
+   grid-area: usb15;
 }
-
