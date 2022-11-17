@@ -101,6 +101,32 @@ body.item {
       padding: 0.7rem;
       font-size: 1.4rem;
    }
+   .footer-grid {
+      padding-top: 2.5rem;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 1fr;
+      margin-bottom: 0.9rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+   }
+   // .footer-grid div {
+   //    border: 2px dashed rgb(109, 167, 21);
+   // }
+   .footer-grid a {
+      color: $white;
+   }
+   .footer-cv {
+      padding-top: 1rem;
+      text-align: right;
+   }
+   .footer-mail {
+      padding-top: 1rem;
+   }
+
+   a:hover {
+      color: $grey;
+   }
 
    // geek
 
