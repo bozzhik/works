@@ -417,3 +417,41 @@ body.item {
       color: var(--grey);
    }
 }
+
+body.deleted {
+   background-color: var(--black);
+   font-family: 'Montserrat', sans-serif;
+   display: grid;
+   place-items: center;
+   min-height: 100vh;
+
+   &::-webkit-scrollbar {
+      width: 17px;
+   }
+   &::-webkit-scrollbar-track {
+      background: #151515;
+   }
+   &::-webkit-scrollbar-thumb {
+      background-color: #252525;
+   }
+
+   .text-console {
+      font-size: 3.5rem;
+      font-weight: 500;
+      color: var(--white);
+      & ::after {
+         content: '|';
+         animation: blink ease 1s infinite;
+      }
+   }
+
+   @keyframes blink {
+      0%,
+      100% {
+         opacity: 0;
+      }
+      50% {
+         opacity: 1;
+      }
+   }
+}
