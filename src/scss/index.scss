@@ -1,7 +1,3 @@
-$black: #0a0a0a;
-$grey: #5d5d5d;
-$white: #dadada;
-
 body.index {
    background-color: var(--black);
    font-family: 'Montserrat', sans-serif;
@@ -153,7 +149,7 @@ body.index {
    //    border: 2px dashed rgb(109, 167, 21);
    // }
    .footer-grid a {
-      color: $white;
+      color: var(--white);
    }
    .footer-cv {
       padding-top: 1rem;

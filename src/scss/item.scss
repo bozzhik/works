@@ -1,9 +1,5 @@
-$black: #0a0a0a;
-$grey: #5d5d5d;
-$white: #dadada;
-
 body.item {
-   background-color: $black;
+   background-color: var(--black);
    & h1 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 400;
@@ -69,7 +65,7 @@ body.item {
    .header-bozhik a,
    .header-works a,
    .header-cv a {
-      color: $white;
+      color: var(--white);
    }
    .header-bozhik span {
       position: relative;
@@ -89,7 +85,7 @@ body.item {
       transition: 0.2s;
    }
    .header-bozhik span:hover:before {
-      color: $grey;
+      color: var(--grey);
    }
    .header-works {
       padding: 0.7rem;
@@ -114,7 +110,7 @@ body.item {
    //    border: 2px dashed rgb(109, 167, 21);
    // }
    .footer-grid a {
-      color: $white;
+      color: var(--white);
    }
    .footer-cv {
       padding-top: 1rem;
@@ -125,7 +121,7 @@ body.item {
    }
 
    a:hover {
-      color: $grey;
+      color: var(--grey);
    }
 
    // geek
@@ -419,6 +415,6 @@ body.item {
    }
 
    a:hover {
-      color: $grey;
+      color: var(--grey);
    }
 }

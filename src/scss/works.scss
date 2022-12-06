@@ -1,11 +1,7 @@
-$black: #0a0a0a;
-$grey: #5d5d5d;
-$white: #dadada;
-
 body.works {
-   background-color: $black;
+   background-color: var(--black);
    & h3 {
-      color: $white;
+      color: var(--white);
       font-family: 'Montserrat', sans-serif;
       font-weight: 400;
       font-size: 1rem;
@@ -33,13 +29,13 @@ body.works {
       font-weight: 500;
    }
    .header-bozhik2 {
-      color: $white;
+      color: var(--white);
       padding-top: 0.7rem;
       padding-left: 0.5rem;
       font-size: 1.4rem;
    }
    .header-bozhik2 a {
-      color: $white;
+      color: var(--white);
    }
    .header-bozhik2 span {
       position: relative;
@@ -59,7 +55,7 @@ body.works {
       transition: 0.1s;
    }
    .header-bozhik2 span:hover:before {
-      color: $grey;
+      color: var(--grey);
    }
    .header-works2 {
       padding: 0.7rem;
@@ -67,7 +63,7 @@ body.works {
       font-size: 1.4rem;
    }
    .header-works2 a {
-      color: $grey;
+      color: var(--grey);
    }
    .header-cv2 {
       text-align: right;
@@ -75,7 +71,7 @@ body.works {
       font-size: 1.4rem;
    }
    .header-cv2 a {
-      color: $white;
+      color: var(--white);
    }
    .task-grid-works {
       display: grid;
@@ -109,13 +105,13 @@ body.works {
       font-weight: 400;
    }
    .footer-grid-works a {
-      color: $white;
+      color: var(--white);
    }
    .footer-cv {
       padding-top: 1rem;
       text-align: right;
    }
    a:hover {
-      color: $grey;
+      color: var(--grey);
    }
 }
