@@ -2,6 +2,10 @@ body.index {
    background-color: var(--black);
    font-family: 'Montserrat', sans-serif;
 
+   & a {
+      color: var(--white);
+   }
+
    .header {
       display: flex;
       justify-content: space-between;
@@ -13,9 +17,6 @@ body.index {
          font-weight: 500;
       }
 
-      & a {
-         color: var(--white);
-      }
       .header-bozhik {
          & span {
             position: relative;
@@ -46,117 +47,93 @@ body.index {
       }
    }
 
-   & h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 400;
-      font-size: 390%;
-      margin-bottom: -1rem;
-      max-width: 50%;
-      margin-right: 0;
-   }
-   & h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
-      font-size: 1.3rem;
-      margin-top: -1rem;
-      max-width: 90%;
-      margin-bottom: 2rem;
-   }
-   & img {
-      max-width: 100%;
-      display: block;
-      width: 100%;
-   }
    .item {
       margin: 0 auto;
-      padding-right: 10px;
-      max-width: 97.7%;
-   }
-   .footer {
-      margin: 0 auto;
-      max-width: 98%;
-   }
-
-   // item-grid
-
-   .item-grid {
+      padding-right: 13px;
+      max-width: 97vw;
       display: grid;
       grid-template-columns: repeat(2, 50%);
-      grid-template-rows: repeat(6, 1fr);
+      grid-template-rows: 1fr;
       grid-template-areas:
-         'skull nft'
+         'hotkeys shortcuts'
+         'inter skull'
          'geek usb'
-         'promo inter'
          'anim smpl'
          'star marshal'
          'comp comp';
-      grid-column-gap: 0.8rem;
-      grid-row-gap: 1rem;
-   }
-   .item-grid div {
-      // border: 2px dashed rgb(109, 167, 21);
-      color: var(--white);
-   }
-   .item-grid img {
-      transition: all 0.1s ease;
-   }
-   .item-grid img:hover {
-      outline: 2px solid var(--grey);
-   }
-   .item-skull {
-      grid-area: skull;
-   }
-   .item-nft {
-      grid-area: nft;
-   }
-   .item-geek {
-      grid-area: geek;
-   }
-   .item-usb {
-      grid-area: usb;
-   }
-   .item-inter {
-      grid-area: inter;
-   }
-   .item-anim {
-      grid-area: anim;
-   }
-   .item-smpl {
-      grid-area: smpl;
-   }
-   .item-star {
-      grid-area: star;
-   }
-   .item-marshal {
-      grid-area: marshal;
-   }
-   .item-comp {
-      grid-area: comp;
+      grid-column-gap: 0.8vw;
+      grid-row-gap: 1vw;
+
+      & h1 {
+         font-weight: 400;
+         font-size: 4rem;
+         max-width: 50%;
+      }
+      & h2 {
+         font-weight: 500;
+         font-size: 1.3rem;
+         margin-top: -1rem;
+         max-width: 90%;
+         margin-bottom: 2rem;
+      }
+
+      & div {
+         color: var(--white);
+      }
+
+      & img {
+         max-width: 100%;
+         display: block;
+         width: 100%;
+         transition: all 0.1s ease;
+         &:hover {
+            outline: 2px solid var(--grey);
+         }
+      }
+
+      .item-hotkeys {
+         grid-area: hotkeys;
+      }
+      .item-shortcuts {
+         grid-area: shortcuts;
+      }
+      .item-inter {
+         grid-area: inter;
+      }
+      .item-skull {
+         grid-area: skull;
+      }
+      .item-geek {
+         grid-area: geek;
+      }
+      .item-usb {
+         grid-area: usb;
+      }
+      .item-anim {
+         grid-area: anim;
+      }
+      .item-smpl {
+         grid-area: smpl;
+      }
+      .item-star {
+         grid-area: star;
+      }
+      .item-marshal {
+         grid-area: marshal;
+      }
+      .item-comp {
+         grid-area: comp;
+      }
    }
 
-   // footer-grid
-
-   .footer-grid {
+   .footer {
+      max-width: 97vw;
       padding-top: 2.5rem;
-      display: grid;
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 1fr;
-      margin-bottom: 0.9rem;
-      font-family: 'Montserrat', sans-serif;
+      padding-bottom: 1rem;
       font-weight: 400;
-   }
-   // .footer-grid div {
-   //    border: 2px dashed rgb(109, 167, 21);
-   // }
-   .footer-grid a {
-      color: var(--white);
-   }
-   .footer-cv {
-      padding-top: 1rem;
-      text-align: right;
-   }
-   .footer-mail {
-      padding-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
    }
 
    a:hover {
