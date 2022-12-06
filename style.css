@@ -5,4 +5,23 @@
 @import 'css/item.css';
 @import 'css/responsive.css';
 
-@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+:root {
+   --black: #0a0a0a;
+   --grey: #5d5d5d;
+   --white: #dadada;
+   --dye: yellow;
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   src: url('fonts/Montserrat-Regular.woff2') format('woff2'), url('fonts/Montserrat-Regular.woff') format('woff');
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   src: url('fonts/Montserrat-Medium.woff2') format('woff2'), url('fonts/Montserrat-Medium.woff') format('woff');
+   font-weight: 500;
+   font-style: normal;
+}
