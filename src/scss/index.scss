@@ -2,6 +2,16 @@ body.index {
    background-color: var(--black);
    font-family: 'Montserrat', sans-serif;
 
+   &::-webkit-scrollbar {
+      width: 17px;
+   }
+   &::-webkit-scrollbar-track {
+      background: #151515;
+   }
+   &::-webkit-scrollbar-thumb {
+      background-color: #252525;
+   }
+
    & a {
       color: var(--white);
    }
