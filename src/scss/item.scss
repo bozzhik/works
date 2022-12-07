@@ -52,6 +52,9 @@ body.item {
 
    & a {
       color: var(--white);
+      &:hover {
+         color: var(--grey);
+      }
    }
 
    & img {
@@ -109,10 +112,6 @@ body.item {
       display: flex;
       justify-content: space-between;
       align-items: end;
-   }
-
-   a:hover {
-      color: var(--grey);
    }
 
    .wrapper {

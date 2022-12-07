@@ -16,9 +16,11 @@ body.index {
    &::-webkit-scrollbar-thumb {
       background-color: #252525;
    }
-
    & a {
       color: var(--white);
+      &:hover {
+         color: var(--grey);
+      }
    }
 
    .header {
@@ -149,10 +151,6 @@ body.index {
       display: flex;
       justify-content: space-between;
       align-items: end;
-   }
-
-   a:hover {
-      color: var(--grey);
    }
 }
 
