@@ -1,6 +1,6 @@
 function renderDeleted() {
    const text = document.querySelector('.text-console')
-   const words = ['page not found..', 'redirecting..']
+   const words = ['page not found..']
 
    setTyper(text, words)
 
@@ -60,7 +60,7 @@ function renderDeleted() {
 
    setTimeout(function () {
       window.location.href = './'
-   }, 4 * 1000)
+   }, 3 * 1000)
 }
 
 renderDeleted()
