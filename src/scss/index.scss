@@ -1,4 +1,9 @@
+html {
+   height: 100%;
+}
+
 body.index {
+   min-height: 100%;
    background-color: var(--black);
    font-family: 'Montserrat', sans-serif;
 
@@ -137,9 +142,8 @@ body.index {
    }
 
    .footer {
-      min-height: calc(50vh - 225px);
       max-width: 97vw;
-      padding-top: 2.5rem;
+      padding-top: 1.5rem;
       padding-bottom: 1rem;
       font-weight: 400;
       display: flex;

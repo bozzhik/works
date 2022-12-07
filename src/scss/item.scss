@@ -1,3 +1,41 @@
+body.deleted {
+   background-color: var(--black);
+   font-family: 'Montserrat', sans-serif;
+   display: grid;
+   place-items: center;
+   min-height: 100vh;
+
+   &::-webkit-scrollbar {
+      width: 17px;
+   }
+   &::-webkit-scrollbar-track {
+      background: #151515;
+   }
+   &::-webkit-scrollbar-thumb {
+      background-color: #252525;
+   }
+
+   .text-console {
+      font-size: 3.5rem;
+      font-weight: 500;
+      color: var(--white);
+      & ::after {
+         content: '|';
+         animation: blink ease 1s infinite;
+      }
+   }
+
+   @keyframes blink {
+      0%,
+      100% {
+         opacity: 0;
+      }
+      50% {
+         opacity: 1;
+      }
+   }
+}
+
 body.item {
    background-color: var(--black);
    font-family: 'Montserrat', sans-serif;
@@ -64,9 +102,8 @@ body.item {
    }
 
    .footer {
-      min-height: calc(50vh - 225px);
       max-width: 97vw;
-      padding-top: 2.5rem;
+      padding-top: 1.5rem;
       padding-bottom: 1rem;
       font-weight: 400;
       display: flex;
@@ -109,305 +146,264 @@ body.item {
             grid-area: comp6;
          }
       }
+
+      .geek-grid {
+         display: grid;
+         grid-template-columns: 0.5fr 0.5fr;
+         grid-template-rows: 0.5fr;
+         grid-gap: 0.5vw;
+         grid-template-areas:
+            'geek1 geek1'
+            'geek2 geek2'
+            'geek5 geek5'
+            'geek3 geek4'
+            'geek6 geek6'
+            'geek10 geek11'
+            'geek8 geek9'
+            'geek12 geek12'
+            'geek13 geek13'
+            'geek14 geek14'
+            'geek15 geek15'
+            'geek16 geek16';
+
+         .geek1 {
+            grid-area: geek1;
+         }
+         .geek2 {
+            grid-area: geek2;
+         }
+         .geek3 {
+            grid-area: geek3;
+         }
+         .geek4 {
+            grid-area: geek4;
+         }
+         .geek5 {
+            grid-area: geek5;
+         }
+         .geek6 {
+            grid-area: geek6;
+         }
+         .geek8 {
+            grid-area: geek8;
+
+            & img {
+               transition: all 0.1s ease;
+               &:hover {
+                  outline: 3px solid #1e7db8;
+               }
+            }
+         }
+         .geek9 {
+            grid-area: geek9;
+         }
+         .geek10 {
+            grid-area: geek10;
+         }
+         .geek11 {
+            grid-area: geek11;
+         }
+         .geek12 {
+            grid-area: geek12;
+            & img {
+               transition: all 0.1s ease;
+               &:hover {
+                  outline: 3px solid #fd4e2b;
+               }
+            }
+         }
+         .geek13 {
+            grid-area: geek13;
+         }
+         .geek14 {
+            grid-area: geek14;
+         }
+         .geek15 {
+            grid-area: geek15;
+         }
+         .geek16 {
+            grid-area: geek16;
+         }
+      }
+
+      .star-grid {
+         display: grid;
+         grid-template-columns: 0.5fr 0.5fr;
+         grid-template-rows: 0.5fr;
+         grid-gap: 0.5vw;
+         grid-template-areas:
+            'star1 star1'
+            'star2 star3'
+            'star4 star4'
+            'star5 star6'
+            'star7 star7'
+            'star8 star9'
+            'star12 star12'
+            'star10 star11'
+            'star13 star13';
+
+         .star1 {
+            grid-area: star1;
+         }
+         .star2 {
+            grid-area: star2;
+         }
+         .star3 {
+            grid-area: star3;
+         }
+         .star4 {
+            grid-area: star4;
+         }
+         .star5 {
+            grid-area: star5;
+         }
+         .star6 {
+            grid-area: star6;
+         }
+         .star7 {
+            grid-area: star7;
+         }
+         .star8 {
+            grid-area: star8;
+         }
+         .star9 {
+            grid-area: star9;
+         }
+         .star10 {
+            grid-area: star10;
+         }
+         .star11 {
+            grid-area: star11;
+         }
+         .star12 {
+            grid-area: star12;
+         }
+         .star13 {
+            grid-area: star13;
+         }
+      }
+
+      .mrhl-grid {
+         display: grid;
+         grid-template-columns: 0.5fr 0.5fr;
+         grid-template-rows: 0.5fr;
+         grid-gap: 0.5vw;
+         grid-template-areas:
+            'mrhl1 mrhl1'
+            'mrhl6 mrhl6'
+            'mrhl2 mrhl3'
+            'mrhl4 mrhl5'
+            'mrhl8 mrhl7';
+
+         .mrhl1 {
+            grid-area: mrhl1;
+         }
+         .mrhl2 {
+            grid-area: mrhl2;
+         }
+         .mrhl3 {
+            grid-area: mrhl3;
+         }
+         .mrhl4 {
+            grid-area: mrhl4;
+         }
+         .mrhl5 {
+            grid-area: mrhl5;
+         }
+         .mrhl6 {
+            grid-area: mrhl6;
+         }
+         .mrhl7 {
+            grid-area: mrhl7;
+         }
+         .mrhl8 {
+            grid-area: mrhl8;
+         }
+      }
+
+      .usb-grid {
+         display: grid;
+         grid-template-columns: 0.5fr 0.5fr;
+         grid-template-rows: 0.5fr;
+         grid-gap: 0.5vw;
+         grid-template-areas:
+            'usb1 usb1'
+            'usb2 usb3'
+            'usb4 usb5'
+            'usb6 usb7'
+            'usb12 usb12'
+            'usb8 usb9'
+            'usb10 usb11'
+            'usb13 usb13'
+            'usb15 usb14';
+
+         .usb1 {
+            grid-area: usb1;
+         }
+         .usb2 {
+            grid-area: usb2;
+         }
+         .usb3 {
+            grid-area: usb3;
+         }
+         .usb4 {
+            grid-area: usb4;
+         }
+         .usb5 {
+            grid-area: usb5;
+         }
+         .usb6 {
+            grid-area: usb6;
+         }
+         .usb7 {
+            grid-area: usb7;
+         }
+         .usb8 {
+            grid-area: usb8;
+         }
+         .usb9 {
+            grid-area: usb9;
+         }
+         .usb10 {
+            grid-area: usb10;
+         }
+         .usb11 {
+            grid-area: usb11;
+         }
+         .usb12 {
+            grid-area: usb12;
+         }
+         .usb13 {
+            grid-area: usb13;
+         }
+         .usb14 {
+            grid-area: usb14;
+         }
+         .usb15 {
+            grid-area: usb15;
+         }
+      }
    }
 }
 
-body.item {
-   // geek
-
-   .geek-grid {
-      display: grid;
-      grid-template-columns: 0.5fr 0.5fr;
-      grid-template-rows: repeat(3, 0.5fr);
-      // border: 2px dashed rgb(255, 255, 255);
-      grid-column-gap: 10px;
-      grid-row-gap: 10px;
-      grid-template-areas:
-         'geek1 geek1'
-         'geek2 geek2'
-         'geek5 geek5'
-         'geek3 geek4'
-         'geek6 geek6'
-         'geek10 geek11'
-         'geek8 geek9'
-         'geek12 geek12'
-         'geek13 geek13'
-         'geek14 geek14'
-         'geek15 geek15'
-         'geek16 geek16';
-   }
-   .geek1 {
-      grid-area: geek1;
-   }
-   .geek2 {
-      grid-area: geek2;
-   }
-   .geek3 {
-      grid-area: geek3;
-   }
-   .geek4 {
-      grid-area: geek4;
-   }
-   .geek5 {
-      grid-area: geek5;
-   }
-   .geek6 {
-      grid-area: geek6;
-   }
-   .geek7 {
-      grid-area: geek7;
-   }
-   .geek8 {
-      grid-area: geek8;
-   }
-   .geek8 img {
-      transition: all 0.1s ease;
-   }
-   .geek8 img:hover {
-      outline: 3px solid #1e7db8;
-   }
-   .geek9 {
-      grid-area: geek9;
-   }
-   .geek10 {
-      grid-area: geek10;
-   }
-   .geek11 {
-      grid-area: geek11;
-   }
-   .geek12 {
-      grid-area: geek12;
-   }
-   .geek12 img {
-      transition: all 0.1s ease;
-   }
-   .geek12 img:hover {
-      outline: 3px solid #fd4e2b;
-   }
-   .geek13 {
-      grid-area: geek13;
-   }
-   .geek14 {
-      grid-area: geek14;
-   }
-   .geek15 {
-      grid-area: geek15;
-   }
-   .geek16 {
-      grid-area: geek16;
-   }
-   // .geek-grid div {
-   //    border: 2px dashed rgb(170, 65, 196);
-   // }
-
-   // comp
-
-   // mrhl
-
-   .mrhl-grid {
-      display: grid;
-      grid-template-columns: 0.5fr 0.5fr;
-      grid-template-rows: repeat(3, 0.5fr);
-      // border: 2px dashed rgb(255, 255, 255);
-      grid-column-gap: 10px;
-      grid-row-gap: 10px;
-      grid-template-areas:
-         'mrhl1 mrhl1'
-         'mrhl6 mrhl6'
-         'mrhl2 mrhl3'
-         'mrhl4 mrhl5'
-         'mrhl8 mrhl7';
-   }
-   .mrhl1 {
-      grid-area: mrhl1;
-   }
-   .mrhl2 {
-      grid-area: mrhl2;
-   }
-   .mrhl3 {
-      grid-area: mrhl3;
-   }
-   .mrhl4 {
-      grid-area: mrhl4;
-   }
-   .mrhl5 {
-      grid-area: mrhl5;
-   }
-   .mrhl6 {
-      grid-area: mrhl6;
-   }
-   .mrhl7 {
-      grid-area: mrhl7;
-   }
-   .mrhl8 {
-      grid-area: mrhl8;
-   }
-
-   // star
-
-   .star-grid {
-      display: grid;
-      grid-template-columns: 0.5fr 0.5fr;
-      grid-template-rows: repeat(3, 0.5fr);
-      // border: 2px dashed rgb(255, 255, 255);
-      grid-column-gap: 10px;
-      grid-row-gap: 10px;
-      grid-template-areas:
-         'star1 star1'
-         'star2 star3'
-         'star4 star4'
-         'star5 star6'
-         'star7 star7'
-         'star8 star9'
-         'star12 star12'
-         'star10 star11'
-         'star13 star13';
-   }
-   .star1 {
-      grid-area: star1;
-   }
-   .star2 {
-      grid-area: star2;
-   }
-   .star3 {
-      grid-area: star3;
-   }
-   .star4 {
-      grid-area: star4;
-   }
-   .star5 {
-      grid-area: star5;
-   }
-   .star6 {
-      grid-area: star6;
-   }
-   .star7 {
-      grid-area: star7;
-   }
-   .star8 {
-      grid-area: star8;
-   }
-   .star9 {
-      grid-area: star9;
-   }
-   .star10 {
-      grid-area: star10;
-   }
-   .star11 {
-      grid-area: star11;
-   }
-   .star12 {
-      grid-area: star12;
-   }
-   .star13 {
-      grid-area: star13;
-   }
-
-   // usb
-
-   .usb-grid {
-      display: grid;
-      grid-template-columns: 0.5fr 0.5fr;
-      grid-template-rows: repeat(3, 0.5fr);
-      // border: 2px dashed rgb(255, 255, 255);
-      grid-column-gap: 10px;
-      grid-row-gap: 10px;
-      grid-template-areas:
-         'usb1 usb1'
-         'usb2 usb3'
-         'usb4 usb5'
-         'usb6 usb7'
-         'usb12 usb12'
-         'usb8 usb9'
-         'usb10 usb11'
-         'usb13 usb13'
-         'usb15 usb14';
-   }
-   .usb1 {
-      grid-area: usb1;
-   }
-   .usb2 {
-      grid-area: usb2;
-   }
-   .usb3 {
-      grid-area: usb3;
-   }
-   .usb4 {
-      grid-area: usb4;
-   }
-   .usb5 {
-      grid-area: usb5;
-   }
-   .usb6 {
-      grid-area: usb6;
-   }
-   .usb7 {
-      grid-area: usb7;
-   }
-   .usb8 {
-      grid-area: usb8;
-   }
-   .usb9 {
-      grid-area: usb9;
-   }
-   .usb10 {
-      grid-area: usb10;
-   }
-   .usb11 {
-      grid-area: usb11;
-   }
-   .usb12 {
-      grid-area: usb12;
-   }
-   .usb13 {
-      grid-area: usb13;
-   }
-   .usb14 {
-      grid-area: usb14;
-   }
-   .usb15 {
-      grid-area: usb15;
-   }
-
-   a:hover {
-      color: var(--grey);
-   }
-}
-
-body.deleted {
-   background-color: var(--black);
-   font-family: 'Montserrat', sans-serif;
-   display: grid;
-   place-items: center;
-   min-height: 100vh;
-
-   &::-webkit-scrollbar {
-      width: 17px;
-   }
-   &::-webkit-scrollbar-track {
-      background: #151515;
-   }
-   &::-webkit-scrollbar-thumb {
-      background-color: #252525;
-   }
-
-   .text-console {
-      font-size: 3.5rem;
-      font-weight: 500;
-      color: var(--white);
-      & ::after {
-         content: '|';
-         animation: blink ease 1s infinite;
-      }
-   }
-
-   @keyframes blink {
-      0%,
-      100% {
-         opacity: 0;
-      }
-      50% {
-         opacity: 1;
+@media (max-width: 768px) {
+   body.item {
+      .wrapper {
+         .comp-grid {
+            grid-gap: 1vw;
+         }
+         .geek-grid {
+            grid-gap: 1vw;
+         }
+         .star-grid {
+            grid-gap: 1vw;
+         }
+         .mrhl-grid {
+            grid-gap: 1vw;
+         }
+         .usb-grid {
+            grid-gap: 1vw;
+         }
       }
    }
 }
