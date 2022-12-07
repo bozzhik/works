@@ -137,6 +137,7 @@ body.index {
    }
 
    .footer {
+      min-height: calc(50vh - 225px);
       max-width: 97vw;
       padding-top: 2.5rem;
       padding-bottom: 1rem;
