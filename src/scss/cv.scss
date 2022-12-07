@@ -1,9 +1,8 @@
-html {
-   height: 100%;
+html.cv {
+   scroll-behavior: smooth;
 }
 
-body.index {
-   min-height: 100%;
+body.cv {
    background-color: var(--black);
    font-family: 'Montserrat', sans-serif;
 
@@ -21,125 +20,126 @@ body.index {
       color: var(--white);
    }
 
-   .header {
-      display: flex;
-      justify-content: space-between;
-      max-width: 97.5vw;
-      margin: 1vw 1vw;
+   // .header {
+   //    display: flex;
+   //    justify-content: space-between;
+   //    max-width: 97.5vw;
+   //    margin: 1vw 1vw;
 
-      & div {
-         font-size: 1.4rem;
-         font-weight: 500;
-      }
+   //    & div {
+   //       font-size: 1.4rem;
+   //       font-weight: 500;
+   //    }
 
-      .header-bozhik {
-         & span {
-            position: relative;
-            transition: 0.1s;
-            user-select: none;
-         }
-         & span:hover {
-            color: transparent;
-         }
-         & span:before {
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            content: attr(data-replace);
-            color: transparent;
-            transition: 0.2s;
-         }
-         & span:hover:before {
-            color: var(--grey);
-         }
-      }
-      .header-works {
-         padding-left: 1vw;
-      }
-      .header-cv {
-         text-align: right;
-      }
-   }
+   //    .header-bozhik {
+   //       & span {
+   //          position: relative;
+   //          transition: 0.1s;
+   //          user-select: none;
+   //       }
+   //       & span:hover {
+   //          color: transparent;
+   //       }
+   //       & span:before {
+   //          position: absolute;
+   //          left: 0;
+   //          width: 100%;
+   //          height: 100%;
+   //          content: attr(data-replace);
+   //          color: transparent;
+   //          transition: 0.2s;
+   //       }
+   //       & span:hover:before {
+   //          color: var(--grey);
+   //       }
+   //    }
+   //    .header-works {
+   //       padding-left: 1vw;
+   //    }
+   //    .header-cv {
+   //       text-align: right;
+   //    }
+   // }
 
-   .item {
-      margin: 0 auto;
-      padding-right: 13px;
-      max-width: 97vw;
-      display: grid;
-      grid-template-columns: repeat(2, 50%);
-      grid-template-rows: 1fr;
-      grid-template-areas:
-         'hotkeys shortcuts'
-         'inter skull'
-         'geek usb'
-         'anim smpl'
-         'star marshal'
-         'comp comp';
-      grid-column-gap: 0.8vw;
-      grid-row-gap: 1vw;
+   // .item {
+   //    margin-top: 2vw;
+   //    margin: 0 auto;
+   //    padding-right: 13px;
+   //    max-width: 97vw;
+   //    display: grid;
+   //    grid-template-columns: repeat(2, 50%);
+   //    grid-template-rows: 1fr;
+   //    grid-template-areas:
+   //       'hotkeys shortcuts'
+   //       'inter skull'
+   //       'geek usb'
+   //       'anim smpl'
+   //       'star marshal'
+   //       'comp comp';
+   //    grid-column-gap: 0.8vw;
+   //    grid-row-gap: 1vw;
 
-      & h1 {
-         font-weight: 400;
-         font-size: 4rem;
-         max-width: 50%;
-      }
-      & h2 {
-         font-weight: 500;
-         font-size: 1.3rem;
-         margin-top: -1rem;
-         max-width: 90%;
-         margin-bottom: 2rem;
-      }
+   //    & h1 {
+   //       font-weight: 400;
+   //       font-size: 4rem;
+   //       max-width: 50%;
+   //    }
+   //    & h2 {
+   //       font-weight: 500;
+   //       font-size: 1.3rem;
+   //       margin-top: -1rem;
+   //       max-width: 90%;
+   //       margin-bottom: 2rem;
+   //    }
 
-      & div {
-         color: var(--white);
-      }
+   //    & div {
+   //       color: var(--white);
+   //    }
 
-      & img {
-         max-width: 100%;
-         display: block;
-         width: 100%;
-         transition: all 0.1s ease;
-         &:hover {
-            outline: 2px solid var(--grey);
-         }
-      }
+   //    & img {
+   //       max-width: 100%;
+   //       display: block;
+   //       width: 100%;
+   //       transition: all 0.1s ease;
+   //       &:hover {
+   //          outline: 2px solid var(--grey);
+   //       }
+   //    }
 
-      .item-hotkeys {
-         grid-area: hotkeys;
-      }
-      .item-shortcuts {
-         grid-area: shortcuts;
-      }
-      .item-inter {
-         grid-area: inter;
-      }
-      .item-skull {
-         grid-area: skull;
-      }
-      .item-geek {
-         grid-area: geek;
-      }
-      .item-usb {
-         grid-area: usb;
-      }
-      .item-anim {
-         grid-area: anim;
-      }
-      .item-smpl {
-         grid-area: smpl;
-      }
-      .item-star {
-         grid-area: star;
-      }
-      .item-marshal {
-         grid-area: marshal;
-      }
-      .item-comp {
-         grid-area: comp;
-      }
-   }
+   //    .item-hotkeys {
+   //       grid-area: hotkeys;
+   //    }
+   //    .item-shortcuts {
+   //       grid-area: shortcuts;
+   //    }
+   //    .item-inter {
+   //       grid-area: inter;
+   //    }
+   //    .item-skull {
+   //       grid-area: skull;
+   //    }
+   //    .item-geek {
+   //       grid-area: geek;
+   //    }
+   //    .item-usb {
+   //       grid-area: usb;
+   //    }
+   //    .item-anim {
+   //       grid-area: anim;
+   //    }
+   //    .item-smpl {
+   //       grid-area: smpl;
+   //    }
+   //    .item-star {
+   //       grid-area: star;
+   //    }
+   //    .item-marshal {
+   //       grid-area: marshal;
+   //    }
+   //    .item-comp {
+   //       grid-area: comp;
+   //    }
+   // }
 
    .footer {
       max-width: 97vw;
@@ -156,30 +156,30 @@ body.index {
    }
 }
 
-@media (max-width: 1024px) {
-   body.index {
-      .header {
-         .header-cv {
-            padding-right: 0.5vw;
-         }
-      }
-   }
-}
+// @media (max-width: 1024px) {
+//    body.index {
+//       .header {
+//          .header-cv {
+//             padding-right: 0.5vw;
+//          }
+//       }
+//    }
+// }
 
-@media (max-width: 768px) {
-   body.index {
-      .header {
-         padding-top: 1vw;
-         .header-cv {
-            padding-right: 0.5vw;
-         }
-      }
-      .item {
-         margin: 2vw;
-         padding-right: 0px;
-         max-width: 97vw;
-         display: flex;
-         flex-direction: column;
-      }
-   }
-}
+// @media (max-width: 768px) {
+//    body.index {
+//       .header {
+//          padding-top: 1vw;
+//          .header-cv {
+//             padding-right: 0.5vw;
+//          }
+//       }
+//       .item {
+//          margin: 2vw;
+//          padding-right: 0px;
+//          max-width: 97vw;
+//          display: flex;
+//          flex-direction: column;
+//       }
+//    }
+// }
