@@ -1,3 +1,20 @@
+@mixin tag($w, $h, $fs, $c, $bc, $p, $g) {
+   width: $w;
+   height: $h;
+   font-size: $fs;
+   color: $c;
+   background-color: $bc;
+   padding: $p;
+   gap: $g;
+}
+
+@mixin tagConfig {
+   display: grid;
+   place-content: center;
+   position: relative;
+   font-weight: 700;
+}
+
 html {
    height: 100%;
 }
@@ -11,10 +28,10 @@ body.index {
       width: 17px;
    }
    &::-webkit-scrollbar-track {
-      background: #151515;
+      background: var(--low-black);
    }
    &::-webkit-scrollbar-thumb {
-      background-color: #252525;
+      background-color: var(--dark-grey);
    }
    & a {
       color: var(--white);
@@ -89,9 +106,7 @@ body.index {
       & h2 {
          font-weight: 500;
          font-size: 1.3rem;
-         margin-top: -1rem;
          max-width: 90%;
-         margin-bottom: 2rem;
       }
 
       & div {
@@ -110,10 +125,47 @@ body.index {
 
       .item-hotkeys {
          grid-area: hotkeys;
+
+         .tags {
+            margin: -1rem 0 2rem 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            & div {
+               opacity: 0;
+               @include tagConfig;
+               @include tag(3.65vw, 2.08vw, 1vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
+            }
+         }
+
+         &:hover div {
+            opacity: 1;
+            transition: 0.5s ease-out;
+         }
       }
       .item-shortcuts {
          grid-area: shortcuts;
+
+         .tags {
+            margin: -1rem 0 2rem 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            & div {
+               opacity: 0;
+               @include tagConfig;
+               @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
+            }
+         }
+
+         &:hover div {
+            opacity: 1;
+            transition: 0.5s ease-out;
+         }
       }
+
       .item-inter {
          grid-area: inter;
       }
@@ -178,6 +230,24 @@ body.index {
          max-width: 97vw;
          display: flex;
          flex-direction: column;
+
+         .item-hotkeys {
+            .tags {
+               & div {
+                  @include tag(9.65vw, 5.08vw, 2.4vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
+               }
+            }
+         }
+
+         .item-shortcuts {
+            .tags {
+               & div {
+                  @include tag(13.21vw, 5.08vw, 2.4vw, #ec4899, #ec489a10, 0.35vw 0.65vw, 0.52vw);
+               }
+            }
+         }
       }
    }
 }
+
+//9/3/1.4

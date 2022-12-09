@@ -9,7 +9,13 @@
    --black: #0a0a0a;
    --grey: #5d5d5d;
    --white: #dadada;
+   --low-black: #151515;
+   --dark-grey: #252525;
    --dye: yellow;
+   --design: #ec4899;
+   --design-bg: #ec489910;
+   --web: #3b82f6;
+   --web-bg: #3b82f610;
 }
 
 @font-face {
