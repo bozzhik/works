@@ -105,7 +105,7 @@ body.index {
       }
       & h2 {
          font-weight: 500;
-         font-size: 1.3rem;
+         font-size: 1.5rem;
          max-width: 90%;
       }
 
@@ -122,15 +122,18 @@ body.index {
             outline: 2px solid var(--grey);
          }
       }
+      & .tags {
+         margin: -1rem 0 1rem 0;
+      }
 
       .item-hotkeys {
          grid-area: hotkeys;
 
          .tags {
-            margin: -1rem 0 2rem 0;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
 
             & div {
                opacity: 0;
@@ -144,14 +147,15 @@ body.index {
             transition: 0.5s ease-out;
          }
       }
+
       .item-shortcuts {
          grid-area: shortcuts;
 
          .tags {
-            margin: -1rem 0 2rem 0;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
 
             & div {
                opacity: 0;
@@ -168,36 +172,254 @@ body.index {
 
       .item-inter {
          grid-area: inter;
+
+         .tags {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            & div {
+               display: flex;
+               flex-direction: row;
+               justify-content: space-between;
+               gap: 0.5vw;
+
+               & a:nth-child(1) {
+                  & div {
+                     opacity: 0;
+                     @include tagConfig;
+                     @include tag(3.65vw, 2.08vw, 1vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
+                  }
+               }
+               & a:nth-child(2) {
+                  & div {
+                     opacity: 0;
+                     @include tagConfig;
+                     @include tag(2.5vw, 2.08vw, 1vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
+                  }
+               }
+            }
+         }
+
+         &:hover div > a:nth-child(1) > div,
+         &:hover div > a:nth-child(2) > div {
+            opacity: 1;
+            transition: 0.5s ease-out;
+         }
       }
+
       .item-skull {
          grid-area: skull;
+
+         .tags {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            & div {
+               display: flex;
+               flex-direction: row;
+               justify-content: space-between;
+               gap: 0.5vw;
+
+               & a:nth-child(1) {
+                  & div {
+                     opacity: 0;
+                     @include tagConfig;
+                     @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
+                  }
+               }
+               & a:nth-child(2) {
+                  & div {
+                     opacity: 0;
+                     @include tagConfig;
+                     @include tag(2.5vw, 2.08vw, 1vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
+                  }
+               }
+            }
+         }
+
+         &:hover div > a:nth-child(1) > div,
+         &:hover div > a:nth-child(2) > div {
+            opacity: 1;
+            transition: 0.5s ease-out;
+         }
       }
+
       .item-geek {
          grid-area: geek;
+
+         .tags {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            & div {
+               opacity: 0;
+
+               @include tagConfig;
+               @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
+            }
+         }
+
+         &:hover div {
+            opacity: 1;
+            transition: 0.5s ease-out;
+         }
       }
+
       .item-usb {
          grid-area: usb;
+
+         .tags {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            & div {
+               display: flex;
+               flex-direction: row;
+               justify-content: space-between;
+               gap: 0.5vw;
+
+               & a:nth-child(1) {
+                  & div {
+                     opacity: 0;
+                     @include tagConfig;
+                     @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
+                  }
+               }
+               & a:nth-child(2) {
+                  & div {
+                     opacity: 0;
+                     @include tagConfig;
+                     @include tag(2.5vw, 2.08vw, 1vw, var(--3d), var(--3d-bg), 0.35vw 0.65vw, 0.52vw);
+                  }
+               }
+            }
+         }
+
+         &:hover div > a:nth-child(1) > div,
+         &:hover div > a:nth-child(2) > div {
+            opacity: 1;
+            transition: 0.5s ease-out;
+         }
       }
       .item-anim {
          grid-area: anim;
+
+         .tags {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            & div {
+               opacity: 0;
+               @include tagConfig;
+               @include tag(3.65vw, 2.08vw, 1vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
+            }
+         }
+
+         &:hover div {
+            opacity: 1;
+            transition: 0.5s ease-out;
+         }
       }
       .item-smpl {
          grid-area: smpl;
+
+         .tags {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            & div {
+               opacity: 0;
+               @include tagConfig;
+               @include tag(3.65vw, 2.08vw, 1vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
+            }
+         }
+
+         &:hover div {
+            opacity: 1;
+            transition: 0.5s ease-out;
+         }
       }
       .item-star {
          grid-area: star;
+
+         .tags {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            & div {
+               opacity: 0;
+               @include tagConfig;
+               @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
+            }
+         }
+
+         &:hover div {
+            opacity: 1;
+            transition: 0.5s ease-out;
+         }
       }
       .item-marshal {
          grid-area: marshal;
+
+         .tags {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            & div {
+               opacity: 0;
+               @include tagConfig;
+               @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
+            }
+         }
+
+         &:hover div {
+            opacity: 1;
+            transition: 0.5s ease-out;
+         }
       }
       .item-comp {
          grid-area: comp;
+
+         .tags {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            & div {
+               opacity: 0;
+               @include tagConfig;
+               @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
+            }
+         }
+
+         &:hover div {
+            opacity: 1;
+            transition: 0.5s ease-out;
+         }
       }
    }
 
    .footer {
       max-width: 97vw;
-      padding-top: 1.5rem;
+      margin: 0 auto;
+      padding-top: 3.5rem;
       padding-bottom: 1rem;
       font-weight: 400;
       display: flex;
@@ -231,7 +453,9 @@ body.index {
          display: flex;
          flex-direction: column;
 
-         .item-hotkeys {
+         .item-hotkeys,
+         .item-anim,
+         .item-smpl {
             .tags {
                & div {
                   @include tag(9.65vw, 5.08vw, 2.4vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
@@ -239,10 +463,80 @@ body.index {
             }
          }
 
-         .item-shortcuts {
+         .item-shortcuts,
+         .item-geek,
+         .item-star,
+         .item-marshal,
+         .item-comp {
             .tags {
                & div {
                   @include tag(13.21vw, 5.08vw, 2.4vw, #ec4899, #ec489a10, 0.35vw 0.65vw, 0.52vw);
+               }
+            }
+         }
+
+         .item-inter {
+            .tags {
+               & div {
+                  gap: 1vw;
+                  & a:nth-child(1) {
+                     & div {
+                        opacity: 0;
+                        @include tagConfig;
+                        @include tag(9.65vw, 5.08vw, 2.4vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
+                     }
+                  }
+                  & a:nth-child(2) {
+                     & div {
+                        opacity: 0;
+                        @include tagConfig;
+                        @include tag(5.5vw, 5.08vw, 2.4vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
+                     }
+                  }
+               }
+            }
+         }
+
+         .item-skull {
+            .tags {
+               & div {
+                  gap: 1vw;
+                  & a:nth-child(1) {
+                     & div {
+                        opacity: 0;
+                        @include tagConfig;
+                        @include tag(13.21vw, 5.08vw, 2.4vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
+                     }
+                  }
+                  & a:nth-child(2) {
+                     & div {
+                        opacity: 0;
+                        @include tagConfig;
+                        @include tag(5.5vw, 5.08vw, 2.4vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
+                     }
+                  }
+               }
+            }
+         }
+
+         .item-usb {
+            .tags {
+               & div {
+                  gap: 1vw;
+                  & a:nth-child(1) {
+                     & div {
+                        opacity: 0;
+                        @include tagConfig;
+                        @include tag(13.21vw, 5.08vw, 2.4vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
+                     }
+                  }
+                  & a:nth-child(2) {
+                     & div {
+                        opacity: 0;
+                        @include tagConfig;
+                        @include tag(5.5vw, 5.08vw, 2.4vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
+                     }
+                  }
                }
             }
          }

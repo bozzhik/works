@@ -16,6 +16,10 @@
    --design-bg: #ec489910;
    --web: #3b82f6;
    --web-bg: #3b82f610;
+   --js: #faff00;
+   --js-bg: #faff0010;
+   --3d: #911bed;
+   --3d-bg: #8f00ff10;
 }
 
 @font-face {
