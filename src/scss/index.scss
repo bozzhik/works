@@ -309,6 +309,7 @@ body.index {
             transition: 0.5s ease-out;
          }
       }
+
       .item-anim {
          grid-area: anim;
 
@@ -330,6 +331,7 @@ body.index {
             transition: 0.5s ease-out;
          }
       }
+
       .item-smpl {
          grid-area: smpl;
 
@@ -351,6 +353,7 @@ body.index {
             transition: 0.5s ease-out;
          }
       }
+
       .item-star {
          grid-area: star;
 
@@ -372,6 +375,7 @@ body.index {
             transition: 0.5s ease-out;
          }
       }
+
       .item-marshal {
          grid-area: marshal;
 
@@ -393,6 +397,7 @@ body.index {
             transition: 0.5s ease-out;
          }
       }
+
       .item-comp {
          grid-area: comp;
 
@@ -481,15 +486,11 @@ body.index {
                   gap: 1vw;
                   & a:nth-child(1) {
                      & div {
-                        opacity: 0;
-                        @include tagConfig;
                         @include tag(9.65vw, 5.08vw, 2.4vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
                      }
                   }
                   & a:nth-child(2) {
                      & div {
-                        opacity: 0;
-                        @include tagConfig;
                         @include tag(5.5vw, 5.08vw, 2.4vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
                      }
                   }
@@ -503,15 +504,11 @@ body.index {
                   gap: 1vw;
                   & a:nth-child(1) {
                      & div {
-                        opacity: 0;
-                        @include tagConfig;
                         @include tag(13.21vw, 5.08vw, 2.4vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
                      }
                   }
                   & a:nth-child(2) {
                      & div {
-                        opacity: 0;
-                        @include tagConfig;
                         @include tag(5.5vw, 5.08vw, 2.4vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
                      }
                   }
@@ -525,15 +522,11 @@ body.index {
                   gap: 1vw;
                   & a:nth-child(1) {
                      & div {
-                        opacity: 0;
-                        @include tagConfig;
                         @include tag(13.21vw, 5.08vw, 2.4vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
                      }
                   }
                   & a:nth-child(2) {
                      & div {
-                        opacity: 0;
-                        @include tagConfig;
                         @include tag(5.5vw, 5.08vw, 2.4vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
                      }
                   }
