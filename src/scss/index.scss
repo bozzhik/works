@@ -90,7 +90,8 @@ body.index {
       grid-template-rows: 1fr;
       grid-template-areas:
          'hotkeys shortcuts'
-         'inter skull'
+         'some skull'
+         'inter modify'
          'geek usb'
          'anim smpl'
          'star marshal'
@@ -170,8 +171,86 @@ body.index {
          }
       }
 
+      .item-some {
+         grid-area: some;
+
+         .tags {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            & div {
+               display: flex;
+               flex-direction: row;
+               justify-content: space-between;
+               gap: 0.5vw;
+
+               // & a:nth-child(1) {
+               //    & div {
+               //       opacity: 0;
+               //       @include tagConfig;
+               //       @include tag(3.65vw, 2.08vw, 1vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
+               //    }
+               // }
+               & a:nth-child(1) {
+                  & div {
+                     opacity: 0;
+                     @include tagConfig;
+                     @include tag(2.5vw, 2.08vw, 1vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
+                  }
+               }
+            }
+         }
+
+         &:hover div > a:nth-child(1) > div,
+         &:hover div > a:nth-child(2) > div {
+            opacity: 1;
+            transition: 0.5s ease-out;
+         }
+      }
+
       .item-inter {
          grid-area: inter;
+
+         .tags {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            & div {
+               display: flex;
+               flex-direction: row;
+               justify-content: space-between;
+               gap: 0.5vw;
+
+               // & a:nth-child(1) {
+               //    & div {
+               //       opacity: 0;
+               //       @include tagConfig;
+               //       @include tag(3.65vw, 2.08vw, 1vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
+               //    }
+               // }
+               & a:nth-child(1) {
+                  & div {
+                     opacity: 0;
+                     @include tagConfig;
+                     @include tag(2.5vw, 2.08vw, 1vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
+                  }
+               }
+            }
+         }
+
+         &:hover div > a:nth-child(1) > div,
+         &:hover div > a:nth-child(2) > div {
+            opacity: 1;
+            transition: 0.5s ease-out;
+         }
+      }
+
+      .item-modify {
+         grid-area: modify;
 
          .tags {
             display: flex;
@@ -196,7 +275,7 @@ body.index {
                   & div {
                      opacity: 0;
                      @include tagConfig;
-                     @include tag(2.5vw, 2.08vw, 1vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
+                     @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
                   }
                }
             }
