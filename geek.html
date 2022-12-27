@@ -59,6 +59,7 @@
       </div>
       <!-- Yandex.Metrika counter -->
       <script type="text/javascript">
+         var ip = { ip_address: "<? echo $_SERVER['REMOTE_ADDR']; ?>" } // Определение IP-адреса посетителя
          ;(function (m, e, t, r, i, k, a) {
             m[i] =
                m[i] ||
@@ -78,7 +79,8 @@
             clickmap: true,
             trackLinks: true,
             accurateTrackBounce: true,
-            webvisor: true
+            webvisor: true,
+            params: window.ip // Добавление параметра визита
          })
       </script>
       <noscript
