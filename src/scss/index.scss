@@ -259,30 +259,14 @@ body.index {
             align-items: center;
 
             & div {
-               display: flex;
-               flex-direction: row;
-               justify-content: space-between;
-               gap: 0.5vw;
+               opacity: 0;
 
-               & a:nth-child(1) {
-                  & div {
-                     opacity: 0;
-                     @include tagConfig;
-                     @include tag(3.65vw, 2.08vw, 1vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
-                  }
-               }
-               & a:nth-child(2) {
-                  & div {
-                     opacity: 0;
-                     @include tagConfig;
-                     @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
-                  }
-               }
+               @include tagConfig;
+               @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
             }
          }
 
-         &:hover div > a:nth-child(1) > div,
-         &:hover div > a:nth-child(2) > div {
+         &:hover div {
             opacity: 1;
             transition: 0.5s ease-out;
          }
@@ -551,7 +535,8 @@ body.index {
          .item-geek,
          .item-star,
          .item-marshal,
-         .item-comp {
+         .item-comp,
+         .item-modify {
             .tags {
                & div {
                   @include tag(13.21vw, 5.08vw, 2.4vw, #ec4899, #ec489a10, 0.35vw 0.65vw, 0.52vw);
