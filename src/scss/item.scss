@@ -14,14 +14,10 @@ body.killer {
          color: var(--white);
          max-width: 70%;
          margin: 0 auto;
-         opacity: 0;
-
-         &:hover {
-            opacity: 1;
-         }
+         display: none;
       }
       h2 {
-         padding-top: 5vw;
+         padding-top: 2vw;
          text-align: center;
          font-size: 1.5vw;
          font-weight: 500;
