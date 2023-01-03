@@ -1,3 +1,52 @@
+body.killer {
+   background-color: var(--black);
+   font-family: 'Montserrat', sans-serif;
+
+   .wrapper {
+      margin: 0 auto;
+      max-width: 98%;
+      margin-top: 1.1rem;
+
+      h1 {
+         text-align: center;
+         font-size: 1vw;
+         font-weight: 300;
+         color: var(--white);
+         max-width: 70%;
+         margin: 0 auto;
+         opacity: 0;
+
+         &:hover {
+            opacity: 1;
+         }
+      }
+      h2 {
+         padding-top: 5vw;
+         text-align: center;
+         font-size: 1.5vw;
+         font-weight: 500;
+         color: var(--white);
+         max-width: 45%;
+         margin: 0 auto;
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   body.killer {
+      .wrapper {
+         h1 {
+            font-size: 3vw;
+            max-width: 90%;
+         }
+         h2 {
+            font-size: 3.9vw;
+            max-width: 100%;
+         }
+      }
+   }
+}
+
 body.deleted {
    background-color: var(--black);
    font-family: 'Montserrat', sans-serif;
