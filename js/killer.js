@@ -2,7 +2,7 @@ const array = ['Катя Карнаух', 'Даниил Волгин', 'Андр
 const players = document.getElementById('players')
 const infoPairs = document.getElementById('pairs')
 
-players.innerHTML = array.join(', ')
+// players.innerHTML = array.join(', ')
 
 array.sort(() => Math.random() - 0.5)
 
