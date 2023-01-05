@@ -11,14 +11,12 @@
    --white: #dadada;
    --low-black: #151515;
    --dark-grey: #252525;
-   --design: #ec4899;
-   --design-bg: #ec489910;
    --web: #3b82f6;
    --web-bg: #3b82f610;
    --js: #faff00;
    --js-bg: #faff0010;
-   --3d: #911bed;
-   --3d-bg: #8f00ff10;
+   --design: #ec4899;
+   --design-bg: #ec489910;
 }
 
 @font-face {
@@ -33,4 +31,30 @@
    src: url('fonts/Montserrat-Medium.woff2') format('woff2'), url('fonts/Montserrat-Medium.woff') format('woff');
    font-weight: 500;
    font-style: normal;
+}
+
+@media (max-width: 2560px) {
+   html {
+      font-size: 22px;
+   }
+}
+@media (max-width: 1920px) {
+   html {
+      font-size: 16px;
+   }
+}
+@media (max-width: 1536px) {
+   html {
+      font-size: 13px;
+   }
+}
+@media (max-width: 1024px) {
+   html {
+      font-size: 11px;
+   }
+}
+@media (max-width: 768px) {
+   html {
+      font-size: 10px;
+   }
 }

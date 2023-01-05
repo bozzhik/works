@@ -9,10 +9,10 @@ body.deleted {
       width: 17px;
    }
    &::-webkit-scrollbar-track {
-      background: #151515;
+      background: var(--low-black);
    }
    &::-webkit-scrollbar-thumb {
-      background-color: #252525;
+      background-color: var(--dark-grey);
    }
 
    .text-console {
@@ -44,10 +44,10 @@ body.item {
       width: 17px;
    }
    &::-webkit-scrollbar-track {
-      background: #151515;
+      background: var(--low-black);
    }
    &::-webkit-scrollbar-thumb {
-      background-color: #252525;
+      background-color: var(--dark-grey);
    }
 
    & a {

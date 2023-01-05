@@ -81,7 +81,7 @@ body.index {
       }
    }
 
-   .item {
+   .works {
       margin: 0 auto;
       padding-right: 13px;
       max-width: 97vw;
@@ -90,7 +90,6 @@ body.index {
       grid-template-rows: 1fr;
       grid-template-areas:
          'hotkeys shortcuts'
-         'some skull'
          'inter modify'
          'geek usb'
          'anim smpl'
@@ -119,368 +118,96 @@ body.index {
          display: block;
          width: 100%;
          transition: all 0.1s ease;
+
          &:hover {
             outline: 2px solid var(--grey);
          }
       }
-      & .tags {
-         margin: -1rem 0 1rem 0;
+
+      .item {
+         &:hover .tag {
+            opacity: 1;
+            transition: 0.5s ease-out;
+         }
+
+         .title {
+            margin: -1rem 0 1rem 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+               div {
+                  opacity: 0;
+                  @include tagConfig;
+               }
+               .web {
+                  @include tag(3.65vw, 2.08vw, 1vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
+               }
+               .js {
+                  @include tag(2.5vw, 2.08vw, 1vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
+               }
+               .design {
+                  @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
+               }
+               .obj {
+                  @include tag(2.5vw, 2.08vw, 1vw, var(--3d), var(--3d-bg), 0.35vw 0.65vw, 0.52vw);
+               }
+            }
+         }
       }
 
-      .item-hotkeys {
+      .hotkeys {
          grid-area: hotkeys;
-
-         .tags {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            & div {
-               opacity: 0;
-               @include tagConfig;
-               @include tag(3.65vw, 2.08vw, 1vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
-            }
-         }
-
-         &:hover div {
-            opacity: 1;
-            transition: 0.5s ease-out;
-         }
       }
 
-      .item-shortcuts {
+      .shortcuts {
          grid-area: shortcuts;
-
-         .tags {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            & div {
-               opacity: 0;
-               @include tagConfig;
-               @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
-            }
-         }
-
-         &:hover div {
-            opacity: 1;
-            transition: 0.5s ease-out;
-         }
       }
 
-      .item-some {
+      .some {
          grid-area: some;
-
-         .tags {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            & div {
-               display: flex;
-               flex-direction: row;
-               justify-content: space-between;
-               gap: 0.5vw;
-
-               // & a:nth-child(1) {
-               //    & div {
-               //       opacity: 0;
-               //       @include tagConfig;
-               //       @include tag(3.65vw, 2.08vw, 1vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
-               //    }
-               // }
-               & a:nth-child(1) {
-                  & div {
-                     opacity: 0;
-                     @include tagConfig;
-                     @include tag(2.5vw, 2.08vw, 1vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
-                  }
-               }
-            }
-         }
-
-         &:hover div > a:nth-child(1) > div,
-         &:hover div > a:nth-child(2) > div {
-            opacity: 1;
-            transition: 0.5s ease-out;
-         }
       }
 
-      .item-admin {
+      .admin {
          grid-area: inter;
-
-         .tags {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            & div {
-               display: flex;
-               flex-direction: row;
-               justify-content: space-between;
-               gap: 0.5vw;
-
-               // & a:nth-child(1) {
-               //    & div {
-               //       opacity: 0;
-               //       @include tagConfig;
-               //       @include tag(3.65vw, 2.08vw, 1vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
-               //    }
-               // }
-               & a:nth-child(1) {
-                  & div {
-                     opacity: 0;
-                     @include tagConfig;
-                     @include tag(2.5vw, 2.08vw, 1vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
-                  }
-               }
-            }
-         }
-
-         &:hover div > a:nth-child(1) > div,
-         &:hover div > a:nth-child(2) > div {
-            opacity: 1;
-            transition: 0.5s ease-out;
-         }
       }
 
-      .item-modify {
+      .modify {
          grid-area: modify;
-
-         .tags {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            & div {
-               opacity: 0;
-
-               @include tagConfig;
-               @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
-            }
-         }
-
-         &:hover div {
-            opacity: 1;
-            transition: 0.5s ease-out;
-         }
       }
 
-      .item-skull {
+      .skull {
          grid-area: skull;
-
-         .tags {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            & div {
-               display: flex;
-               flex-direction: row;
-               justify-content: space-between;
-               gap: 0.5vw;
-
-               & a:nth-child(1) {
-                  & div {
-                     opacity: 0;
-                     @include tagConfig;
-                     @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
-                  }
-               }
-               & a:nth-child(2) {
-                  & div {
-                     opacity: 0;
-                     @include tagConfig;
-                     @include tag(2.5vw, 2.08vw, 1vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
-                  }
-               }
-            }
-         }
-
-         &:hover div > a:nth-child(1) > div,
-         &:hover div > a:nth-child(2) > div {
-            opacity: 1;
-            transition: 0.5s ease-out;
-         }
       }
 
-      .item-geek {
+      .geek {
          grid-area: geek;
-
-         .tags {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            & div {
-               opacity: 0;
-
-               @include tagConfig;
-               @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
-            }
-         }
-
-         &:hover div {
-            opacity: 1;
-            transition: 0.5s ease-out;
-         }
       }
 
-      .item-usb {
+      .usb {
          grid-area: usb;
-
-         .tags {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            & div {
-               display: flex;
-               flex-direction: row;
-               justify-content: space-between;
-               gap: 0.5vw;
-
-               & a:nth-child(1) {
-                  & div {
-                     opacity: 0;
-                     @include tagConfig;
-                     @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
-                  }
-               }
-               & a:nth-child(2) {
-                  & div {
-                     opacity: 0;
-                     @include tagConfig;
-                     @include tag(2.5vw, 2.08vw, 1vw, var(--3d), var(--3d-bg), 0.35vw 0.65vw, 0.52vw);
-                  }
-               }
-            }
-         }
-
-         &:hover div > a:nth-child(1) > div,
-         &:hover div > a:nth-child(2) > div {
-            opacity: 1;
-            transition: 0.5s ease-out;
-         }
       }
 
-      .item-anim {
+      .anim {
          grid-area: anim;
-
-         .tags {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            & div {
-               opacity: 0;
-               @include tagConfig;
-               @include tag(3.65vw, 2.08vw, 1vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
-            }
-         }
-
-         &:hover div {
-            opacity: 1;
-            transition: 0.5s ease-out;
-         }
       }
 
-      .item-smpl {
+      .smpl {
          grid-area: smpl;
-
-         .tags {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            & div {
-               opacity: 0;
-               @include tagConfig;
-               @include tag(3.65vw, 2.08vw, 1vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
-            }
-         }
-
-         &:hover div {
-            opacity: 1;
-            transition: 0.5s ease-out;
-         }
       }
 
-      .item-star {
+      .star {
          grid-area: star;
-
-         .tags {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            & div {
-               opacity: 0;
-               @include tagConfig;
-               @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
-            }
-         }
-
-         &:hover div {
-            opacity: 1;
-            transition: 0.5s ease-out;
-         }
       }
 
-      .item-marshal {
+      .marshal {
          grid-area: marshal;
-
-         .tags {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            & div {
-               opacity: 0;
-               @include tagConfig;
-               @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
-            }
-         }
-
-         &:hover div {
-            opacity: 1;
-            transition: 0.5s ease-out;
-         }
       }
 
-      .item-comp {
+      .comp {
          grid-area: comp;
-
-         .tags {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            & div {
-               opacity: 0;
-               @include tagConfig;
-               @include tag(5.21vw, 2.08vw, 1vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
-            }
-         }
-
-         &:hover div {
-            opacity: 1;
-            transition: 0.5s ease-out;
-         }
       }
    }
 
@@ -514,85 +241,24 @@ body.index {
             padding-right: 0.5vw;
          }
       }
-      .item {
+      .works {
          margin: 2vw;
          padding-right: 0px;
          max-width: 97vw;
          display: flex;
          flex-direction: column;
 
-         .item-hotkeys,
-         .item-anim,
-         .item-smpl {
-            .tags {
-               & div {
-                  @include tag(9.65vw, 5.08vw, 2.4vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
-               }
-            }
-         }
-
-         .item-shortcuts,
-         .item-geek,
-         .item-star,
-         .item-marshal,
-         .item-comp,
-         .item-modify {
-            .tags {
-               & div {
-                  @include tag(13.21vw, 5.08vw, 2.4vw, #ec4899, #ec489a10, 0.35vw 0.65vw, 0.52vw);
-               }
-            }
-         }
-
-         .item-admin {
-            .tags {
-               & div {
-                  gap: 1vw;
-                  & a:nth-child(1) {
-                     & div {
-                        @include tag(9.65vw, 5.08vw, 2.4vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
-                     }
+         .item {
+            .title {
+               a {
+                  .web {
+                     @include tag(9.65vw, 5.08vw, 2.4vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
                   }
-                  & a:nth-child(2) {
-                     & div {
-                        @include tag(5.5vw, 5.08vw, 2.4vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
-                     }
+                  .js {
+                     @include tag(5.5vw, 5.08vw, 2.4vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
                   }
-               }
-            }
-         }
-
-         .item-skull {
-            .tags {
-               & div {
-                  gap: 1vw;
-                  & a:nth-child(1) {
-                     & div {
-                        @include tag(13.21vw, 5.08vw, 2.4vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
-                     }
-                  }
-                  & a:nth-child(2) {
-                     & div {
-                        @include tag(5.5vw, 5.08vw, 2.4vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
-                     }
-                  }
-               }
-            }
-         }
-
-         .item-usb {
-            .tags {
-               & div {
-                  gap: 1vw;
-                  & a:nth-child(1) {
-                     & div {
-                        @include tag(13.21vw, 5.08vw, 2.4vw, var(--design), var(--design-bg), 0.35vw 0.65vw, 0.52vw);
-                     }
-                  }
-                  & a:nth-child(2) {
-                     & div {
-                        @include tag(5.5vw, 5.08vw, 2.4vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
-                     }
+                  .design {
+                     @include tag(13.21vw, 5.08vw, 2.4vw, #ec4899, #ec489a10, 0.35vw 0.65vw, 0.52vw);
                   }
                }
             }
@@ -600,5 +266,3 @@ body.index {
       }
    }
 }
-
-//9/3/1.4
