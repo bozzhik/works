@@ -120,11 +120,14 @@ body.item {
       max-width: 98%;
       margin-top: 1.1rem;
 
-      .comp-grid {
+      .grid {
          display: grid;
          grid-template-columns: 0.5fr 0.5fr;
          grid-template-rows: 0.5fr;
          grid-gap: 0.5vw;
+      }
+
+      .comp {
          grid-template-areas:
             'comp1 comp1'
             'comp3 comp4'
@@ -146,12 +149,7 @@ body.item {
             grid-area: comp6;
          }
       }
-
-      .geek-grid {
-         display: grid;
-         grid-template-columns: 0.5fr 0.5fr;
-         grid-template-rows: 0.5fr;
-         grid-gap: 0.5vw;
+      .geek {
          grid-template-areas:
             'geek1 geek1'
             'geek2 geek2'
@@ -190,7 +188,7 @@ body.item {
             & img {
                transition: all 0.1s ease;
                &:hover {
-                  outline: 3px solid #1e7db8;
+                  outline: 3px solid var(--web);
                }
             }
          }
@@ -205,10 +203,11 @@ body.item {
          }
          .geek12 {
             grid-area: geek12;
+
             & img {
                transition: all 0.1s ease;
                &:hover {
-                  outline: 3px solid #fd4e2b;
+                  outline: 3px solid var(--design);
                }
             }
          }
@@ -225,12 +224,7 @@ body.item {
             grid-area: geek16;
          }
       }
-
-      .star-grid {
-         display: grid;
-         grid-template-columns: 0.5fr 0.5fr;
-         grid-template-rows: 0.5fr;
-         grid-gap: 0.5vw;
+      .star {
          grid-template-areas:
             'star1 star1'
             'star2 star3'
@@ -282,12 +276,7 @@ body.item {
             grid-area: star13;
          }
       }
-
-      .mrhl-grid {
-         display: grid;
-         grid-template-columns: 0.5fr 0.5fr;
-         grid-template-rows: 0.5fr;
-         grid-gap: 0.5vw;
+      .mrhl {
          grid-template-areas:
             'mrhl1 mrhl1'
             'mrhl6 mrhl6'
@@ -320,12 +309,7 @@ body.item {
             grid-area: mrhl8;
          }
       }
-
-      .usb-grid {
-         display: grid;
-         grid-template-columns: 0.5fr 0.5fr;
-         grid-template-rows: 0.5fr;
-         grid-gap: 0.5vw;
+      .usb {
          grid-template-areas:
             'usb1 usb1'
             'usb2 usb3'
@@ -389,19 +373,7 @@ body.item {
 @media (max-width: 768px) {
    body.item {
       .wrapper {
-         .comp-grid {
-            grid-gap: 1vw;
-         }
-         .geek-grid {
-            grid-gap: 1vw;
-         }
-         .star-grid {
-            grid-gap: 1vw;
-         }
-         .mrhl-grid {
-            grid-gap: 1vw;
-         }
-         .usb-grid {
+         .grid {
             grid-gap: 1vw;
          }
       }
