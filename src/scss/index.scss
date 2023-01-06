@@ -121,6 +121,7 @@ body.index {
 
          &:hover {
             outline: 2px solid var(--grey);
+            transform: scale(1.005);
          }
       }
 

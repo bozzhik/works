@@ -1,4 +1,9 @@
+html {
+   height: 100%;
+}
+
 body.tag {
+   min-height: 100%;
    background-color: var(--black);
    font-family: 'Montserrat', sans-serif;
 
@@ -11,7 +16,6 @@ body.tag {
    &::-webkit-scrollbar-thumb {
       background-color: var(--dark-grey);
    }
-
    & a {
       color: var(--white);
       &:hover {
@@ -19,17 +23,11 @@ body.tag {
       }
    }
 
-   & img {
-      max-width: 100%;
-      display: block;
-      width: 100%;
-   }
-
    .header {
       display: flex;
       justify-content: space-between;
       max-width: 97.5vw;
-      margin: 1vw 1vw;
+      margin: 1vw;
 
       & div {
          font-size: 1.4rem;
@@ -66,28 +64,149 @@ body.tag {
       }
    }
 
-   .footer {
-      max-width: 98vw;
+   .projects {
       margin: 0 auto;
-      padding-top: 1.5rem;
-      padding-bottom: 1rem;
+      padding-right: 0px;
+      max-width: 97.2vw;
+      display: grid;
+      grid-template-columns: repeat(2, 0.5fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0.8vw;
+      grid-row-gap: 1vw;
+
+      & h1 {
+         font-weight: 400;
+         font-size: 4rem;
+         max-width: 50%;
+      }
+      & h2 {
+         font-weight: 500;
+         font-size: 1.5rem;
+         max-width: 90%;
+      }
+
+      & div {
+         color: var(--white);
+      }
+
+      & img {
+         max-width: 100%;
+         display: block;
+         width: 100%;
+         transition: all 0.1s ease;
+
+         &:hover {
+            outline: 2px solid var(--grey);
+            transform: scale(1.005);
+         }
+      }
+   }
+
+   .another {
+      max-width: 97.5vw;
+      margin: 3vw auto 1vw auto;
+
+      h1 {
+         text-align: center;
+         font-weight: 400;
+         font-size: 2.5rem;
+         color: var(--white);
+
+         &::after {
+            content: '→';
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            margin-left: 1vw;
+         }
+      }
+
+      &:hover h1::after {
+         animation: margin-left 0.5s ease-in-out backwards;
+
+         @keyframes margin-left {
+            0% {
+               margin-left: 1vw;
+            }
+            50% {
+               margin-left: 2vw;
+            }
+            100% {
+               margin-left: 1vw;
+            }
+         }
+      }
+   }
+
+   .design {
+      &:hover h1::after {
+         color: var(--design);
+      }
+   }
+
+   .web {
+      &:hover h1::after {
+         color: var(--web);
+      }
+   }
+
+   .js {
+      &:hover h1::after {
+         color: var(--js);
+      }
+   }
+
+   .footer {
+      max-width: 97vw;
+      margin: 0 auto;
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
       font-weight: 400;
       display: flex;
       justify-content: space-between;
       align-items: end;
    }
-
-   .wrapper {
-      margin: 0 auto;
-      max-width: 98%;
-      margin-top: 1.1rem;
-   }
 }
 
-@media (max-width: 768px) {
-   body.tag {
-      .wrapper {
-         background-color: var(--design);
-      }
-   }
-}
+// @media (max-width: 1024px) {
+//    body.index {
+//       .header {
+//          .header-cv {
+//             padding-right: 0.5vw;
+//          }
+//       }
+//    }
+// }
+
+// @media (max-width: 768px) {
+//    body.index {
+//       .header {
+//          padding-top: 1vw;
+//          .header-cv {
+//             padding-right: 0.5vw;
+//          }
+//       }
+//       .works {
+//          margin: 2vw;
+//          padding-right: 0px;
+//          max-width: 97vw;
+//          display: flex;
+//          flex-direction: column;
+
+//          .item {
+//             .title {
+//                a {
+//                   .web {
+//                      @include tag(9.65vw, 5.08vw, 2.4vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
+//                   }
+//                   .js {
+//                      @include tag(5.5vw, 5.08vw, 2.4vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
+//                   }
+//                   .design {
+//                      @include tag(13.21vw, 5.08vw, 2.4vw, #ec4899, #ec489a10, 0.35vw 0.65vw, 0.52vw);
+//                   }
+//                }
+//             }
+//          }
+//       }
+//    }
+// }
