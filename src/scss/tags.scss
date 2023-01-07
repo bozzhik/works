@@ -1,0 +1,328 @@
+html {
+   height: 100%;
+}
+
+body.tag {
+   min-height: 100%;
+   background-color: var(--black);
+   font-family: 'Montserrat', sans-serif;
+
+   &::-webkit-scrollbar {
+      width: 17px;
+   }
+   &::-webkit-scrollbar-track {
+      background: var(--low-black);
+   }
+   &::-webkit-scrollbar-thumb {
+      background-color: var(--dark-grey);
+   }
+   & a {
+      color: var(--white);
+      &:hover {
+         color: var(--grey);
+      }
+   }
+
+   .header {
+      display: flex;
+      justify-content: space-between;
+      max-width: 97.5vw;
+      margin: 1vw;
+
+      & div {
+         font-size: 1.4rem;
+         font-weight: 500;
+      }
+
+      .header-bozhik {
+         & span {
+            position: relative;
+            transition: 0.1s;
+            user-select: none;
+         }
+         & span:hover {
+            color: transparent;
+         }
+         & span:before {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: attr(data-replace);
+            color: transparent;
+            transition: 0.2s;
+         }
+         & span:hover:before {
+            color: var(--grey);
+         }
+      }
+      .header-works {
+         padding-left: 1vw;
+      }
+      .header-cv {
+         text-align: right;
+      }
+   }
+
+   .projects {
+      margin: 0 auto;
+      padding-right: 0px;
+      max-width: 97.2vw;
+      display: grid;
+      grid-template-columns: repeat(2, 0.5fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0.8vw;
+      grid-row-gap: 1vw;
+
+      & h1 {
+         font-weight: 400;
+         font-size: 4rem;
+         max-width: 50%;
+      }
+      & h2 {
+         font-weight: 500;
+         font-size: 1.5rem;
+         max-width: 90%;
+      }
+
+      & div {
+         color: var(--white);
+      }
+
+      & img {
+         max-width: 100%;
+         display: block;
+         width: 100%;
+         transition: all 0.1s ease;
+
+         &:hover {
+            outline: 2px solid var(--grey);
+            transform: scale(1.005);
+         }
+      }
+   }
+
+   .another {
+      max-width: 97.5vw;
+      margin: 3vw auto 1vw auto;
+
+      h1 {
+         text-align: center;
+         font-weight: 400;
+         font-size: 2.5rem;
+         color: var(--white);
+
+         &::after {
+            content: '→';
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            margin-left: 1vw;
+         }
+      }
+
+      &:hover h1::after {
+         animation: margin-left 0.5s ease-in-out backwards;
+
+         @keyframes margin-left {
+            0% {
+               margin-left: 1vw;
+            }
+            50% {
+               margin-left: 2vw;
+            }
+            100% {
+               margin-left: 1vw;
+            }
+         }
+      }
+   }
+
+   .design {
+      &:hover h1::after {
+         color: var(--design);
+      }
+   }
+
+   .web {
+      &:hover h1::after {
+         color: var(--web);
+      }
+   }
+
+   .js {
+      &:hover h1::after {
+         color: var(--js);
+      }
+   }
+
+   .footer {
+      max-width: 97vw;
+      margin: 0 auto;
+      padding-top: 2.5rem;
+      padding-bottom: 1rem;
+      font-weight: 400;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+   }
+
+   .empty {
+      padding-top: 10.5rem;
+   }
+}
+
+@media (max-width: 1024px) {
+   body.tag {
+      .header {
+         .header-cv {
+            padding-right: 0.5vw;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   body.tag {
+      .header {
+         padding-top: 1vw;
+         .header-cv {
+            padding-right: 0.5vw;
+         }
+      }
+      .projects {
+         margin: 2vw;
+         padding-right: 0px;
+         max-width: 97vw;
+         display: flex;
+         flex-direction: column;
+      }
+
+      .another {
+         h1 {
+            margin: 5vw auto 1vw auto;
+            font-size: 1.7rem;
+         }
+      }
+   }
+}
+
+body.sub-tag {
+   background-color: var(--black);
+   font-family: 'Montserrat', sans-serif;
+   overflow: hidden;
+
+   &::-webkit-scrollbar {
+      width: 17px;
+   }
+   &::-webkit-scrollbar-track {
+      background: var(--low-black);
+   }
+   &::-webkit-scrollbar-thumb {
+      background-color: var(--dark-grey);
+   }
+   & a {
+      color: var(--white);
+      &:hover {
+         color: var(--grey);
+      }
+   }
+
+   .header {
+      display: flex;
+      justify-content: space-between;
+      max-width: 97.5vw;
+      margin: 1vw;
+
+      & div {
+         font-size: 1.4rem;
+         font-weight: 500;
+      }
+
+      .header-bozhik {
+         & span {
+            position: relative;
+            transition: 0.1s;
+            user-select: none;
+         }
+         & span:hover {
+            color: transparent;
+         }
+         & span:before {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: attr(data-replace);
+            color: transparent;
+            transition: 0.2s;
+         }
+         & span:hover:before {
+            color: var(--grey);
+         }
+      }
+      .header-works {
+         padding-left: 1vw;
+      }
+      .header-cv {
+         text-align: right;
+      }
+   }
+
+   nav {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30vh;
+      padding: clamp(1rem, 5vw, 6rem);
+
+      & > a {
+         color: var(--grey);
+         font-family: 'Montserrat', sans-serif;
+         font-size: clamp(3rem, 8vw, 10rem);
+         font-weight: 300;
+         text-decoration: none;
+         position: relative;
+
+         &:hover {
+            color: white;
+         }
+      }
+
+      & > a > span {
+         display: block;
+         border-bottom: 1px solid transparent;
+         border-top: 1px solid transparent;
+         position: relative;
+         z-index: 2;
+      }
+
+      & > a:hover > span {
+         border-top-color: white;
+         border-bottom-color: white;
+      }
+
+      & > a > img {
+         position: absolute;
+         opacity: 0;
+         transform: translate(-50%, -50%) scale(0.5);
+         transition: transform 250ms, opacity 250ms;
+         pointer-events: none;
+         width: min(40vw, 1000px);
+      }
+
+      & > a:hover > img {
+         opacity: 1;
+         transform: translate(-50%, -50%) scale(1);
+      }
+   }
+
+   .footer {
+      max-width: 97vw;
+      margin: 0 auto;
+      padding-top: 2.5rem;
+      padding-bottom: 1rem;
+      font-weight: 400;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+   }
+}
