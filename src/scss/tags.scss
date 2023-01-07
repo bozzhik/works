@@ -137,41 +137,6 @@ body.tag {
       }
    }
 
-   .main {
-      max-width: 97.5vw;
-      margin: 3vw auto 1vw auto;
-
-      h1 {
-         text-align: center;
-         font-weight: 400;
-         font-size: 2.5rem;
-         color: var(--white);
-
-         &::after {
-            content: '→';
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 400;
-            margin-left: 1vw;
-         }
-      }
-
-      &:hover h1::after {
-         animation: margin-left 0.5s ease-in-out backwards;
-
-         @keyframes margin-left {
-            0% {
-               margin-left: 1vw;
-            }
-            50% {
-               margin-left: 2vw;
-            }
-            100% {
-               margin-left: 1vw;
-            }
-         }
-      }
-   }
-
    .design {
       &:hover h1::after {
          color: var(--design);
@@ -206,46 +171,37 @@ body.tag {
    }
 }
 
-// @media (max-width: 1024px) {
-//    body.index {
-//       .header {
-//          .header-cv {
-//             padding-right: 0.5vw;
-//          }
-//       }
-//    }
-// }
+@media (max-width: 1024px) {
+   body.tag {
+      .header {
+         .header-cv {
+            padding-right: 0.5vw;
+         }
+      }
+   }
+}
 
-// @media (max-width: 768px) {
-//    body.index {
-//       .header {
-//          padding-top: 1vw;
-//          .header-cv {
-//             padding-right: 0.5vw;
-//          }
-//       }
-//       .works {
-//          margin: 2vw;
-//          padding-right: 0px;
-//          max-width: 97vw;
-//          display: flex;
-//          flex-direction: column;
+@media (max-width: 768px) {
+   body.tag {
+      .header {
+         padding-top: 1vw;
+         .header-cv {
+            padding-right: 0.5vw;
+         }
+      }
+      .projects {
+         margin: 2vw;
+         padding-right: 0px;
+         max-width: 97vw;
+         display: flex;
+         flex-direction: column;
+      }
 
-//          .item {
-//             .title {
-//                a {
-//                   .web {
-//                      @include tag(9.65vw, 5.08vw, 2.4vw, var(--web), var(--web-bg), 0.35vw 0.65vw, 0.52vw);
-//                   }
-//                   .js {
-//                      @include tag(5.5vw, 5.08vw, 2.4vw, var(--js), var(--js-bg), 0.35vw 0.65vw, 0.52vw);
-//                   }
-//                   .design {
-//                      @include tag(13.21vw, 5.08vw, 2.4vw, #ec4899, #ec489a10, 0.35vw 0.65vw, 0.52vw);
-//                   }
-//                }
-//             }
-//          }
-//       }
-//    }
-// }
+      .another {
+         h1 {
+            margin: 5vw auto 1vw auto;
+            font-size: 1.7rem;
+         }
+      }
+   }
+}
