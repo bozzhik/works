@@ -144,7 +144,7 @@ body.cv {
          row-gap: 0.1vw;
          place-items: center;
          width: 27.5%;
-         margin: 6.5vw auto 0 auto;
+         margin: 7vw auto 0 auto;
 
          .item {
             width: 3vw;
@@ -153,14 +153,47 @@ body.cv {
             place-items: center;
 
             svg {
-               transform: scale(1.5);
+               transform: scale(2);
                color: var(--grey);
             }
 
             &:hover svg {
                transition: transform 0.5s ease-in-out;
-               transform: scale(1.7) translate(0, -0.25vw);
+               transform: scale(2.2) translate(0, -0.25vw);
+               background-color: transparent;
                color: var(--white);
+            }
+
+            &:hover .stroke-web {
+               stroke: var(--web);
+            }
+
+            &:hover .color-web {
+               fill: var(--web);
+            }
+
+            &:hover .stroke-design {
+               stroke: var(--design);
+            }
+
+            &:hover .color-design {
+               fill: var(--design);
+            }
+
+            &:hover .stroke-js {
+               stroke: var(--js);
+            }
+
+            &:hover .color-js {
+               fill: var(--js);
+            }
+
+            &:hover .stroke-some {
+               stroke: #cbfb45;
+            }
+
+            &:hover .color-some {
+               fill: #cbfb45;
             }
          }
 
@@ -168,7 +201,7 @@ body.cv {
             transition: opacity 0.3s ease-in-out;
             opacity: 0;
             font-size: 1vw;
-            font-weight: 400;
+            font-weight: 300;
             color: var(--white);
             text-align: center;
          }
