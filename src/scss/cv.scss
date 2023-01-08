@@ -66,7 +66,7 @@ body.cv {
       top: 50%;
       left: 50%;
       transform: translate(-50%, 50%);
-      animation: appear-from-bottom 1.25s ease-in-out infinite;
+      animation: appear-from-bottom 1s ease-in-out infinite;
       animation-play-state: paused;
 
       @keyframes appear-from-bottom {
@@ -85,8 +85,51 @@ body.cv {
       }
    }
 
-   // .entry {
-   // }
+   #entry {
+      display: none;
+      max-width: 97.5vw;
+      margin: -3vw auto 0;
+      animation: load-screen 0.5s ease-in-out forwards;
+      animation-play-state: paused;
+
+      @keyframes load-screen {
+         0% {
+            opacity: 0;
+            transform: translate(0, 50%);
+         }
+         100% {
+            opacity: 1;
+            transform: translate(0, 20%);
+         }
+      }
+
+      h1,
+      h2 {
+         color: var(--white);
+         text-align: center;
+      }
+
+      h1 {
+         font-size: 13.5vw;
+         line-height: 85%;
+         font-weight: 700;
+
+         span {
+            letter-spacing: 15px;
+         }
+      }
+
+      h2 {
+         font-size: 1.15vw;
+         font-weight: 400;
+
+         span {
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+   }
 }
 
 @media (max-width: 1024px) {
