@@ -141,7 +141,7 @@ body.cv {
       .cards {
          display: grid;
          grid-template-columns: repeat(4, 1fr);
-         row-gap: 0.5vw;
+         row-gap: 0.1vw;
          place-items: center;
          width: 27.5%;
          margin: 6.5vw auto 0 auto;
@@ -152,23 +152,30 @@ body.cv {
             display: grid;
             place-items: center;
 
-            &:hover svg {
-               transition: transform 1s ease-in-out;
-               transform: scale(2);
-               color: var(--white);
-            }
             svg {
                transform: scale(1.5);
+               color: var(--grey);
+            }
+
+            &:hover svg {
+               transition: transform 0.5s ease-in-out;
+               transform: scale(1.7) translate(0, -0.25vw);
                color: var(--white);
             }
          }
 
          .title {
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
             font-size: 1vw;
             font-weight: 400;
             color: var(--white);
             text-align: center;
          }
+
+         // &:hover .title {
+         //    visibility: visible;
+         // }
       }
    }
 }
