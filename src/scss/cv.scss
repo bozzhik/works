@@ -88,7 +88,7 @@ body.cv {
    #entry {
       display: none;
       max-width: 97.5vw;
-      margin: -3vw auto 0;
+      margin: -5vw auto 0;
       animation: load-screen 0.5s ease-in-out forwards;
       animation-play-state: paused;
 
@@ -120,13 +120,54 @@ body.cv {
       }
 
       h2 {
+         margin-top: 0.25vw;
          font-size: 1.15vw;
-         font-weight: 400;
+         font-weight: 500;
+         color: var(--grey);
 
-         span {
+         a {
             &:hover {
                text-decoration: underline;
             }
+            &:hover:nth-of-type(1) {
+               color: var(--web);
+            }
+            &:hover:nth-of-type(2) {
+               color: var(--design);
+            }
+         }
+      }
+
+      .cards {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         row-gap: 0.5vw;
+         place-items: center;
+         width: 27.5%;
+         margin: 6.5vw auto 0 auto;
+
+         .item {
+            width: 3vw;
+            height: 3vw;
+            display: grid;
+            place-items: center;
+
+            &:hover svg {
+               transition: transform 1s ease-in-out;
+               transform: scale(2);
+               color: var(--white);
+            }
+            svg {
+               transform: scale(1.5);
+               color: var(--white);
+            }
+         }
+
+         .title {
+            font-size: 1vw;
+            font-weight: 400;
+            color: var(--white);
+            text-align: center;
          }
       }
    }

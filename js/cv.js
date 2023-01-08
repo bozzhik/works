@@ -6,7 +6,7 @@ function textOnBoot() {
       boot.style.animationPlayState = 'running'
    }, 1000)
    setTimeout(() => {
-      boot.innerHTML = 'HOLD ON'
+      boot.innerHTML = `LOOK AT MY AWESOME RESUME`
    }, 2000)
    setTimeout(() => {
       boot.style.display = 'none'
