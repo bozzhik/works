@@ -243,6 +243,7 @@ body.cv {
    #who {
       display: none;
       margin: 15vw auto 0;
+      padding-bottom: 15vw;
       animation: load-screen 0.5s ease-in-out forwards;
       animation-play-state: paused;
 
@@ -291,39 +292,17 @@ body.cv {
       }
 
       .who-projects {
-         position: absolute;
-         left: 0;
-         width: 100%;
-         display: flex;
-         flex-direction: row;
-         justify-content: center;
-         gap: 0.5vw;
-         margin: 3vw auto;
-         animation: move 7.5s linear infinite;
-         animation-play-state: running;
-
-         &:hover {
-            animation-play-state: paused;
-         }
-
-         @keyframes move {
-            from {
-               left: -100%;
-            }
-            to {
-               left: 100%;
-            }
-         }
-
-         .card {
-            padding: 0.5vw 2vw;
-         }
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         width: 55%;
+         gap: 1vw;
+         margin: 4.5vw auto 0;
 
          h3 {
             color: var(--grey);
             text-align: center;
             margin: 0 auto;
-            font-size: 2.75vw;
+            font-size: 3.13vw;
             font-weight: 500;
             text-transform: uppercase;
 
@@ -353,15 +332,12 @@ body.cv {
    #skills {
       display: none;
       max-width: 97.5vw;
-      margin: 15vw auto 0;
-      padding-top: 4vw;
+      margin: 10vw auto 0;
+      padding-bottom: 5vw;
       animation: load-screen 0.5s ease-in-out forwards;
       animation-play-state: paused;
 
       h1 {
-         display: flex;
-         padding-bottom: 4vw;
-         flex-direction: column;
          text-align: center;
          font-size: 3.13vw;
          line-height: 85%;
@@ -379,32 +355,36 @@ body.cv {
          animation: animatedgradient 5s ease alternate infinite;
       }
 
-      h2,
-      a {
-         display: block;
+      h2 {
          color: var(--grey);
          text-align: center;
-         text-transform: uppercase;
-      }
-
-      a {
-         margin: -0.5vw auto;
-         max-width: 55%;
-         font-size: 3.13vw;
-         font-weight: 500;
-      }
-
-      h2 {
-         margin: -0.5vw auto;
-         max-width: 55%;
+         margin: 2vw auto;
+         max-width: 60%;
          font-size: 1.15vw;
          font-weight: 500;
-         padding-bottom: 2vw;
-      }
+         text-transform: uppercase;
 
-      a:hover {
-         text-decoration: underline;
-         color: var(--white);
+         a {
+            &:hover {
+               text-decoration: underline;
+               color: var(--white);
+            }
+            &:hover:nth-of-type(1) {
+               color: var(--web);
+            }
+            &:hover:nth-of-type(2) {
+               color: var(--design);
+            }
+            &:hover:nth-of-type(3) {
+               color: var(--js);
+            }
+            &:hover:nth-of-type(4) {
+               color: var(--some);
+            }
+            &:hover:nth-of-type(5) {
+               color: var(--web);
+            }
+         }
       }
    }
 
