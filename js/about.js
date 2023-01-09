@@ -20,7 +20,7 @@ function textOnBoot() {
       boot.style.animationPlayState = 'running'
    }, 1000)
    setTimeout(() => {
-      boot.innerHTML = `LOOK AT MY AWESOME RESUME`
+      boot.innerHTML = `LOOK AT MY AWESOME ABOUT PAGE`
    }, 2000)
    setTimeout(() => {
       boot.style.display = 'none'
