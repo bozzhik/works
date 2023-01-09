@@ -9,11 +9,11 @@ function changeGradientPosition() {
       const x = event.offsetX
       const y = event.offsetY
 
-      const percentX = x / textGradient.offsetWidth
-      const percentY = y / textGradient.offsetHeight
+      const percentX = Math.max(0.2, Math.min(1.5, x / textGradient.offsetWidth))
+      const percentY = Math.max(0.2, Math.min(0.8, y / textGradient.offsetHeight))
 
       textGradient.style.animation = 'none'
-      textGradient.style.transition = 'all 0.25s ease'
+      textGradient.style.transition = 'all 0.5s ease'
       textGradient.style.backgroundPosition = `${percentX * 100}% ${percentY * 100}%`
    })
 

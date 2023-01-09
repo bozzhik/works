@@ -133,11 +133,6 @@ body.cv {
             }
          }
 
-         b {
-            line-height: 85%;
-            font-weight: 700;
-         }
-
          span {
             letter-spacing: 15px;
          }
@@ -262,10 +257,10 @@ body.cv {
          background-clip: text;
          -webkit-background-clip: text;
          -webkit-text-fill-color: transparent;
-         text-decoration: underline;
-         text-decoration-color: var(--grey);
-         text-decoration-thickness: 0.15rem;
-         text-underline-offset: 0.75rem;
+         // text-decoration: underline;
+         // text-decoration-color: var(--grey);
+         // text-decoration-thickness: 0.15rem;
+         // text-underline-offset: 0.75rem;
          animation: animatedgradient 5s ease alternate infinite;
       }
 
@@ -300,7 +295,7 @@ body.cv {
          flex-direction: row;
          justify-content: space-between;
          max-width: 90%;
-         margin: 3vw auto;
+         margin: 4vw auto;
 
          .card {
             padding: 0.5vw 2vw;
@@ -320,11 +315,6 @@ body.cv {
             }
 
             &:hover {
-               // text-decoration: underline;
-               // text-decoration-color: var(--grey);
-               // text-decoration-thickness: 0.15rem;
-               // text-underline-offset: 0.5rem;
-               color: var(--white);
                background: linear-gradient(60deg, var(--web), var(--design), var(--some), var(--js));
                background-size: 300% 300%;
                text-transform: uppercase;
@@ -360,10 +350,10 @@ body.cv {
          background-clip: text;
          -webkit-background-clip: text;
          -webkit-text-fill-color: transparent;
-         text-decoration: underline;
-         text-decoration-color: var(--grey);
-         text-decoration-thickness: 0.15rem;
-         text-underline-offset: 0.75rem;
+         // text-decoration: underline;
+         // text-decoration-color: var(--grey);
+         // text-decoration-thickness: 0.15rem;
+         // text-underline-offset: 0.75rem;
          animation: animatedgradient 5s ease alternate infinite;
       }
 
