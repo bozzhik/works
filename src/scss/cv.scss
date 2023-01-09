@@ -359,6 +359,9 @@ body.cv {
       animation-play-state: paused;
 
       h1 {
+         display: flex;
+         padding-bottom: 4vw;
+         flex-direction: column;
          text-align: center;
          font-size: 3.13vw;
          line-height: 85%;
@@ -376,29 +379,32 @@ body.cv {
          animation: animatedgradient 5s ease alternate infinite;
       }
 
-      h2 {
+      h2,
+      a {
+         display: block;
          color: var(--grey);
          text-align: center;
+         text-transform: uppercase;
+      }
+
+      a {
+         margin: -0.5vw auto;
+         max-width: 55%;
+         font-size: 3.13vw;
+         font-weight: 500;
+      }
+
+      h2 {
          margin: -0.5vw auto;
          max-width: 55%;
          font-size: 1.15vw;
          font-weight: 500;
-         text-transform: uppercase;
+         padding-bottom: 2vw;
+      }
 
-         a:hover {
-            text-decoration: underline;
-            color: var(--white);
-         }
-
-         &:first-of-type {
-            margin-top: 2vw;
-         }
-
-         span {
-            margin: 0 0.5vw;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.5vw;
-         }
+      a:hover {
+         text-decoration: underline;
+         color: var(--white);
       }
    }
 
