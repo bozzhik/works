@@ -536,6 +536,35 @@ body.resume {
       }
    }
 
+   .wrapper {
+      max-width: 40%;
+      margin: 3vw auto 0;
+
+      h1 {
+         font-size: 3.13vw;
+         line-height: 85%;
+         font-weight: 600;
+         background: linear-gradient(60deg, var(--web), var(--design), var(--some), var(--js));
+         background-size: 300% 300%;
+         text-transform: uppercase;
+         background-clip: text;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         animation: animatedgradient 5s ease alternate infinite;
+         transition: transform 0.5s ease-in-out;
+      }
+
+      span {
+         display: block;
+         padding-top: 0.5vw;
+         padding-left: 0.2vw;
+         font-size: 1vw;
+         line-height: 85%;
+         font-weight: 400;
+         color: var(--white);
+      }
+   }
+
    #buttons {
       margin: 10vw auto 0;
       padding-bottom: 5vw;
