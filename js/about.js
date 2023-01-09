@@ -4,6 +4,7 @@ const whoScreen = document.getElementById('who')
 const skillsScreen = document.getElementById('skills')
 const aboutScreen = document.getElementById('about')
 const textGradient = document.getElementById('colorized')
+const buttons = document.getElementById('buttons')
 
 const works = document.getElementById('works')
 const github = document.getElementById('github')
@@ -37,6 +38,8 @@ setTimeout(() => {
    skillsScreen.style.animationPlayState = 'running'
    aboutScreen.style.display = 'block'
    aboutScreen.style.animationPlayState = 'running'
+   buttons.style.display = 'block'
+   buttons.style.animationPlayState = 'running'
 }, 3500)
 
 function changeGradientPosition() {

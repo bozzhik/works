@@ -1,4 +1,4 @@
-body.cv {
+body.about {
    background-color: var(--black);
    font-family: 'Montserrat', sans-serif;
    overflow-x: hidden;
@@ -434,6 +434,39 @@ body.cv {
             &:hover:nth-of-type(2) {
                color: var(--design);
             }
+         }
+      }
+   }
+
+   #buttons {
+      display: none;
+      margin: 10vw auto 0;
+      padding-bottom: 5vw;
+      animation: load-screen 0.5s ease-in-out forwards;
+      animation-play-state: paused;
+
+      button {
+         margin: 0 auto;
+         padding: 0;
+         width: 15%;
+         display: block;
+         border: none;
+         text-align: center;
+         font-size: 3.13vw;
+         line-height: 85%;
+         font-weight: 600;
+         background: linear-gradient(60deg, var(--web), var(--design), var(--some), var(--js));
+         background-size: 300% 300%;
+         text-transform: uppercase;
+         background-clip: text;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         animation: animatedgradient 5s ease alternate infinite;
+         transition: transform 0.5s ease-in-out;
+
+         &:hover {
+            transition: transform 0.5s ease-in-out;
+            transform: scale(1.1);
          }
       }
    }
