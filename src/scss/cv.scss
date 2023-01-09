@@ -88,7 +88,7 @@ body.cv {
    #entry {
       display: none;
       max-width: 97.5vw;
-      margin: -5vw auto 0;
+      margin: -2.5vw auto 0;
       animation: load-screen 0.5s ease-in-out forwards;
       animation-play-state: paused;
 
@@ -139,7 +139,6 @@ body.cv {
       }
 
       h2 {
-         color: var(--white);
          text-align: center;
          margin-top: 0.25vw;
          font-size: 1.15vw;
@@ -176,7 +175,13 @@ body.cv {
 
             svg {
                transform: scale(2) rotate3d(1, 1, 1, 0deg);
-               color: var(--grey);
+            }
+
+            .stroke-web,
+            .stroke-design,
+            .stroke-js,
+            .stroke-some {
+               stroke: var(--grey);
             }
 
             &:hover svg {
@@ -231,6 +236,104 @@ body.cv {
          // &:hover .title {
          //    visibility: visible;
          // }
+      }
+   }
+
+   #who {
+      display: none;
+      max-width: 97.5vw;
+      margin: 15vw auto;
+      animation: load-screen 0.5s ease-in-out forwards;
+      animation-play-state: paused;
+
+      h1 {
+         text-align: center;
+         font-size: 3.13vw;
+         line-height: 85%;
+         font-weight: 500;
+         background: linear-gradient(60deg, var(--web), var(--design), var(--some), var(--js));
+         background-size: 300% 300%;
+         text-transform: uppercase;
+         background-clip: text;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         text-decoration: underline;
+         text-decoration-color: var(--grey);
+         text-decoration-thickness: 0.15rem;
+         text-underline-offset: 0.75rem;
+         animation: animatedgradient 5s ease alternate infinite;
+      }
+
+      h2 {
+         color: var(--grey);
+         text-align: center;
+         margin: 2vw auto;
+         max-width: 60%;
+         font-size: 1.15vw;
+         font-weight: 500;
+         text-transform: uppercase;
+
+         a {
+            &:hover {
+               text-decoration: underline;
+               color: var(--white);
+            }
+            &:hover:nth-of-type(1) {
+               color: var(--web);
+            }
+            &:hover:nth-of-type(2) {
+               color: var(--design);
+            }
+         }
+      }
+   }
+
+   #about {
+      display: none;
+      max-width: 97.5vw;
+      margin: 15vw auto;
+      animation: load-screen 0.5s ease-in-out forwards;
+      animation-play-state: paused;
+
+      h1 {
+         text-align: center;
+         font-size: 3.13vw;
+         line-height: 85%;
+         font-weight: 500;
+         background: linear-gradient(60deg, var(--web), var(--design), var(--some), var(--js));
+         background-size: 300% 300%;
+         text-transform: uppercase;
+         background-clip: text;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         text-decoration: underline;
+         text-decoration-color: var(--grey);
+         text-decoration-thickness: 0.15rem;
+         text-underline-offset: 0.75rem;
+         animation: animatedgradient 5s ease alternate infinite;
+      }
+
+      h2 {
+         color: var(--grey);
+         text-align: center;
+         margin: 2vw auto;
+         max-width: 60%;
+         font-size: 1.15vw;
+         font-weight: 500;
+         text-transform: uppercase;
+
+         a {
+            &:hover {
+               text-decoration: underline;
+               color: var(--white);
+            }
+            &:hover:nth-of-type(1) {
+               color: var(--web);
+            }
+            &:hover:nth-of-type(2) {
+               color: var(--design);
+            }
+         }
       }
    }
 }

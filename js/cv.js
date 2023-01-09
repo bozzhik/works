@@ -1,5 +1,7 @@
 const boot = document.getElementById('boot')
 const entryScreen = document.getElementById('entry')
+const whoScreen = document.getElementById('who')
+const aboutScreen = document.getElementById('about')
 
 function textOnBoot() {
    setTimeout(() => {
@@ -58,3 +60,13 @@ function showTitleCards() {
 }
 
 showTitleCards()
+
+setTimeout(() => {
+   whoScreen.style.display = 'block'
+   whoScreen.style.animationPlayState = 'running'
+}, 3500)
+
+setTimeout(() => {
+   aboutScreen.style.display = 'block'
+   aboutScreen.style.animationPlayState = 'running'
+}, 3500)
