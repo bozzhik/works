@@ -103,16 +103,35 @@ body.cv {
          }
       }
 
-      h1,
-      h2 {
-         color: var(--white);
-         text-align: center;
-      }
+      $page-background-color: #2f3c4f;
+      $gradient-color-1: #f57170;
+      $gradient-color-2: #10ddc2;
 
       h1 {
+         text-align: center;
          font-size: 13.5vw;
          line-height: 85%;
          font-weight: 700;
+         color: #fc3735;
+         background: -webkit-linear-gradient(left, var(--web), var(--design), var(--web));
+         background-size: 1600px 200px;
+         text-transform: uppercase;
+         background-clip: text;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         animation-duration: 2.5s;
+         animation-name: animationgradienttitle;
+         animation-iteration-count: infinite;
+         animation-fill-mode: forwards;
+
+         @keyframes animationgradienttitle {
+            0% {
+               background-position: 0 1600px;
+            }
+            100% {
+               background-position: 1600px 0;
+            }
+         }
 
          span {
             letter-spacing: 15px;
@@ -120,6 +139,8 @@ body.cv {
       }
 
       h2 {
+         color: var(--white);
+         text-align: center;
          margin-top: 0.25vw;
          font-size: 1.15vw;
          font-weight: 500;
