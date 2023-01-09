@@ -250,7 +250,7 @@ body.cv {
          text-align: center;
          font-size: 3.13vw;
          line-height: 85%;
-         font-weight: 500;
+         font-weight: 600;
          background: linear-gradient(60deg, var(--web), var(--design), var(--some), var(--js));
          background-size: 300% 300%;
          text-transform: uppercase;
@@ -279,10 +279,59 @@ body.cv {
                color: var(--white);
             }
             &:hover:nth-of-type(1) {
-               color: var(--web);
+               color: var(--some);
             }
             &:hover:nth-of-type(2) {
+               color: var(--web);
+            }
+            &:hover:nth-of-type(3) {
                color: var(--design);
+            }
+         }
+      }
+
+      .who-projects {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         max-width: 90%;
+         margin: 3vw auto;
+
+         .card {
+            padding: 0.5vw 2vw;
+         }
+
+         h3 {
+            color: var(--grey);
+            text-align: center;
+            margin: 0 auto;
+            font-size: 2.5vw;
+            font-weight: 500;
+            text-transform: uppercase;
+
+            span {
+               font-family: Arial, Helvetica, sans-serif;
+               visibility: hidden;
+            }
+
+            &:hover {
+               // text-decoration: underline;
+               // text-decoration-color: var(--grey);
+               // text-decoration-thickness: 0.15rem;
+               // text-underline-offset: 0.5rem;
+               color: var(--white);
+               background: linear-gradient(60deg, var(--web), var(--design), var(--some), var(--js));
+               background-size: 300% 300%;
+               text-transform: uppercase;
+               background-clip: text;
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+               animation: animatedgradient 5s ease alternate infinite;
+            }
+
+            &:hover span {
+               transition: visibility 1s ease-in-out;
+               visibility: visible;
             }
          }
       }
@@ -299,7 +348,7 @@ body.cv {
          text-align: center;
          font-size: 3.13vw;
          line-height: 85%;
-         font-weight: 500;
+         font-weight: 600;
          background: linear-gradient(60deg, var(--web), var(--design), var(--some), var(--js));
          background-size: 300% 300%;
          text-transform: uppercase;
