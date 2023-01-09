@@ -442,7 +442,7 @@ body.about {
    #buttons {
       display: none;
       margin: 10vw auto 0;
-      padding-bottom: 5vw;
+      padding-bottom: 7vw;
       animation: load-screen 0.5s ease-in-out forwards;
       animation-play-state: paused;
 
@@ -473,7 +473,7 @@ body.about {
    }
 }
 
-body.cv {
+body.resume {
    background-color: var(--black);
    font-family: 'Montserrat', sans-serif;
    overflow-x: hidden;
@@ -543,7 +543,7 @@ body.cv {
       button {
          margin: 0 auto;
          padding: 0;
-         width: 15%;
+         width: 35%;
          display: block;
          border: none;
          text-align: center;
