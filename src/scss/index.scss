@@ -73,10 +73,10 @@ body.index {
             color: var(--grey);
          }
       }
-      .header-works {
-         padding-left: 1vw;
+      .header-git {
+         margin-left: 7rem;
       }
-      .header-cv {
+      .header-about {
          text-align: right;
       }
    }
@@ -224,22 +224,12 @@ body.index {
    }
 }
 
-@media (max-width: 1024px) {
-   body.index {
-      .header {
-         .header-cv {
-            padding-right: 0.5vw;
-         }
-      }
-   }
-}
-
 @media (max-width: 768px) {
    body.index {
       .header {
          padding-top: 1vw;
-         .header-cv {
-            padding-right: 0.5vw;
+         .header-git {
+            margin-left: 0.5rem;
          }
       }
       .works {

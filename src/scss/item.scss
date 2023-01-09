@@ -96,10 +96,10 @@ body.item {
             color: var(--grey);
          }
       }
-      .header-works {
-         padding-left: 1vw;
+      .header-git {
+         margin-left: 7rem;
       }
-      .header-cv {
+      .header-about {
          text-align: right;
       }
    }
@@ -372,6 +372,12 @@ body.item {
 
 @media (max-width: 768px) {
    body.item {
+      .header {
+         padding-top: 1vw;
+         .header-git {
+            margin-left: 0.5rem;
+         }
+      }
       .wrapper {
          .grid {
             grid-gap: 1vw;
