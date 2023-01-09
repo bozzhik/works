@@ -186,7 +186,7 @@ body.cv {
 
             &:hover svg {
                transition: transform 0.5s ease-in-out;
-               transform: scale(2.2) translate(0, -0.25vw) rotate3d(1, 0, 0, 25deg);
+               transform: scale(2.2) translate(0, -0.25vw);
                background-color: transparent;
                color: var(--white);
             }
