@@ -90,6 +90,7 @@ body.about {
       display: none;
       max-width: 97.5vw;
       margin: -2.5vw auto 0;
+      padding-bottom: 5vw;
       animation: load-screen 0.5s ease-in-out forwards;
       animation-play-state: paused;
 
@@ -242,8 +243,8 @@ body.about {
 
    #who {
       display: none;
-      margin: 15vw auto 0;
-      padding-bottom: 15vw;
+      margin: 10vw auto 0;
+      padding-bottom: 5vw;
       animation: load-screen 0.5s ease-in-out forwards;
       animation-play-state: paused;
 
