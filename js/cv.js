@@ -2,6 +2,28 @@ const boot = document.getElementById('boot')
 const entryScreen = document.getElementById('entry')
 const whoScreen = document.getElementById('who')
 const aboutScreen = document.getElementById('about')
+const textGradient = document.getElementById('colorized')
+
+function changeGradientPosition() {
+   textGradient.addEventListener('mousemove', (event) => {
+      const x = event.offsetX
+      const y = event.offsetY
+
+      const percentX = x / textGradient.offsetWidth
+      const percentY = y / textGradient.offsetHeight
+
+      textGradient.style.animation = 'none'
+      textGradient.style.transition = 'all 0.25s ease'
+      textGradient.style.backgroundPosition = `${percentX * 100}% ${percentY * 100}%`
+   })
+
+   textGradient.addEventListener('mouseleave', () => {
+      textGradient.style.animation = 'animatedgradient 5s ease alternate infinite'
+      textGradient.style.transition = 'all 0.25s ease'
+   })
+}
+
+changeGradientPosition()
 
 function textOnBoot() {
    setTimeout(() => {

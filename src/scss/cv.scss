@@ -112,7 +112,7 @@ body.cv {
          font-size: 13.5vw;
          line-height: 85%;
          font-weight: 700;
-         color: #fc3735;
+         color: var(--black);
          background: linear-gradient(60deg, var(--web), var(--design), var(--some), var(--js));
          background-size: 300% 300%;
          text-transform: uppercase;
@@ -131,6 +131,11 @@ body.cv {
             100% {
                background-position: 0% 50%;
             }
+         }
+
+         b {
+            line-height: 85%;
+            font-weight: 700;
          }
 
          span {
