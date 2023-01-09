@@ -1,8 +1,43 @@
 const boot = document.getElementById('boot')
 const entryScreen = document.getElementById('entry')
 const whoScreen = document.getElementById('who')
+const skillsScreen = document.getElementById('skills')
 const aboutScreen = document.getElementById('about')
 const textGradient = document.getElementById('colorized')
+
+const works = document.getElementById('works')
+const github = document.getElementById('github')
+const find = document.getElementById('find')
+const resume = document.getElementById('resume')
+const titleWorks = document.getElementById('title-works')
+const titleGithub = document.getElementById('title-github')
+const titleFind = document.getElementById('title-find')
+const titleResume = document.getElementById('title-resume')
+
+function textOnBoot() {
+   setTimeout(() => {
+      boot.style.animationPlayState = 'running'
+   }, 1000)
+   setTimeout(() => {
+      boot.innerHTML = `LOOK AT MY AWESOME RESUME`
+   }, 2000)
+   setTimeout(() => {
+      boot.style.display = 'none'
+   }, 3000)
+}
+
+textOnBoot()
+
+setTimeout(() => {
+   entryScreen.style.display = 'block'
+   entryScreen.style.animationPlayState = 'running'
+   whoScreen.style.display = 'block'
+   whoScreen.style.animationPlayState = 'running'
+   skillsScreen.style.display = 'block'
+   skillsScreen.style.animationPlayState = 'running'
+   aboutScreen.style.display = 'block'
+   aboutScreen.style.animationPlayState = 'running'
+}, 3500)
 
 function changeGradientPosition() {
    textGradient.addEventListener('mousemove', (event) => {
@@ -24,34 +59,6 @@ function changeGradientPosition() {
 }
 
 changeGradientPosition()
-
-function textOnBoot() {
-   setTimeout(() => {
-      boot.style.animationPlayState = 'running'
-   }, 1000)
-   setTimeout(() => {
-      boot.innerHTML = `LOOK AT MY AWESOME RESUME`
-   }, 2000)
-   setTimeout(() => {
-      boot.style.display = 'none'
-   }, 3000)
-}
-
-textOnBoot()
-
-setTimeout(() => {
-   entryScreen.style.display = 'block'
-   entryScreen.style.animationPlayState = 'running'
-}, 3500)
-
-const works = document.getElementById('works')
-const github = document.getElementById('github')
-const find = document.getElementById('find')
-const resume = document.getElementById('resume')
-const titleWorks = document.getElementById('title-works')
-const titleGithub = document.getElementById('title-github')
-const titleFind = document.getElementById('title-find')
-const titleResume = document.getElementById('title-resume')
 
 function showTitleCards() {
    works.addEventListener('mouseenter', function () {
@@ -82,13 +89,3 @@ function showTitleCards() {
 }
 
 showTitleCards()
-
-setTimeout(() => {
-   whoScreen.style.display = 'block'
-   whoScreen.style.animationPlayState = 'running'
-}, 3500)
-
-setTimeout(() => {
-   aboutScreen.style.display = 'block'
-   aboutScreen.style.animationPlayState = 'running'
-}, 3500)

@@ -1,6 +1,7 @@
 body.cv {
    background-color: var(--black);
    font-family: 'Montserrat', sans-serif;
+   overflow-x: hidden;
 
    &::-webkit-scrollbar {
       width: 17px;
@@ -241,8 +242,7 @@ body.cv {
 
    #who {
       display: none;
-      max-width: 97.5vw;
-      margin: 15vw auto;
+      margin: 15vw auto 0;
       animation: load-screen 0.5s ease-in-out forwards;
       animation-play-state: paused;
 
@@ -291,11 +291,29 @@ body.cv {
       }
 
       .who-projects {
+         position: absolute;
+         left: 0;
+         width: 100%;
          display: flex;
          flex-direction: row;
-         justify-content: space-between;
-         max-width: 90%;
-         margin: 4vw auto;
+         justify-content: center;
+         gap: 0.5vw;
+         margin: 3vw auto;
+         animation: move 7.5s linear infinite;
+         animation-play-state: running;
+
+         &:hover {
+            animation-play-state: paused;
+         }
+
+         @keyframes move {
+            from {
+               left: -100%;
+            }
+            to {
+               left: 100%;
+            }
+         }
 
          .card {
             padding: 0.5vw 2vw;
@@ -305,7 +323,7 @@ body.cv {
             color: var(--grey);
             text-align: center;
             margin: 0 auto;
-            font-size: 2.5vw;
+            font-size: 2.75vw;
             font-weight: 500;
             text-transform: uppercase;
 
@@ -332,10 +350,63 @@ body.cv {
       }
    }
 
+   #skills {
+      display: none;
+      max-width: 97.5vw;
+      margin: 15vw auto 0;
+      padding-top: 4vw;
+      animation: load-screen 0.5s ease-in-out forwards;
+      animation-play-state: paused;
+
+      h1 {
+         text-align: center;
+         font-size: 3.13vw;
+         line-height: 85%;
+         font-weight: 600;
+         background: linear-gradient(60deg, var(--web), var(--design), var(--some), var(--js));
+         background-size: 300% 300%;
+         text-transform: uppercase;
+         background-clip: text;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         // text-decoration: underline;
+         // text-decoration-color: var(--grey);
+         // text-decoration-thickness: 0.15rem;
+         // text-underline-offset: 0.75rem;
+         animation: animatedgradient 5s ease alternate infinite;
+      }
+
+      h2 {
+         color: var(--grey);
+         text-align: center;
+         margin: -0.5vw auto;
+         max-width: 55%;
+         font-size: 1.15vw;
+         font-weight: 500;
+         text-transform: uppercase;
+
+         a:hover {
+            text-decoration: underline;
+            color: var(--white);
+         }
+
+         &:first-of-type {
+            margin-top: 2vw;
+         }
+
+         span {
+            margin: 0 0.5vw;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5vw;
+         }
+      }
+   }
+
    #about {
       display: none;
       max-width: 97.5vw;
-      margin: 15vw auto;
+      margin: 10vw auto 0;
+      padding-bottom: 5vw;
       animation: load-screen 0.5s ease-in-out forwards;
       animation-play-state: paused;
 
