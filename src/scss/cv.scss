@@ -113,23 +113,23 @@ body.cv {
          line-height: 85%;
          font-weight: 700;
          color: #fc3735;
-         background: -webkit-linear-gradient(left, var(--web), var(--design), var(--web));
-         background-size: 1600px 200px;
+         background: linear-gradient(60deg, var(--web), var(--design), var(--some), var(--js));
+         background-size: 300% 300%;
          text-transform: uppercase;
          background-clip: text;
          -webkit-background-clip: text;
          -webkit-text-fill-color: transparent;
-         animation-duration: 2.5s;
-         animation-name: animationgradienttitle;
-         animation-iteration-count: infinite;
-         animation-fill-mode: forwards;
+         animation: animatedgradient 5s ease alternate infinite;
 
-         @keyframes animationgradienttitle {
+         @keyframes animatedgradient {
             0% {
-               background-position: 0 1600px;
+               background-position: 0% 50%;
+            }
+            50% {
+               background-position: 100% 50%;
             }
             100% {
-               background-position: 1600px 0;
+               background-position: 0% 50%;
             }
          }
 
@@ -149,6 +149,7 @@ body.cv {
          a {
             &:hover {
                text-decoration: underline;
+               color: var(--white);
             }
             &:hover:nth-of-type(1) {
                color: var(--web);
@@ -210,11 +211,11 @@ body.cv {
             }
 
             &:hover .stroke-some {
-               stroke: #cbfb45;
+               stroke: var(--some);
             }
 
             &:hover .color-some {
-               fill: #cbfb45;
+               fill: var(--some);
             }
          }
 
