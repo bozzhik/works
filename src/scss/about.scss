@@ -578,6 +578,7 @@ body.resume {
 
          h2 {
             color: var(--grey);
+            cursor: pointer;
 
             &:hover {
                color: var(--white);

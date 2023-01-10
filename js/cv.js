@@ -10,9 +10,6 @@ function textAction() {
    website.addEventListener('mouseover', () => {
       website.innerHTML = 'my portfolio'
    })
-   website.addEventListener('click', () => {
-      website.innerHTML = 'website copied'
-   })
    website.addEventListener('mouseout', () => {
       website.innerHTML = websiteText
    })
@@ -21,7 +18,14 @@ function textAction() {
       email.innerHTML = 'copy my email?'
    })
    email.addEventListener('click', () => {
-      email.innerHTML = 'email copied'
+      navigator.clipboard.writeText(emailText).then(
+         () => {
+            email.innerHTML = 'email copied!'
+         },
+         () => {
+            email.innerHTML = 'error, copy it yourself'
+         }
+      )
    })
    email.addEventListener('mouseout', () => {
       email.innerHTML = emailText
@@ -30,11 +34,8 @@ function textAction() {
    tel.addEventListener('mouseover', () => {
       tel.innerHTML = 'come on! call me'
    })
-   tel.addEventListener('click', () => {
-      tel.innerHTML = 'tel copied'
-   })
    tel.addEventListener('mouseout', () => {
-      tel.innerHTML = emailText
+      tel.innerHTML = telText
    })
 }
 
