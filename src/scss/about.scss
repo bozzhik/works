@@ -576,12 +576,16 @@ body.resume {
          flex-direction: row;
          justify-content: space-between;
 
-         a {
+         h2 {
             color: var(--grey);
 
             &:hover {
                color: var(--white);
                text-decoration: underline;
+               text-decoration: underline;
+               text-decoration-color: var(--white);
+               text-decoration-thickness: 0.1rem;
+               text-underline-offset: 0.65rem;
             }
          }
       }
