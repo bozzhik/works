@@ -18,8 +18,8 @@ const siteName = "BOZZHIK"
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{siteName} {title}</title>
-    <meta name="title" content={`${siteName} ${title}`} />
+    <title>{siteName + title}</title>
+    <meta name="title" content={siteName + title} />
     <meta name="description" content={description} />
     <meta name="keywords" content="bozzhik, bozhik, божик, веб-разработчик, веб-дизайнер, портфолио, веб-сайты, веб-программирование, фронтенд, бэкенд, UI/UX, пользовательский интерфейс, опыт, проекты, веб-портфолио, интерактивные сайты, фриланс, заказ сайтов, веб-разработка на заказ, веб-проект, создание сайтов" />
     <meta name="robots" content="index, follow">
@@ -27,13 +27,13 @@ const siteName = "BOZZHIK"
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content=`https://tutea.ru/${page_path}` />
-    <meta property="og:title" content={`${siteName} ${title}`} />
+    <meta property="og:title" content={siteName + title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="/seo.png" />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content=`https://tutea.ru/${page_path}` />
-    <meta property="og:title" content={`${siteName} ${title}`} />
+    <meta property="og:title" content={siteName + title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content="/seo.png" />
   </head>
