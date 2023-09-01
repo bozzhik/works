@@ -3,11 +3,13 @@ interface Props {
   title: string
   description: string
   page_path: string
+  keywords: string
 }
 
 const {title} = Astro.props
 const {description} = Astro.props
 const {page_path} = Astro.props
+const {keywords} = Astro.props
 
 const siteName = "BOZZHIK"
 ---
@@ -21,7 +23,7 @@ const siteName = "BOZZHIK"
     <title>{siteName + title}</title>
     <meta name="title" content={siteName + title} />
     <meta name="description" content={description} />
-    <meta name="keywords" content="bozzhik, bozhik, божик, веб-разработчик, веб-дизайнер, портфолио, веб-сайты, веб-программирование, фронтенд, бэкенд, UI/UX, пользовательский интерфейс, опыт, проекты, веб-портфолио, интерактивные сайты, фриланс, заказ сайтов, веб-разработка на заказ, веб-проект, создание сайтов" />
+    <meta name="keywords" content=`bozzhik, bozhik, божик, веб-разработчик, веб-дизайнер, портфолио, веб-сайты, фронтенд, фрилансер, заказ сайтов, веб-разработка на заказ, создание сайта, ${keywords}` />
     <meta name="robots" content="index, follow">
     <meta name="author" content={siteName} />
 
