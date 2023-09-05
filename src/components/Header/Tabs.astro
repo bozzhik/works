@@ -1,0 +1,23 @@
+<div class="m-5 text-center">
+  <div class="relative flex h-10 gap-4 border w-52">
+    <button class="z-10 w-1/2 bg-transparent cursor-pointer text-secondary hover:opacity-80" data-action="left">btn 1</button>
+    <button class="z-10 w-1/2 bg-transparent cursor-pointer text-secondary hover:opacity-80" data-action="right">btn 2</button>
+    <div id="area" class="absolute top-0 left-0 w-1/2 h-full transition-transform duration-300 ease-in-out bg-primary"></div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const area = document.getElementById('area')
+    const buttons = document.querySelectorAll('button[data-action]')
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const action = button.getAttribute('data-action')
+        if (area && (action === 'left' || action === 'right')) {
+          area.style.transform = `translateX(${action === 'left' ? '0%' : '100%'})`
+        }
+      })
+    })
+  })
+</script>
