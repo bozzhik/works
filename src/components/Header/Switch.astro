@@ -1,23 +1,50 @@
 <div class="justify-self-center">
-  <div class="relative flex w-44 h-[60px] bg-custom-dark-2 rounded-switch">
-    <button class="z-10 w-1/2 text-xl text-white bg-transparent hover:opacity-80" data-action="left">Work</button>
-    <button class="z-10 w-1/2 -ml-1 text-xl text-white bg-transparent hover:opacity-80" data-action="right">Play</button>
+  <div class="relative flex w-[184px] h-[60px] bg-custom-dark-2 rounded-switch">
+    <button class="z-10 w-1/2 text-lg duration-300 bg-transparent hover:text-white hover:font-medium" data-action="left">Work</button>
+    <button class="z-10 w-1/2 -ml-1 text-lg duration-300 bg-transparent hover:text-white hover:font-medium" data-action="right">Play</button>
     <div id="area" class="absolute top-[6px] left-[6px] w-[45%] h-[80%] transition-transform duration-300 ease-in-out rounded-switch bg-custom-dark-1"></div>
   </div>
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const area = document.getElementById('area')
+  interface Button {
+    classList: DOMTokenList
+    addEventListener(type: string, listener: EventListener): void
+  }
+
+  function initialize() {
     const buttons = document.querySelectorAll('button[data-action]')
+    const isHomePage = window.location.pathname === '/'
+
+    buttons.forEach((button, index) => {
+      const isButtonOne = index === 0
+      button.classList.add(isHomePage === isButtonOne ? 'text-white' : 'text-gray-700')
+      button.classList.add(isHomePage === isButtonOne ? 'font-medium' : 'font-normal')
+    })
+  }
+
+  function switchOperation() {
+    const buttons = document.querySelectorAll('button[data-action]')
+    const area = document.getElementById('area')
 
     buttons.forEach((button) => {
       button.addEventListener('click', () => {
+        buttons.forEach((b) => {
+          b.classList.remove('text-white', 'font-medium')
+          b.classList.add('text-gray-700', 'font-normal')
+        })
+
         const action = button.getAttribute('data-action')
-        if (area && (action === 'left' || action === 'right')) {
-          area.style.transform = `translateX(${action === 'left' ? '0%' : '105%'})`
-        }
+        area!.style.transform = action === 'left' ? 'translateX(0%)' : 'translateX(105%)'
+
+        button.classList.remove('text-gray-700', 'font-normal')
+        button.classList.add('text-white', 'font-medium')
       })
     })
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initialize()
+    switchOperation()
   })
 </script>

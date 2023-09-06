@@ -4,10 +4,17 @@ import MenuIcon from './MenuIcon.astro'
 
 <div class="justify-self-end">
   <div class="flex justify-center items-center w-[60px] h-[60px] bg-custom-dark-1 rounded-full">
-    <button class="z-10 w-1/2 text-xl text-white bg-transparent hover:opacity-80" data-action="left">
+    <button class="z-10 w-1/2 text-xl text-white bg-transparent">
       <div class="grid place-items-center">
-        <MenuIcon color="white" />
+        <MenuIcon />
       </div>
     </button>
   </div>
 </div>
+
+<style is:global>
+  button:hover path {
+    transition: all 0.3s ease;
+    stroke: white;
+  }
+</style>
