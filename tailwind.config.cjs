@@ -4,11 +4,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        grotesque: ['Mazzard', 'ui-sans-serif', 'system-ui', '-apple-system', 'Roboto', 'sans-serif'],
+        grotesque: ['Sequel Sans', 'ui-sans-serif', 'system-ui', '-apple-system', 'Roboto', 'sans-serif'],
+        monospaced: ['DM Mono'],
       },
       colors: {
         custom: {
           color: '#783217',
+          'light-2': '#868686',
+          'light-1': '#2E2E2E',
           'dark-2': '#161616',
           'dark-1': '#272727',
           background: '#111111',
