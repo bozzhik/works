@@ -6,6 +6,28 @@ module.exports = {
       fontFamily: {
         grotesque: ['Mazzard', 'ui-sans-serif', 'system-ui', '-apple-system', 'Roboto', 'sans-serif'],
       },
+      colors: {
+        custom: {
+          color: '#783217',
+          'dark-2': '#161616',
+          'dark-1': '#272727',
+          background: '#111111',
+        },
+        gray: {
+          100: '#f0f0f0',
+          200: '#e4e4e4',
+          300: '#d1d1d1',
+          400: '#b4b4b4',
+          500: '#919191',
+          600: '#818181',
+          700: '#6a6a6a',
+          800: '#5a5a5a',
+          900: '#4e4e4e',
+        },
+      },
+      borderRadius: {
+        switch: '30px',
+      },
     },
     screens: {
       xl: {max: '1536px'},
@@ -14,22 +36,4 @@ module.exports = {
       xs: {max: '350px'},
     },
   },
-  daisyui: {
-    themes: [
-      {
-        dark: {
-          primary: '#641ae6',
-          secondary: '#d926a9',
-          accent: '#1fb2a6',
-          neutral: '#2a323c',
-          'base-100': '#111111',
-          info: '#3abff8',
-          success: '#36d399',
-          warning: '#fbbd23',
-          error: '#f87272',
-        },
-      },
-    ],
-  },
-  plugins: [require('daisyui')],
 }
