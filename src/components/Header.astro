@@ -1,10 +1,16 @@
 ---
 import Avatar from './Header/Avatar.astro'
 import Menu from './Header/Menu.astro'
-import Tabs from './Header/Tabs.astro'
+import Tabs from './Header/Switch.astro'
+
+interface Props {
+  width: string
+}
+
+const {width} = Astro.props
 ---
 
-<header class="flex justify-between">
+<header class=`grid items-center grid-cols-3 mx-auto mt-9 ${width}`>
   <Avatar />
   <Tabs />
   <Menu />
