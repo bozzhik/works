@@ -19,12 +19,23 @@ const secondButton = 'Works'
 
   function initialize() {
     const buttons = document.querySelectorAll('button[data-action]')
-    const isHomePage = window.location.pathname === '/'
+    const isProjectsPage = window.location.pathname === '/'
+    const isWorksPage = window.location.pathname === '/works.html'
+    const area = document.getElementById('area')
 
     buttons.forEach((button, index) => {
       const isButtonOne = index === 0
-      button.classList.add(isHomePage === isButtonOne ? 'text-white' : 'text-gray-700')
+      const isButtonTwo = index === 1
+      button.classList.add(isProjectsPage === isButtonOne ? 'text-white' : 'text-gray-700')
+      button.classList.add(isWorksPage === isButtonTwo ? 'text-gray-700' : 'text-white')
     })
+
+    if (area) {
+      if (isWorksPage) {
+        area.classList.remove('left-[6px]')
+        area.classList.add('right-[6px]')
+      }
+    }
   }
 
   function switchOperation() {
@@ -38,11 +49,25 @@ const secondButton = 'Works'
           b.classList.add('text-gray-700')
         })
 
-        const action = button.getAttribute('data-action')
-        area!.style.transform = action === 'left' ? 'translateX(0%)' : 'translateX(96%)'
+        if (area) {
+          const action = button.getAttribute('data-action')
+          if (window.location.pathname.startsWith('/works')) {
+            area.style.transform = action === 'left' ? 'translateX(-96%)' : 'translateX(0%)'
+          } else {
+            area.style.transform = action === 'left' ? 'translateX(0%)' : 'translateX(96%)'
+          }
+        }
 
         button.classList.remove('text-gray-700')
         button.classList.add('text-white')
+
+        setTimeout(() => {
+          if (button.getAttribute('data-action') === 'left') {
+            window.location.href = '/'
+          } else {
+            window.location.href = '/works.html'
+          }
+        }, 300)
       })
     })
   }
