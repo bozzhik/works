@@ -1,8 +1,13 @@
+---
+const firstButton = 'Projects'
+const secondButton = 'Works'
+---
+
 <div class="justify-self-center">
-  <div class="relative flex w-[184px] lg:w-[145px] lg:h-[52px] h-[60px] bg-custom-dark-2 rounded-switch">
-    <button class="z-10 w-1/2 text-lg duration-300 bg-transparent lg:text-base hover:text-white" data-action="left">Work</button>
-    <button class="z-10 w-1/2 -ml-1 text-lg duration-300 bg-transparent lg:text-base hover:text-white" data-action="right">Play</button>
-    <div id="area" class="absolute top-[6px] left-[6px] w-[45%] h-[80%] transition-transform duration-300 ease-in-out rounded-switch bg-custom-dark-1"></div>
+  <div class="relative flex w-[205px] px-2 lg:w-[145px] lg:h-[52px] h-[60px] bg-custom-dark-2 rounded-switch">
+    <button class="z-10 w-1/2 text-base duration-300 bg-transparent lg:text-base hover:text-white" data-action="left">{firstButton}</button>
+    <button class="z-10 w-1/2 text-base duration-300 bg-transparent lg:text-base hover:text-white" data-action="right">{secondButton}</button>
+    <div id="area" class="absolute top-[6px] left-[6px] w-[48%] h-[80%] transition-transform duration-300 ease-in-out rounded-switch bg-custom-dark-1"></div>
   </div>
 </div>
 
@@ -34,7 +39,7 @@
         })
 
         const action = button.getAttribute('data-action')
-        area!.style.transform = action === 'left' ? 'translateX(0%)' : 'translateX(105%)'
+        area!.style.transform = action === 'left' ? 'translateX(0%)' : 'translateX(96%)'
 
         button.classList.remove('text-gray-700')
         button.classList.add('text-white')
