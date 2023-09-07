@@ -1,3 +1,6 @@
+const plugin = require('tailwindcss/plugin')
+
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -34,9 +37,15 @@ module.exports = {
     },
     screens: {
       xl: {max: '1536px'},
-      lg: {max: '1280px'},
+      lg: {max: '1024px'},
       sm: {max: '768px'},
       xs: {max: '350px'},
     },
   },
+  plugins: [
+    // adds a `s-*` utility to apply the same width and height
+    plugin(function sizePlugin(api) {
+      api.matchUtilities({s: (value) => ({width: value, height: value})}, {values: api.theme('width')})
+    }),
+  ],
 }
