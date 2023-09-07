@@ -1,0 +1,17 @@
+---
+import Caption from './Hero/Caption.astro'
+import TextMono from './Hero/TextMono.astro'
+import Title from './Hero/Title.astro'
+
+interface Props {
+  width: string
+}
+
+const {width} = Astro.props
+---
+
+<div class=`mt-36 mx-auto text-center ${width}`>
+  <Caption />
+  <Title />
+  <TextMono content="Im currently at Snap, where I design experiences around finding and using AR Lenses on Snapchat" classes="GRADIENT_TEXT w-2/3 mx-auto leading-[110%] mt-10" />
+</div>
