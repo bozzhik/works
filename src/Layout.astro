@@ -19,7 +19,7 @@ const siteName = 'BOZZHIK'
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link href="https://fonts.googleapis.com/css?family=DM+Mono:500" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=DM+Mono:normal" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
     <title>{siteName + title}</title>
     <meta name="title" content={siteName + title} />
@@ -45,15 +45,6 @@ const siteName = 'BOZZHIK'
   </body>
 </html>
 
-<style is:global>
-  .GRADIENT_TEXT {
-    background: linear-gradient(100deg, #838386 5%, #fff 100%);
-    background-size: 100% 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-</style>
 
 <style is:global>
   @font-face {
@@ -62,15 +53,6 @@ const siteName = 'BOZZHIK'
       url('../fonts/Sequel-Sans-Roman-Head.woff2') format('woff2'),
       url('../fonts/Sequel-Sans-Roman-Head.woff') format('woff');
     font-weight: 400;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Sequel Sans';
-    src:
-      url('../fonts/Sequel-Sans-Medium-Head.woff2') format('woff2'),
-      url('../fonts/Sequel-Sans-Medium-Head.woff') format('woff');
-    font-weight: 500;
     font-style: normal;
   }
 
