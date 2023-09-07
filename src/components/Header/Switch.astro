@@ -1,13 +1,15 @@
 ---
 const firstButton = 'Projects'
 const secondButton = 'Works'
+
+const buttonStyles = 'z-10 w-1/2 text-base duration-300 bg-transparent lg:text-base hover:text-white text-gray-700'
 ---
 
 <div class="justify-self-center">
-  <div class="relative flex w-[205px] px-2 lg:w-[145px] lg:h-[52px] h-[60px] bg-custom-dark-2 rounded-switch">
-    <button class="z-10 w-1/2 text-base duration-300 bg-transparent lg:text-base hover:text-white" data-action="left">{firstButton}</button>
-    <button class="z-10 w-1/2 text-base duration-300 bg-transparent lg:text-base hover:text-white" data-action="right">{secondButton}</button>
-    <div id="area" class="absolute top-[6px] left-[6px] w-[48%] h-[80%] transition-transform duration-300 ease-in-out rounded-switch bg-custom-dark-1"></div>
+  <div class="relative flex w-[205px] px-[6px] lg:w-[180px] lg:h-[52px] h-[60px] bg-custom-dark-2 rounded-switch">
+    <button class={buttonStyles} data-action="left">{firstButton}</button>
+    <button class={buttonStyles} data-action="right">{secondButton}</button>
+    <div id="area" class="absolute lg:top-[5.25px] top-[6px] w-[48%] h-[80%] transition-transform duration-300 ease-in-out rounded-switch bg-custom-dark-1"></div>
   </div>
 </div>
 
@@ -26,17 +28,23 @@ const secondButton = 'Works'
     buttons.forEach((button, index) => {
       const isButtonOne = index === 0
       const isButtonTwo = index === 1
-      button.classList.add(isProjectsPage === isButtonOne ? 'text-white' : 'text-gray-700')
-      button.classList.add(isWorksPage === isButtonTwo ? 'text-gray-700' : 'text-white')
+
+      if (isProjectsPage) {
+        button.classList.add(isButtonOne ? 'text-white' : 'text-gray-700')
+      } else if (isWorksPage) {
+        button.classList.add(isButtonTwo ? 'text-white' : 'text-gray-700')
+      }
     })
 
     if (area) {
       if (isWorksPage) {
-        area.classList.remove('left-[6px]')
-        area.classList.add('right-[6px]')
+        area.classList.remove('left-[5px]')
+        area.classList.add('right-[6.5px]')
       }
     }
   }
+
+  initialize()
 
   function switchOperation() {
     const buttons = document.querySelectorAll('button[data-action]')
@@ -49,12 +57,25 @@ const secondButton = 'Works'
           b.classList.add('text-gray-700')
         })
 
-        if (area) {
-          const action = button.getAttribute('data-action')
+        function translateX(leftTranslate: string, rightTranslate: string): void {
+          if (area) {
+            const action = button.getAttribute('data-action')
+            const translateValue = action === 'left' ? leftTranslate : rightTranslate
+            area.style.transform = `translateX(${translateValue}%)`
+          }
+        }
+
+        if (window.innerWidth < 768) {
           if (window.location.pathname.startsWith('/works')) {
-            area.style.transform = action === 'left' ? 'translateX(-96%)' : 'translateX(0%)'
+            translateX('-94', '0')
           } else {
-            area.style.transform = action === 'left' ? 'translateX(0%)' : 'translateX(96%)'
+            translateX('0', '94')
+          }
+        } else {
+          if (window.location.pathname.startsWith('/works')) {
+            translateX('-93.7', '0')
+          } else {
+            translateX('0', '94.5')
           }
         }
 
