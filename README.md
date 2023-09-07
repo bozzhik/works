@@ -3,7 +3,7 @@
 1. Clone the repository
 
 ```bash
-git clone https://github.com/mbozhik/works.git
+git clone https://github.com/bozzhik/works.git
 ```
 
 2. Go to the project folder
@@ -27,5 +27,5 @@ npm run dev
 \*4. Or run the git command chain
 
 ```bash
-git clone https://github.com/mbozhik/works.git && cd works && npm i && code .
+git clone https://github.com/bozzhik/works.git && cd works && npm i && code .
 ```
