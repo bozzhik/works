@@ -22,7 +22,8 @@ const buttonStyles = 'block grid place-items-center z-10 w-1/2 text-base duratio
   function initialize() {
     const links = document.querySelectorAll('a[data-action]')
     const isProjectsPage = window.location.pathname === '/'
-    const isWorksPage = window.location.pathname === '/works.html'
+    const isWorksPage = /^\/works(?:\/|\.astro)?$/.test(window.location.pathname)
+
     const area = document.getElementById('area')
 
     links.forEach((link, index) => {
