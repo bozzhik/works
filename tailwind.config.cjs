@@ -12,12 +12,9 @@ module.exports = {
       },
       colors: {
         custom: {
-          color: '#783217',
+          'dark-1': '#0F0F0F',
+          'dark-2': '#1A1A1A',
           'light-2': '#868686',
-          'light-1': '#2E2E2E',
-          'dark-2': '#161616',
-          'dark-1': '#272727',
-          background: '#111111',
         },
         gray: {
           100: '#f0f0f0',

@@ -1,20 +1,7 @@
----
-import ResumeIcon from './ResumeIcon.astro'
----
-
-<div class="justify-self-end">
-  <div class="flex items-center justify-center rounded-full s-14 sm:s-[48px] bg-custom-dark-1">
-    <button class="z-10 w-1/2 text-xl text-white bg-transparent">
-      <div class="grid place-items-center">
-        <ResumeIcon />
-      </div>
-    </button>
+<div class="relative z-10 inline-flex justify-self-end">
+  <div class="block overflow-hidden transition border-[4px] duration-200 border-transparent rounded-full aspect-square s-[70px] sm:s-[60px]">
+    <div class="s-full group flex overflow-hidden justify-center items-center bg-custom-dark-1">
+      <img class="group-hover:animate-pulse object-cover s-[22px] -mt-[2px]" src="../../../resume.png" />
+    </div>
   </div>
 </div>
-
-<style is:global>
-  button:hover path {
-    transition: all 0.3s ease;
-    stroke: white;
-  }
-</style>
