@@ -9,7 +9,7 @@ const buttonStyles = 'block grid place-items-center z-10 w-1/2 text-base duratio
   <div class="relative flex w-[205px] px-[6px] lg:w-[180px] lg:h-[52px] h-[60px] bg-custom-dark-2 rounded-switch">
     <a id="PROJECTS_LINK" href="/" class={buttonStyles} data-action="left">{firstButton}</a>
     <a id="WORKS_LINK" href="/works/" class={buttonStyles} data-action="right">{secondButton}</a>
-    <div id="area" class="absolute lg:top-[5.25px] top-[6px] w-[48%] h-[80%] transition-transform duration-200 ease-in-out rounded-switch bg-custom-dark-1"></div>
+    <div id="area" class="absolute lg:top-[5.25px] top-[6px] w-[48%] h-[80%] ease-in-out rounded-switch bg-custom-dark-1"></div>
   </div>
 </div>
 
@@ -19,11 +19,11 @@ const buttonStyles = 'block grid place-items-center z-10 w-1/2 text-base duratio
     addEventListener(type: string, listener: EventListener): void
   }
 
+  const isProjectsPage = window.location.pathname === '/'
+  const isWorksPage = /^\/works(?:\/|\.astro)?$/.test(window.location.pathname)
+
   function initialize() {
     const links = document.querySelectorAll('a[data-action]')
-    const isProjectsPage = window.location.pathname === '/'
-    const isWorksPage = /^\/works(?:\/|\.astro)?$/.test(window.location.pathname)
-
     const area = document.getElementById('area')
 
     links.forEach((link, index) => {
@@ -49,6 +49,11 @@ const buttonStyles = 'block grid place-items-center z-10 w-1/2 text-base duratio
     const links = document.querySelectorAll('a[data-action]')
     const area = document.getElementById('area')
 
+    if (!area) {
+      console.error('Element with ID "area" not found')
+      return
+    }
+
     links.forEach((link) => {
       link.addEventListener('click', () => {
         links.forEach((l) => {
@@ -56,15 +61,13 @@ const buttonStyles = 'block grid place-items-center z-10 w-1/2 text-base duratio
           l.classList.add('text-gray-700')
         })
 
-        function translateX(leftTranslate: string, rightTranslate: string) {
-          if (area) {
-            const action = link.getAttribute('data-action')
-            const translateValue = action === 'left' ? leftTranslate : rightTranslate
-            area.style.transform = `translateX(${translateValue}%)`
-          }
+        if (link.getAttribute('data-action') === 'left') {
+          area.style.left = '6.5px'
+          area.style.right = 'auto'
+        } else {
+          area.style.left = 'auto'
+          area.style.right = '6.5px'
         }
-
-        translateX('-94', '0')
 
         link.classList.remove('text-gray-700')
         link.classList.add('text-white')
