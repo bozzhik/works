@@ -2,85 +2,50 @@
 const firstButton = 'Projects'
 const secondButton = 'Works'
 
-const buttonStyles = 'block grid place-items-center z-10 w-1/2 text-base duration-200 bg-transparent lg:text-sm hover:text-white text-gray-700'
+const buttonStyles = 'grid place-items-center z-10 text-base duration-200 lg:text-sm hover:text-white text-gray-700 w-[48%] h-[80%] ease-in-out rounded-switch'
 ---
 
 <div class="justify-self-center" transition:persist>
-  <div class="relative flex w-[205px] px-[6px] lg:w-[155px] lg:h-[50px] h-[60px] bg-custom-dark-1 rounded-switch">
+  <div class="relative justify-center items-center flex w-[205px] px-[4px] lg:w-[155px] lg:h-[50px] h-[60px] bg-custom-dark-1 rounded-switch">
     <a id="PROJECTS_LINK" href="/" class={buttonStyles} data-action="left">{firstButton}</a>
     <a id="WORKS_LINK" href="/works/" class={buttonStyles} data-action="right">{secondButton}</a>
-    <div id="area" class="absolute lg:top-[5.25px] top-[6px] w-[48%] h-[80%] ease-in-out rounded-switch bg-custom-dark-2"></div>
   </div>
 </div>
 
 <script>
-  interface Button {
-    classList: DOMTokenList
-    addEventListener(type: string, listener: EventListener): void
-  }
-
-  const isProjectsPage = window.location.pathname === '/'
-  const isWorksPage = /^\/works(?:\/|\.astro)?$/.test(window.location.pathname)
+  const links = document.querySelectorAll('a[data-action]')
 
   function initialize() {
-    const links = document.querySelectorAll('a[data-action]')
-    const area = document.getElementById('area')
+    const isProjectsPage = window.location.pathname === '/'
+    const isWorksPage = /^\/works(?:\/|\.astro)?$/.test(window.location.pathname)
 
     links.forEach((link, index) => {
       const isLinkOne = index === 0
       const isLinkTwo = index === 1
 
-      if (isProjectsPage) {
-        link.classList.add(isLinkOne ? 'text-white' : 'text-gray-700')
-      } else if (isWorksPage) {
-        link.classList.add(isLinkTwo ? 'text-white' : 'text-gray-700')
-      }
-    })
+      const textColorClass = (isProjectsPage && isLinkOne) || (isWorksPage && isLinkTwo) ? 'text-white' : 'text-gray-700'
+      const bgColorClass = (isProjectsPage && isLinkOne) || (isWorksPage && isLinkTwo) ? 'bg-custom-dark-2' : 'bg-transparent'
 
-    if (area) {
-      if (isWorksPage) {
-        area.style.left = 'auto'
-        area.style.right = '6.5px'
-      }
-    }
+      link.classList.add(textColorClass, bgColorClass)
+    })
   }
 
   function switchOperation() {
     const links = document.querySelectorAll('a[data-action]')
-    const area = document.getElementById('area')
-
-    if (!area) {
-      console.error('Element with ID "area" not found')
-      return
-    }
 
     links.forEach((link) => {
       link.addEventListener('click', () => {
         links.forEach((l) => {
-          l.classList.remove('text-white')
-          l.classList.add('text-gray-700')
+          l.classList.toggle('text-white', link === l)
+          l.classList.toggle('bg-custom-dark-2', link === l)
+          l.classList.toggle('text-gray-700', link !== l)
+          l.classList.toggle('bg-transparent', link !== l)
         })
-
-        if (link.getAttribute('data-action') === 'left') {
-          area.style.left = '6.5px'
-          area.style.right = 'auto'
-        } else {
-          area.style.left = 'auto'
-          area.style.right = '6.5px'
-        }
-
-        link.classList.remove('text-gray-700')
-        link.classList.add('text-white')
       })
     })
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    initialize()
-    switchOperation()
-  })
-
-  document.addEventListener('astro:beforeload', () => {
     initialize()
     switchOperation()
   })
