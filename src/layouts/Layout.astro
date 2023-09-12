@@ -1,16 +1,15 @@
 ---
 import {ViewTransitions} from 'astro:transitions'
+import BackgroundStars from '../components/BackgroundStars.astro'
+
 interface Props {
-  title: string
+  title?: string
   description: string
-  page_path: string
-  keywords: string
+  page_path?: string
+  keywords?: string
 }
 
-const {title} = Astro.props
-const {description} = Astro.props
-const {page_path} = Astro.props
-const {keywords} = Astro.props
+const {title = '', description, page_path = '', keywords = 'веб-программирование, бэкенд, UI/UX, интерактивные сайты, 3д сайты'} = Astro.props
 
 const siteName = 'BOZZHIK'
 ---
@@ -23,6 +22,7 @@ const siteName = 'BOZZHIK'
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=DM+Mono:normal" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
+
     <title>{siteName + title}</title>
     <meta name="title" content={siteName + title} />
     <meta name="description" content={description} />
@@ -31,13 +31,13 @@ const siteName = 'BOZZHIK'
     <meta name="author" content={siteName} />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content=`https://tutea.ru/${page_path}` />
+    <meta property="og:url" content=`https://bozzhik.ru/${page_path}` />
     <meta property="og:title" content={siteName + title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="/seo.png" />
 
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content=`https://tutea.ru/${page_path}` />
+    <meta property="twitter:url" content=`https://bozzhik.ru/${page_path}` />
     <meta property="og:title" content={siteName + title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content="/seo.png" />
@@ -45,24 +45,22 @@ const siteName = 'BOZZHIK'
   </head>
   <body class="text-white font-grotesque bg-black">
     <slot />
+    <BackgroundStars />
   </body>
-  <style is:global>
-    @font-face {
-      font-family: 'Sequel Sans';
-      src:
-        url('../fonts/Sequel-Sans-Roman-Head.woff2') format('woff2'),
-        url('../fonts/Sequel-Sans-Roman-Head.woff') format('woff');
-      font-weight: 400;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Sequel Sans';
-      src:
-        url('../fonts/Sequel-Sans-Semi-Bold-Disp.woff2') format('woff2'),
-        url('../fonts/Sequel-Sans-Semi-Bold-Disp.woff') format('woff');
-      font-weight: 600;
-      font-style: normal;
-    }
-  </style>
 </html>
+
+<style is:global>
+  @font-face {
+    font-family: 'Sequel Sans';
+    src: url('../fonts/Sequel-Sans-Roman-Head.woff2') format('woff2'), url('../fonts/Sequel-Sans-Roman-Head.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sequel Sans';
+    src: url('../fonts/Sequel-Sans-Semi-Bold-Disp.woff2') format('woff2'), url('../fonts/Sequel-Sans-Semi-Bold-Disp.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+</style>
