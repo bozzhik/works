@@ -2,15 +2,9 @@
 import Avatar from './Header/Avatar.astro'
 import Resume from './Header/Resume.astro'
 import Tabs from './Header/Switch.astro'
-
-interface Props {
-  width: string
-}
-
-const {width} = Astro.props
 ---
 
-<header class=`grid items-center grid-cols-3 mx-auto lg:mt-2 mt-9 ${width}`>
+<header class=`grid items-center grid-cols-3 mx-auto lg:mt-2 mt-9 w-[55%] xl:w-[65%] lg:w-[95%]`>
   <Avatar />
   <Tabs />
   <Resume />

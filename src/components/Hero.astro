@@ -3,15 +3,15 @@ import TextMono from './Hero/TextMono.astro'
 import Title from './Hero/Title.astro'
 
 interface Props {
-  width: string
   textmono_content: string
 }
 
-const {width, textmono_content} = Astro.props
+const {textmono_content} = Astro.props
+
 const screenHeight = '!h-[100svh] h-[100vh]'
 ---
 
-<div class={`${screenHeight} w-screen absolute inset-0 flex flex-col justify-center mx-auto text-center ${width}`}>
+<div class={`w-screen absolute inset-0 flex flex-col justify-center mx-auto text-center ${screenHeight}`}>
   <Title />
   <TextMono content={textmono_content} classes="lg:w-4/5 mx-auto leading-[110%] xl:mt-4 mt-7" />
 </div>
