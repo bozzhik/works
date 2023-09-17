@@ -1,4 +1,5 @@
 ---
+import ArrowDown from './Hero/ArrowDown.astro'
 import TextMono from './Hero/TextMono.astro'
 import Title from './Hero/Title.astro'
 
@@ -8,10 +9,11 @@ interface Props {
 
 const {textmono_content} = Astro.props
 
-const screenHeight = '!h-[100svh] h-[100vh]'
+const screenHeight = '!h-[75svh] h-[75vh] mb-[6.5vh]'
 ---
 
-<div class={`w-screen absolute inset-0 flex flex-col justify-center mx-auto text-center ${screenHeight}`}>
+<div class={`w-full inset-0 flex flex-col justify-center mx-auto text-center ${screenHeight}`}>
   <Title />
   <TextMono content={textmono_content} classes="lg:w-4/5 mx-auto leading-[110%] xl:mt-4 mt-7" />
 </div>
+<ArrowDown />
