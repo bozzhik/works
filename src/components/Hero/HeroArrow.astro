@@ -1,3 +1,28 @@
 <a href="#HERO_CONTENT" class="mb-[10vh] flex gap-10 items-center justify-center">
-  <svg class="s-10 animate-pulse hover:animate-bounce" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#6a6a6a" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"></path></svg>
+  <svg class="s-10 animate-bounce-custom" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"></path></svg>
 </a>
+
+<style>
+  svg path {
+    stroke: #6a6a6a;
+    transition: 150ms ease-in-out;
+  }
+
+  svg:hover path {
+    stroke: white;
+  }
+  @keyframes bounce-custom {
+    0%,
+    100% {
+      transform: translateY(-25%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+  .animate-bounce-custom {
+    animation: bounce-custom 1.75s infinite;
+  }
+</style>
