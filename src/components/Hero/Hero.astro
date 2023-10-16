@@ -5,9 +5,10 @@ import TextMono from '../UI/TextMono.astro'
 
 interface Props {
   textmono_content: string
+  id_link: string
 }
 
-const {textmono_content} = Astro.props
+const {textmono_content, id_link} = Astro.props
 
 const screenHeight = '!h-[75svh] h-[75vh] mb-[6.5vh]'
 ---
@@ -16,4 +17,4 @@ const screenHeight = '!h-[75svh] h-[75vh] mb-[6.5vh]'
   <Title />
   <TextMono content={textmono_content} classes="lg:w-4/5 mx-auto leading-[110%] xl:mt-4 mt-7" />
 </div>
-<ArrowDown />
+<ArrowDown {id_link} />
