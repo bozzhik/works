@@ -2,15 +2,16 @@
 import {ViewTransitions} from 'astro:transitions'
 import BackgroundStars from '../components/BackgroundStars.astro'
 import Header from '../components/Header/Header.astro'
+import Fonts from './Fonts.astro'
 
 interface Props {
-  title?: string
+  page_name?: string
   description: string
   page_path?: string
   keywords?: string
 }
 
-const {title = '', description, page_path = '', keywords = 'веб-программирование, бэкенд, UI/UX, интерактивные сайты, 3д сайты'} = Astro.props
+const {page_name = '', description, page_path = '', keywords = 'веб-программирование, бэкенд, UI/UX, интерактивные сайты, 3д сайты'} = Astro.props
 
 const siteName = 'BOZZHIK'
 ---
@@ -24,8 +25,8 @@ const siteName = 'BOZZHIK'
     <link href="https://fonts.googleapis.com/css?family=DM+Mono:normal" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
 
-    <title>{siteName + title}</title>
-    <meta name="title" content={siteName + title} />
+    <title>{siteName + page_name}</title>
+    <meta name="title" content={siteName + page_name} />
     <meta name="description" content={description} />
     <meta name="keywords" content=`bozzhik, bozhik, божик, веб-разработчик, веб-дизайнер, портфолио, веб-сайты, фронтенд, фрилансер, заказ сайтов, веб-разработка на заказ, создание сайта, ${keywords}` />
     <meta name="robots" content="index, follow" />
@@ -33,13 +34,13 @@ const siteName = 'BOZZHIK'
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content=`https://bozzhik.ru/${page_path}` />
-    <meta property="og:title" content={siteName + title} />
+    <meta property="og:title" content={siteName + page_name} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="/seo.png" />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content=`https://bozzhik.ru/${page_path}` />
-    <meta property="og:title" content={siteName + title} />
+    <meta property="og:title" content={siteName + page_name} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content="/seo.png" />
     <ViewTransitions />
@@ -48,24 +49,7 @@ const siteName = 'BOZZHIK'
     <Header />
     <BackgroundStars />
     <slot />
-    <style is:global>
-      @font-face {
-        font-family: 'Sequel Sans';
-        src:
-          url('../fonts/Sequel-Sans-Roman-Head.woff2') format('woff2'),
-          url('../fonts/Sequel-Sans-Roman-Head.woff') format('woff');
-        font-weight: 400;
-        font-style: normal;
-      }
-
-      @font-face {
-        font-family: 'Sequel Sans';
-        src:
-          url('../fonts/Sequel-Sans-Semi-Bold-Disp.woff2') format('woff2'),
-          url('../fonts/Sequel-Sans-Semi-Bold-Disp.woff') format('woff');
-        font-weight: 600;
-        font-style: normal;
-      }
-    </style>
   </body>
 </html>
+
+<Fonts />
