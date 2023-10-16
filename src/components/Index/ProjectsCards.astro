@@ -1,0 +1,24 @@
+---
+import {getCollection} from 'astro:content'
+
+const data = await getCollection('projects')
+---
+
+<div id="PROJECTS_CARDS" class="grid grid-cols-2 gap-10 w-4/5 mx-auto mb-32 pt-[1vh]">
+  {
+    data.map((i) => (
+      <a href="#" class="flex flex-col items-center s-full z-10 relative rounded-[35px] overflow-hidden border-[1px] border-[#292b3d] border-b-0">
+        <div class="flex flex-col justify-center items-center max-w-[540px] pt-4 px-8 pb-12 mt-auto">
+          <h4 class="font-medium text-2xl text-[#c7d1ea] mb-4">{i.data.title}</h4>
+          <p class="text-sm text-[#b2bbd1] mb-4 text-center">{i.data.description}</p>
+        </div>
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  a {
+    background: linear-gradient(126.6deg, rgba(124, 130, 177, 0.12) 28.69%, rgba(17, 18, 27, 0) 100%);
+  }
+</style>
