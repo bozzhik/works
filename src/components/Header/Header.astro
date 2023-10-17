@@ -2,13 +2,14 @@
 import Button from './HeaderButton.astro'
 import Tabs from './HeaderSwitch.astro'
 
-
 const avatarSize = 's-9 -mt-2 lg:s-7'
 const resumeSize = 's-6 -mt-[2px] lg:s-5'
 ---
 
-<header class=`grid items-center grid-cols-3 w-6 mx-auto lg:mt-2 mt-9 w-[55%] xl:w-[65%] lg:w-[95%]`>
-  <Button icon="../../../maks.png" position="justify-self-start" size={avatarSize}/>
-  <Tabs />
-  <Button icon="../../../resume.png" position="justify-self-end" size={resumeSize}/>
+<header class="fixed z-[999] w-screen lg:mt-2 mt-9">
+  <div class="grid items-center grid-cols-3 mx-auto w-[55%] xl:w-[65%] lg:w-[95%]">
+    <Button icon="../../../maks.png" position="justify-self-start" size={avatarSize} />
+    <Tabs />
+    <Button icon="../../../resume.png" position="justify-self-end" size={resumeSize} />
+  </div>
 </header>
