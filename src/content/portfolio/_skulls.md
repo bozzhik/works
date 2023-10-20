@@ -1,5 +1,6 @@
 ---
 type: 'project'
+position: 2
 title: 'SKULLS'
 description: 'Store for a collection of NFT Skulls. Immerse yourself in the art and crypto world with our collection'
 image: '../../../projects/skull.png'
