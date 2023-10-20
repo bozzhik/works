@@ -4,7 +4,7 @@ import {getCollection} from 'astro:content'
 const data = await getCollection('portfolio')
 ---
 
-<div class="grid grid-cols-3 sm:grid-cols-1 gap-10 w-[80%] sm:w-[90%] mx-auto mb-32 pt-[13vh]">
+<div class="-mt-[32.5vh] grid grid-cols-3 sm:grid-cols-1 gap-10 w-[80%] sm:w-[90%] mx-auto mb-32 pt-[13vh]">
   {
     data
       .filter((i) => i.data.type === 'work')
