@@ -12,9 +12,9 @@ const data = await getCollection('portfolio')
       .map((i) => (
         <a href={i.data.link} target={i.data.external_target ? '_blank' : '_self'} class="flex flex-col items-center rounded-[35px] sm:rounded-[20px] overflow-hidden border-[1px] border-custom-gray-1 border-b-0">
           {i.data.image && <img class="object-cover object-top w-full h-auto" src={i.data.image} alt={i.data.title} />}
-          <div class="flex flex-col justify-center items-center max-w-[540px] pt-4 px-8 pb-12 mt-auto">
-            <h4 class="font-medium text-2xl text-custom-light-1 mb-4">{i.data.title}</h4>
-            {i.data.description && <p class="text-sm text-custom-light-1 mb-4 text-center">{i.data.description}</p>}
+          <div class="flex flex-col justify-center items-center text-center text-custom-light-1 max-w-[70%] sm:max-w-[100%] sm:p-4 sm:pb-8 pt-4 px-8 pb-14 mt-auto">
+            <h4 class="text-3xl font-medium sm:text-2xl">{i.data.title}</h4>
+            {i.data.description && <p class="mt-4 text-sm sm:mt-3">{i.data.description}</p>}
           </div>
         </a>
       ))
