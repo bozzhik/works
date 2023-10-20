@@ -14,7 +14,9 @@ module.exports = {
         custom: {
           'dark-1': '#0F0F0F',
           'dark-2': '#1A1A1A',
-          'light-2': '#868686',
+          'gray-1': '#292929',
+          'gray-2': '#868686',
+          'light-1': '#c7c7c7',
         },
         gray: {
           100: '#f0f0f0',

@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # astro config for vscode
 .vscode/
+
+# ignore temporary work files
+*temp*

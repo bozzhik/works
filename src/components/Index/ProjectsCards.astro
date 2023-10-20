@@ -1,0 +1,29 @@
+---
+import {getCollection} from 'astro:content'
+
+const data = await getCollection('projects')
+---
+
+<div id="PROJECTS_CARDS" class="grid grid-cols-2 sm:grid-cols-1 gap-10 w-[80%] sm:w-[90%] mx-auto mb-32 pt-[13vh]">
+  {
+    data.map((i) => (
+      <>
+        {i.data.type === 'project' && (
+          <a href={i.data.link} target={i.data.external_target ? '_blank' : '_self'} class="flex flex-col items-center rounded-[35px] sm:rounded-[20px] overflow-hidden border-[1px] border-custom-gray-1 border-b-0">
+            <img class="object-cover object-top w-full h-auto" src={i.data.image} alt={i.data.title} />
+            <div class="flex flex-col justify-center items-center max-w-[540px] pt-4 px-8 pb-12 mt-auto">
+              <h4 class="font-medium text-2xl text-custom-light-1 mb-4">{i.data.title}</h4>
+              <p class="text-sm text-custom-light-1 mb-4 text-center">{i.data.description}</p>
+            </div>
+          </a>
+        )}
+      </>
+    ))
+  }
+</div>
+
+<style>
+  a {
+    background: linear-gradient(127deg, rgba(157, 157, 158, 0.11) 29%, rgba(17, 18, 27, 0) 100%);
+  }
+</style>
