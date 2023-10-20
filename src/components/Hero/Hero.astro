@@ -5,16 +5,17 @@ import TextMono from '../UI/TextMono.astro'
 
 interface Props {
   textmono_content: string
+  arrow_exist: boolean
   id_link: string
+  classes?: string
+  text_classes?: string
 }
 
-const {textmono_content, id_link} = Astro.props
-
-const screenHeight = '!h-[100svh] h-[100vh]'
+const {textmono_content, id_link, arrow_exist, classes, text_classes} = Astro.props
 ---
 
-<div class={`w-full inset-0 flex flex-col justify-center mx-auto text-center ${screenHeight}`}>
-  <HeroTitle />
+<div class={`w-full inset-0 flex flex-col justify-center mx-auto text-center ${classes}`}>
+  <HeroTitle {text_classes} />
   <TextMono content={textmono_content} classes="lg:w-4/5 mx-auto leading-[110%] xl:mt-4 mt-6" />
 </div>
-<HeroArrow {id_link} />
+{arrow_exist ? <HeroArrow {id_link} /> : ''}
