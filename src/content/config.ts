@@ -12,5 +12,5 @@ const portfolioCollection = defineCollection({
 })
 
 export const collections = {
-  projects: portfolioCollection,
+  portfolio: portfolioCollection,
 }
