@@ -1,6 +1,6 @@
 ---
 type: 'work'
-position: 1
+position: 4
 title: 'Borovsk Delivery'
 image: '../../../projects/null.png'
 link: 'https://borovsk.vercel.app/'
