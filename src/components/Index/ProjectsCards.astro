@@ -9,13 +9,15 @@ const data = await getCollection('projects')
     data.map((i) => (
       <>
         {i.data.type === 'project' && (
-          <a href={i.data.link} target={i.data.external_target ? '_blank' : '_self'} class="flex flex-col items-center rounded-[35px] sm:rounded-[20px] overflow-hidden border-[1px] border-custom-gray-1 border-b-0">
-            <img class="object-cover object-top w-full h-auto" src={i.data.image} alt={i.data.title} />
-            <div class="flex flex-col justify-center items-center max-w-[540px] pt-4 px-8 pb-12 mt-auto">
-              <h4 class="font-medium text-2xl text-custom-light-1 mb-4">{i.data.title}</h4>
-              <p class="text-sm text-custom-light-1 mb-4 text-center">{i.data.description}</p>
-            </div>
-          </a>
+          <div class="card">
+            <a href={i.data.link} target={i.data.external_target ? '_blank' : '_self'} class="wrapper flex flex-col items-center rounded-[35px] sm:rounded-[20px] overflow-hidden border-[1px] border-custom-gray-1 border-b-0">
+              <img class="object-cover object-top w-full h-auto" src={i.data.image} alt={i.data.title} />
+              <div class="flex flex-col justify-center items-center max-w-[540px] pt-4 px-8 pb-12 mt-auto">
+                <h4 class="font-medium text-2xl text-custom-light-1 mb-4">{i.data.title}</h4>
+                <p class="text-sm text-custom-light-1 mb-4 text-center">{i.data.description}</p>
+              </div>
+            </a>
+          </div>
         )}
       </>
     ))
@@ -27,3 +29,104 @@ const data = await getCollection('projects')
     background: linear-gradient(127deg, rgba(157, 157, 158, 0.11) 29%, rgba(17, 18, 27, 0) 100%);
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let factor = 5
+
+    function slide(wrapper: HTMLDivElement) {
+      let initialX: number
+      let left: number
+
+      wrapper.addEventListener('mousedown', handleStart)
+      wrapper.addEventListener('touchstart', handleStart)
+
+      function handleStart(e: MouseEvent | TouchEvent) {
+        e.preventDefault()
+
+        left = wrapper.getBoundingClientRect().left - wrapper.parentElement!.getBoundingClientRect().left
+
+        initialX = (e as MouseEvent).pageX || (e as TouchEvent).touches[0].pageX
+
+        document.body.addEventListener('mousemove', handleMove)
+        document.body.addEventListener('touchmove', handleMove, {passive: false})
+        document.body.addEventListener('mouseup', handleEnd)
+        document.body.addEventListener('touchend', handleEnd)
+      }
+
+      function handleMove(e: MouseEvent | TouchEvent) {
+        let currentX = (e as MouseEvent).pageX || (e as TouchEvent).touches[0].pageX
+        let newPos = left + currentX - initialX
+
+        if (newPos <= 0 && newPos) {
+          wrapper.style.transform = 'translate(' + newPos + 'px, 0)'
+        }
+      }
+
+      function handleEnd() {
+        document.body.removeEventListener('mousemove', handleMove)
+        document.body.removeEventListener('touchmove', handleMove)
+        document.body.removeEventListener('mouseup', handleEnd)
+        document.body.removeEventListener('touchend', handleEnd)
+      }
+    }
+
+    function float3D(card: HTMLDivElement) {
+      card.addEventListener('touchstart', handleMove)
+      card.addEventListener('mousemove', handleMove)
+
+      card.addEventListener('touchend', handleLeave)
+      card.addEventListener('mouseleave', handleLeave)
+
+      function handleMove(e: MouseEvent | TouchEvent) {
+        e.preventDefault()
+
+        let rect = card.getBoundingClientRect()
+        let top = rect.top
+        let left = rect.left
+        let width = rect.width
+        let height = rect.height
+        let halfX = left + width / 2
+        let halfY = top + height / 2
+        let pageX = (e as MouseEvent).pageX || (e as TouchEvent).touches[0].pageX
+        let pageY = (e as MouseEvent).pageY || (e as TouchEvent).touches[0].pageY
+
+        let duration = e.type === 'touchstart' ? 0 : 0.15
+
+        setRotate(-((pageY - halfY) / height) * factor, ((pageX - halfX) / width) * factor, duration)
+      }
+
+      function handleLeave() {
+        setRotate(0, 0, 0.25)
+      }
+
+      function setRotate(valueX: number, valueY: number, duration: number) {
+        let vendor = ''
+        let style = card.style
+
+        if ('WebkitTransform' in style) {
+          vendor = '-webkit-'
+        }
+
+        style[vendor + 'transform'] = 'perspective(700px) rotateY(' + valueY + 'deg) rotateX(' + valueX + 'deg)'
+        style[vendor + 'transition'] = duration + 's'
+      }
+    }
+
+    // Select all wrappers and cards
+    let wrappers = document.querySelectorAll('.wrapper')
+    let cards = document.querySelectorAll('.card')
+
+    // Apply the behavior to each wrapper and card
+    wrappers.forEach((wrapper, index) => {
+      if (wrapper instanceof HTMLDivElement) {
+        slide(wrapper)
+      }
+
+      const card = cards[index]
+      if (card instanceof HTMLDivElement) {
+        float3D(card)
+      }
+    })
+  })
+</script>
