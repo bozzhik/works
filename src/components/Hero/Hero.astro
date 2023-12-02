@@ -7,15 +7,14 @@ interface Props {
   textmono_content: string
   arrow_exist: boolean
   id_link: string
-  classes?: string
-  text_classes?: string
 }
 
-const {textmono_content, id_link, arrow_exist, classes, text_classes} = Astro.props
+const {textmono_content, id_link, arrow_exist} = Astro.props
+const classes = '!h-[100svh] h-[100vh]'
 ---
 
 <div class={`w-full inset-0 flex flex-col justify-center mx-auto text-center ${classes}`}>
-  <HeroTitle {text_classes} />
+  <HeroTitle />
   <TextMono content={textmono_content} classes="lg:w-4/5 mx-auto leading-[110%] xl:mt-4 mt-6" />
 </div>
 {arrow_exist ? <HeroArrow {id_link} /> : ''}
