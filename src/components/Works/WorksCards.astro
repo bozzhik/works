@@ -4,22 +4,23 @@ import {getCollection} from 'astro:content'
 const data = await getCollection('portfolio')
 ---
 
-<div class="-mt-[32.5vh] grid grid-cols-3 sm:grid-cols-1 gap-10 w-[80%] sm:w-[90%] mx-auto mb-32 pt-[13vh]">
-  {
-    data
-      .filter((i) => i.data.type === 'work')
-      .sort((a, b) => a.data.position - b.data.position)
-      .map((i) => (
-        <a href={i.data.link} target={i.data.external_target ? '_blank' : '_self'} class="flex flex-col items-center rounded-[35px] sm:rounded-[20px] overflow-hidden border-[1px] border-custom-gray-1 border-b-0">
-          {i.data.image && <img class="object-cover object-top w-full h-auto" src={i.data.image} alt={i.data.title} />}
-          <div class="flex flex-col justify-center items-center text-center text-custom-light-1 max-w-[70%] sm:max-w-[100%] sm:p-4 sm:pb-8 pt-4 px-8 pb-14 mt-auto">
-            <h4 class="text-3xl font-medium sm:text-2xl">{i.data.title}</h4>
-            {i.data.description && <p class="mt-4 text-sm sm:mt-3">{i.data.description}</p>}
-          </div>
-        </a>
-      ))
-  }
-</div>
+<section data-section="WORKS" class="w-[80%] sm:w-[90%] mx-auto">
+  <div class="flex flex-col gap-10 pt-[13vh] mb-32 -mt-[32.5vh]">
+    {
+      data
+        .filter((i) => i.data.type === 'work')
+        .sort((a, b) => a.data.position - b.data.position)
+        .map((i) => (
+          <a href={i.data.link} target={i.data.external_target ? '_blank' : '_self'} class="flex group flex-col h-[40vh] items-center rounded-[35px] sm:rounded-[20px] overflow-hidden border-[1px] border-custom-gray-1 border-b-0">
+            <div class="flex flex-col justify-center items-center text-center text-custom-light-1 max-w-[70%] sm:max-w-[100%] sm:p-4 sm:pb-8 pt-4 px-8 pb-14 mt-auto">
+              <h4 class="text-3xl font-medium sm:text-2xl group-hover:underline">{i.data.title}</h4>
+              {i.data.description && <p class="mt-4 text-sm sm:mt-3">{i.data.description}</p>}
+            </div>
+          </a>
+        ))
+    }
+  </div>
+</section>
 
 <style>
   a {

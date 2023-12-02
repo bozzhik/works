@@ -5,7 +5,7 @@ interface Props {
   size: string
 }
 
-const {icon, position, size} = Astro.props
+const {icon, position, size} = Astro.props as Props
 ---
 
 <div class=`relative z-10 inline-flex ${position}`>
