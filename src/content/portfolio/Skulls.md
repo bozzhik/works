@@ -1,7 +1,6 @@
 ---
 type: 'project'
-position: 2
-title: 'SKULLS'
+title: 'SKULLS NFT'
 description: 'Store for a collection of NFT Skulls. Immerse yourself in the art and crypto world with our collection'
 image: '../../../projects/skull.png'
 link: 'https://nft.bozzhik.ru/'

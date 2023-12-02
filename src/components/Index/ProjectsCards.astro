@@ -2,6 +2,11 @@
 import {getCollection} from 'astro:content'
 
 const data = await getCollection('portfolio')
+
+const cardPositions = {
+  HOTKEYS: 1,
+  'SKULLS NFT': 2,
+}
 ---
 
 <section data-section="PROJECTS" class="w-[80%] sm:w-[90%] mx-auto mb-32 pt-[13vh]">
@@ -9,7 +14,7 @@ const data = await getCollection('portfolio')
     {
       data
         .filter((i) => i.data.type === 'project')
-        .sort((a, b) => a.data.position - b.data.position)
+        .sort((a, b) => cardPositions[a.data.title] - cardPositions[b.data.title])
         .map((i) => (
           <a href={i.data.link} target={i.data.external_target ? '_blank' : '_self'} class="flex flex-col items-center rounded-[35px] sm:rounded-[20px] overflow-hidden border-[1px] border-custom-gray-1 border-b-0">
             <img class="object-cover object-top w-full h-auto" src={i.data.image} alt={i.data.title} />
