@@ -2,14 +2,28 @@
 import Button from './HeaderButton.astro'
 import Tabs from './HeaderSwitch.astro'
 
-const avatarSize = 's-9 -mt-2 lg:s-7'
-const resumeSize = 's-6 -mt-[2px] lg:s-5'
+const buttons = {
+  avatar: {
+    icon: '../../../maks.png',
+    size: 's-9 -mt-2 lg:s-7',
+    position: 'justify-self-start',
+    href: 'https://t.me/bozzhik',
+    blank: '_blank',
+  },
+  resume: {
+    icon: '../../../resume.png',
+    size: 's-6 -mt-[2px] lg:s-5',
+    position: 'justify-self-end',
+    href: 'https://bozzhik.ru/cv.html',
+    blank: '_blank',
+  },
+}
 ---
 
 <header class="fixed z-[999] w-screen lg:mt-2 mt-9">
   <div class="grid items-center grid-cols-3 mx-auto w-[55%] xl:w-[65%] lg:w-[95%]">
-    <Button icon="../../../maks.png" position="justify-self-start" size={avatarSize} />
+    <Button href={buttons.avatar.href} blank={buttons.avatar.blank} icon={buttons.avatar.icon} position={buttons.avatar.position} size={buttons.avatar.size} />
     <Tabs />
-    <Button icon="../../../resume.png" position="justify-self-end" size={resumeSize} />
+    <Button href={buttons.resume.href} blank={buttons.resume.blank} icon={buttons.resume.icon} position={buttons.resume.position} size={buttons.resume.size} />
   </div>
 </header>
