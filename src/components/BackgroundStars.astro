@@ -17,15 +17,7 @@
     trails: false,
   }
 
-  var sf = new StarFieldCanvas.StarField('CANVAS_STARS', config)
+  var starField = new StarFieldCanvas.StarField('CANVAS_STARS', config)
 
-  sf.start()
-
-  // document.addEventListener('DOMContentLoaded', () => {
-  //   sf.start()
-  // })
-
-  // document.addEventListener('astro:beforeload', () => {
-  //   sf.start()
-  // })
+  starField.start()
 </script>
