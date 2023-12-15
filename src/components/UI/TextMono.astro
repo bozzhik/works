@@ -2,9 +2,10 @@
 interface Props {
   content: string
   classes: string
+  transition?: string
 }
 
-const {content, classes} = Astro.props
+const {content, classes, transition} = Astro.props
 ---
 
-<p class="text-2xl xl:text-xl lg:text-sm lg:leading-[1.15] uppercase font-normal font-monospaced" class:list={classes} set:html={content} />
+<p transition:name={transition} class="text-2xl xl:text-xl lg:text-sm lg:leading-[1.15] uppercase font-normal font-monospaced" class:list={classes} set:html={content} />
