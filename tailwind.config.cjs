@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        grotesque: ['Sequel Sans', 'ui-sans-serif', 'system-ui', '-apple-system', 'Roboto', 'sans-serif'],
+        grotesque: ['Shapiro', 'ui-sans-serif', 'system-ui', '-apple-system', 'Roboto', 'sans-serif'],
         monospaced: ['DM Mono'],
       },
       colors: {
