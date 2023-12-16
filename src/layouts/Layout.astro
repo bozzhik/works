@@ -12,7 +12,7 @@ interface Props {
   keywords?: string
 }
 
-const {page_name = '', description, page_path = '', keywords = 'веб-программирование, бэкенд, UI/UX, интерактивные сайты, 3д сайты'} = Astro.props
+const {page_name = '', description, page_path = '', keywords} = Astro.props
 
 const siteName = 'BOZZHIK'
 ---
@@ -29,7 +29,7 @@ const siteName = 'BOZZHIK'
     <title>{siteName + page_name}</title>
     <meta name="title" content={siteName + page_name} />
     <meta name="description" content={description} />
-    <meta name="keywords" content=`bozzhik, bozhik, божик, веб-разработчик, веб-дизайнер, портфолио, веб-сайты, фронтенд, фрилансер, заказ сайтов, веб-разработка на заказ, создание сайта, ${keywords}` />
+    <meta name="keywords" content=`bozzhik, создание сайта цена, создание сайта ключ цена, создание сайтов москва цены, разработка сайта цена, разработка сайта стоимость, разработка сайта под ключ, ключ разработка сайта цена, разработка сайта под ключ цена, создание сайта +под ключ, создание сайта +под ключ цена, заказать разработку сайт, портфолио разработчика сайт, найти разработчика сайтов, заказать создание сайта ${keywords}` />
     <meta name="robots" content="index, follow" />
     <meta name="author" content={siteName} />
 
