@@ -2,7 +2,6 @@
 import {getCollection} from 'astro:content'
 
 const data = await getCollection('portfolio')
-console.log('🚀 ~ file: WorksCards.astro:5 ~ data:', data)
 
 import {cardsStyle} from '../index/ProjectsCards.astro'
 import NewBadge from '../UI/NewBadge.astro'
@@ -20,18 +19,18 @@ const cardsPositioning = {
 ---
 
 <section data-section="WORKS" class="w-[60%] xl:w-[65%] lg:w-[95%] mx-auto">
-  <div class="flex flex-col gap-10 pt-[13vh] mb-32 -mt-[32.5vh]">
+  <div class="flex flex-col gap-10 sm:gap-16 pt-[13vh] mb-32 -mt-[32.5vh]">
     {
       data
         .filter((i) => i.data.type === 'work')
         .sort((a, b) => cardsPositioning[a.data.title] - cardsPositioning[b.data.title])
         .map((i) => (
-          <a data-card class="relative flex group flex-row h-[31rem] items-center justify-between overflow-hidden duration-500 hover:scale-105" class:list={cardsStyle} href={i.data.link} target={i.data.external_target ? '_blank' : '_self'}>
+          <a data-card class="relative flex sm:flex-col group flex-row h-[31rem] items-center justify-between overflow-hidden duration-500 hover:scale-105" class:list={cardsStyle} href={i.data.link} target={i.data.external_target ? '_blank' : '_self'}>
             {i.data.new && <NewBadge />}
-            <div class="z-10 w-[35%] flex flex-col justify-center pl-16 text-custom-light-1">
+            <div class="z-10 w-[35%] sm:w-full flex flex-col justify-center pl-16 sm:pl-7 sm:pt-7 text-custom-light-1">
               <img class="object-cover s-10" src={i.data.icon} alt={`${i.data.title} LOGO`} />
               <h4 class="mt-5 text-4xl font-medium sm:text-2xl">{i.data.title}</h4>
-              {i.data.description && <p class="mt-1 text-base" set:html={i.data.description} />}
+              {i.data.description && <p class="mt-1 text-base sm:text-sm sm:w-[97%]" set:html={i.data.description} />}
 
               {i.data.tech && (
                 <div class="flex flex-wrap gap-2 mt-5">
@@ -41,7 +40,8 @@ const cardsPositioning = {
                 </div>
               )}
             </div>
-            <img class="z-10 w-[65%] object-cover" src={i.data.image} alt={`${i.data.title} WEBSITE`} />
+
+            <img class="z-10 w-[65%] sm:w-full object-cover" src={i.data.image} alt={`${i.data.title} WEBSITE`} />
             <img class="absolute inset-0 " src="../../../card_default.png" alt={i.data.title} />
           </a>
         ))

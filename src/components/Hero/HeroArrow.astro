@@ -33,4 +33,10 @@ const {id_link} = Astro.props
   .animate-bounce-custom {
     animation: bounce-custom 1.75s infinite;
   }
+
+  @media (max-width: 786px) {
+    .animate-bounce-custom {
+      animation: bounce-custom 3s infinite;
+    }
+  }
 </style>
