@@ -10,7 +10,7 @@ icon: '../../../works/icons/tutea.svg'
 tech:
   - Astro
   - React
-  - TypeScript
+  - Typescript
   - Tailwind
   - Swiper
 

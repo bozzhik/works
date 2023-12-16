@@ -9,7 +9,7 @@ image: '../../../works/graphite.png'
 icon: '../../../works/icons/graphite.svg'
 tech:
   - Astro
-  - TypeScript
+  - Typescript
   - Tailwind
   - WebGL
 
