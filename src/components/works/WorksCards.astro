@@ -33,7 +33,7 @@ const cardsPositioning = {
               {i.data.description && <p class="mt-1 text-base sm:text-sm sm:w-[97%]" set:html={i.data.description} />}
 
               {i.data.tech && (
-                <div class="flex flex-wrap gap-2 mt-5">
+                <div class="flex flex-wrap gap-2 mt-5 pr-7">
                   {i.data.tech.map((badge) => (
                     <TechBadge text={badge} icon={`../../../tech/${badge.toLowerCase()}.svg`} />
                   ))}
