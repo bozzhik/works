@@ -1,7 +1,7 @@
 ---
 type: 'work'
 title: 'MARAKU'
-image: '../../../projects/null.png'
+image: '../../../card_default.png'
 link: 'https://maraku.ru/'
 external_target: true
 ---

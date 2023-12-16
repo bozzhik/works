@@ -1,7 +1,7 @@
 ---
 type: 'work'
 title: 'GRAPHITE HOUSE'
-image: '../../../projects/null.png'
+image: '../../../card_default.png'
 link: 'https://graphite.house/'
 external_target: true
 ---

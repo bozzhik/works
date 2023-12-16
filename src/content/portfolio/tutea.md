@@ -1,7 +1,7 @@
 ---
 type: 'work'
 title: 'TUTEA'
-image: '../../../projects/null.png'
+image: '../../../card_default.png'
 link: 'https://tutea.ru/'
 external_target: true
 ---
