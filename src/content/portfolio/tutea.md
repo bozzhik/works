@@ -1,7 +1,9 @@
 ---
 type: 'work'
 title: 'TUTEA'
-image: '../../../card_default.png'
+description: 'A startup&#39;s landing page for bulk special tea sales and a tea catalog based on CMS.'
+image: '../../../works/tutea.png'
+icon: '../../../works/icons/tutea.svg'
 link: 'https://tutea.ru/'
 external_target: true
 ---
