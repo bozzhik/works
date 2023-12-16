@@ -24,7 +24,7 @@ npm i
 npm run dev
 ```
 
-\*4. Or run the git command chain
+&nbsp; *4. Or run the git command chain
 
 ```bash
 git clone https://github.com/bozzhik/works.git && cd works && npm i && code .
