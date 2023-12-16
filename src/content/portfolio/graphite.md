@@ -7,6 +7,11 @@ description: 'Landing page for the sale of concert tickets for famous Russian ar
 
 image: '../../../works/graphite.png'
 icon: '../../../works/icons/graphite.svg'
+tech:
+  - Astro
+  - TypeScript
+  - Tailwind
+  - WebGL
 
 link: 'https://graphite.house/'
 external_target: true

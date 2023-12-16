@@ -7,6 +7,12 @@ description: 'A startup&#39;s landing page for bulk special tea sales and a tea 
 
 image: '../../../works/tutea.png'
 icon: '../../../works/icons/tutea.svg'
+tech:
+  - Astro
+  - React
+  - TypeScript
+  - Tailwind
+  - Swiper
 
 link: 'https://tutea.ru/'
 external_target: true

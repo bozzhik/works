@@ -28,13 +28,19 @@ const cardsPositioning = {
         .map((i) => (
           <a data-card class="relative flex group flex-row h-[31rem] items-center justify-between overflow-hidden duration-500 hover:scale-105" class:list={cardsStyle} href={i.data.link} target={i.data.external_target ? '_blank' : '_self'}>
             {i.data.new && <NewBadge />}
-
             <div class="z-10 w-[35%] flex flex-col justify-center pl-16 text-custom-light-1">
               <img class="object-cover s-10" src={i.data.icon} alt={`${i.data.title} LOGO`} />
               <h4 class="mt-5 text-4xl font-medium sm:text-2xl">{i.data.title}</h4>
               {i.data.description && <p class="mt-1 text-base" set:html={i.data.description} />}
-            </div>
 
+              {i.data.tech && (
+                <div class="flex flex-wrap gap-2 mt-5">
+                  {i.data.tech.map((badge) => (
+                    <TechBadge text={badge} icon={`../../../tech/${badge.toLowerCase()}.svg`} />
+                  ))}
+                </div>
+              )}
+            </div>
             <img class="z-10 w-[65%] object-cover" src={i.data.image} alt={`${i.data.title} WEBSITE`} />
             <img class="absolute inset-0 " src="../../../card_default.png" alt={i.data.title} />
           </a>
