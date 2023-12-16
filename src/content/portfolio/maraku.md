@@ -1,7 +1,9 @@
 ---
 type: 'work'
 title: 'MARAKU'
-image: '../../../card_default.png'
+description: 'An outsourcing startup&#39;s landing-slider page for company promotion and customer search.'
+image: '../../../works/maraku.png'
+icon: '../../../works/icons/maraku.svg'
 link: 'https://maraku.ru/'
 external_target: true
 ---
