@@ -1,5 +1,5 @@
 ---
-type: 'work'
+# type: 'work'
 title: 'RESTKERAMIKA'
 image: '../../../card_default.png'
 link: 'https://restkeramika.ru/'

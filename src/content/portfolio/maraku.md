@@ -1,7 +1,7 @@
 ---
 type: 'work'
 title: 'MARAKU'
-description: 'An outsourcing startup&#39;s landing-slider page for company promotion and customer search.'
+description: 'A startup&#39;s landing-slider page for outsourcing company customer search.'
 image: '../../../works/maraku.png'
 icon: '../../../works/icons/maraku.svg'
 link: 'https://maraku.ru/'
