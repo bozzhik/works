@@ -3,6 +3,7 @@ import {ViewTransitions} from 'astro:transitions'
 import BackgroundStars from '../components/BackgroundStars.astro'
 import Header from '../components/Header/Header.astro'
 import Fonts from './Fonts.astro'
+import Analytics from './Analytics.astro'
 
 interface Props {
   page_name?: string
@@ -50,6 +51,7 @@ const siteName = 'BOZZHIK'
     <BackgroundStars />
     <slot />
     <Fonts />
+    <Analytics />
     <style is:global>
       [data-card] {
         background: linear-gradient(125deg, rgba(157, 157, 158, 0.1) 29%, rgba(17, 18, 27, 0) 100%);
