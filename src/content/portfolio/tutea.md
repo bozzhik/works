@@ -13,6 +13,7 @@ tech:
   - Typescript
   - Tailwind
   - Swiper
+  - Python
 
 link: 'https://tutea.ru/'
 external_target: true
