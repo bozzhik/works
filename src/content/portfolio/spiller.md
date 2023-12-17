@@ -2,7 +2,7 @@
 type: 'work'
 
 title: 'Dr. Spiller'
-description: 'A startup&#39;s landing-slider page for outsourcing company customer search.'
+description: 'A multi-page website for the official distributor of premium German cosmetics Dr. Spiller in Kazakhstan and Kyrgyzstan.'
 tech:
   - Astro
   - React
