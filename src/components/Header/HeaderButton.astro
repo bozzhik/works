@@ -5,12 +5,13 @@ interface Props {
   size: string
   href?: string
   blank?: string
+  reload: boolean
 }
 
-const {icon, position, size, href, blank} = Astro.props as Props
+const {icon, position, size, href, blank, reload} = Astro.props as Props
 ---
 
-<a {href} target={blank} class="relative z-10 inline-flex" class:list={position}>
+<a data-astro-reload={reload ? '' : undefined} {href} target={blank} class="relative z-10 inline-flex" class:list={position}>
   <div class="block overflow-hidden transition border-[4px] duration-200 border-transparent rounded-full aspect-square s-[70px] sm:s-[60px] hover:ring-[2px] hover:ring-custom-gray-2">
     <div class="flex items-center justify-center overflow-hidden s-full group bg-custom-dark-1">
       <img class=`group-hover:animate-pulse object-cover ${size}` src={icon} />
