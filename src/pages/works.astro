@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero/Hero.astro'
 import WorksCards from '../components/works/WorksCards.astro'
+import Header from '../components/Header/Header.astro'
 
 const pageData = {
   page_path: 'works',
@@ -15,6 +16,7 @@ const pageData = {
 ---
 
 <Layout page_path={pageData.page_path} description={pageData.description}>
+  <Header />
   <Hero textmono_content={pageData.hero.textmono} id_link={pageData.hero.id_link} arrow_exist={pageData.hero.arrow_exist} />
   <WorksCards />
 </Layout>

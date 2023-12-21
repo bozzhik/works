@@ -1,14 +1,14 @@
 ---
 import Button from './HeaderButton.astro'
-import Tabs from './HeaderSwitch.astro'
+import Switch from './HeaderSwitch.astro'
 
-const buttons = {
+export const buttons = {
   avatar: {
     icon: '../../../maks.png',
     size: 's-9 -mt-2 lg:s-7',
     position: 'justify-self-start',
-    href: 'https://t.me/bozzhik',
-    blank: '_blank',
+    href: '/contacts/',
+    blank: '',
   },
   resume: {
     icon: '../../../resume.png',
@@ -23,7 +23,7 @@ const buttons = {
 <header class="fixed z-[999] w-screen lg:mt-2 mt-9 pr-4 sm:pr-0">
   <div class="grid items-center grid-cols-3 mx-auto w-[60%] xl:w-[65%] lg:w-[95%]">
     <Button href={buttons.avatar.href} blank={buttons.avatar.blank} icon={buttons.avatar.icon} position={buttons.avatar.position} size={buttons.avatar.size} />
-    <Tabs />
+    <Switch />
     <Button href={buttons.resume.href} blank={buttons.resume.blank} icon={buttons.resume.icon} position={buttons.resume.position} size={buttons.resume.size} />
   </div>
 </header>
