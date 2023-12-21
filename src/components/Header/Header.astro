@@ -14,8 +14,8 @@ export const buttons = {
     icon: '../../../resume.png',
     size: 's-6 -mt-[2px] lg:s-5',
     position: 'justify-self-end',
-    href: 'https://bozzhik.ru/cv.html',
-    blank: '_blank',
+    href: '/cv/',
+    blank: '',
   },
 }
 ---
@@ -24,6 +24,6 @@ export const buttons = {
   <div class="grid items-center grid-cols-3 mx-auto w-[60%] xl:w-[65%] lg:w-[95%]">
     <Button reload={true} href={buttons.avatar.href} blank={buttons.avatar.blank} icon={buttons.avatar.icon} position={buttons.avatar.position} size={buttons.avatar.size} />
     <Switch />
-    <Button reload={false} href={buttons.resume.href} blank={buttons.resume.blank} icon={buttons.resume.icon} position={buttons.resume.position} size={buttons.resume.size} />
+    <Button reload={true} href={buttons.resume.href} blank={buttons.resume.blank} icon={buttons.resume.icon} position={buttons.resume.position} size={buttons.resume.size} />
   </div>
 </header>

@@ -1,15 +1,11 @@
 ---
 import TextMono from '../UI/TextMono.astro'
-import Button from './HeaderButton.astro'
-
-import {buttons} from './Header.astro'
 ---
 
 <header class="fixed z-[999] w-screen lg:mt-2 mt-9 pr-4 sm:pr-0">
   <div class="grid items-center grid-cols-2 mx-auto w-[60%] xl:w-[65%] lg:w-[95%] sm:w-[90%]">
     <a data-astro-reload href="/" id="BACK_LINK" class="justify-self-start w-full">
-      <TextMono content="< WEBSITE" classes="lg:w-4/5 mx-auto leading-[110%] text-lg sm:w-full m-0 text-gray-500 hover:text-white duration-300" />
+      <TextMono content="< WEBSITE" classes="lg:w-4/5 mx-auto leading-[110%] text-lg sm:w-full fon m-0 text-gray-500 hover:text-white duration-300" />
     </a>
-    <Button reload={true} href={buttons.resume.href} blank={buttons.resume.blank} icon={buttons.resume.icon} position={buttons.resume.position} size={buttons.resume.size} />
   </div>
 </header>
