@@ -33,14 +33,14 @@ const cardsPositioning = {
               {i.data.tech && (
                 <div class="flex flex-wrap gap-2 mt-5 pr-7">
                   {i.data.tech.map((badge) => (
-                    <TechBadge text={badge} icon={`../../../tech/${badge.toLowerCase()}.svg`} />
+                    <TechBadge text={badge} icon={`/tech/${badge.toLowerCase()}.svg`} />
                   ))}
                 </div>
               )}
             </div>
 
             <img class="z-10 w-[65%] sm:w-full object-cover group-hover:-translate-y-2 duration-500" src={i.data.image} alt={`${i.data.title} WEBSITE`} />
-            <img class="absolute inset-0 " src="../../../card_default.png" alt={i.data.title} />
+            <img class="absolute inset-0 " src="/card_default.png" alt={i.data.title} />
           </a>
         ))
     }

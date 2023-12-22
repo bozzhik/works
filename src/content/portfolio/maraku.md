@@ -8,8 +8,8 @@ tech:
   - Vite
   - Tailwind
 
-image: '../../../works/maraku.png'
-icon: '../../../works/icons/maraku.svg'
+image: '/works/maraku.png'
+icon: '/works/icons/maraku.svg'
 
 link: 'https://maraku.ru/'
 external_target: true

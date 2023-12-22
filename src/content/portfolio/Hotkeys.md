@@ -10,7 +10,7 @@ tech:
   - SCSS
   - Webpack
 
-image: '../../../projects/hotkeys.png'
+image: '/projects/hotkeys.png'
 link: 'https://hotkeys.adc.ac/'
 external_target: true
 ---

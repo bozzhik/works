@@ -7,7 +7,7 @@ tech:
   - JavaScript
   - Swiper
 
-image: '../../../projects/skull.png'
+image: '/projects/skull.png'
 link: 'https://nft.bozzhik.ru/'
 external_target: true
 ---
