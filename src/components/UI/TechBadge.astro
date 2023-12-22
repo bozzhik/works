@@ -11,6 +11,6 @@ const {text, icon, classes} = Astro.props as Props
 ---
 
 <div class="inline-flex items-center gap-1 py-[6px] s-fit group text-base sm:text-sm" class:list={[badgeStyles, classes]}>
-  <img class="object-contain duration-300 saturate-50 group-hover:saturate-100 s-4" src={icon} alt={text} />
-  <span class="mt-[2px]">{text}</span>
+  {icon && <img class="object-contain duration-300 saturate-50 group-hover:saturate-100 s-4" src={icon} alt={text} />}
+  <span class="mt-[2px]" set:html={text} />
 </div>
