@@ -13,6 +13,6 @@ tech:
   - Tailwind
   - WebGL
 
-link: 'https://graphite.house/'
+link: 'https://graphite-house.vercel.app'
 external_target: true
 ---
