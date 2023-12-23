@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         grotesque: ['Shapiro', 'ui-sans-serif', 'system-ui', '-apple-system', 'Roboto', 'sans-serif'],
-        monospaced: ['DM Mono'],
+        monospaced: ['DM Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
       },
       colors: {
         custom: {
