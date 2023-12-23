@@ -2,7 +2,7 @@
 type: 'work'
 
 title: 'RESTKERAMIKA'
-description: 'A landing page for a startup specializing in the production of visual thermal camouflage for military applications.'
+description: 'Лэндинг для компании, которая занимается реставрацией сантехники. Создание сайта для продвижения своих услуг в интернете.'
 tech:
   - Vite
   - Tailwind

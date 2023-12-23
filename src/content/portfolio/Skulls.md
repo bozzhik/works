@@ -1,7 +1,7 @@
 ---
 type: 'project'
 title: 'SKULLS NFT'
-description: 'Store for a collection of NFT Skulls. Immerse yourself in the art and crypto world with our collection'
+description: 'Магазин для коллекции черепов NFT. Погрузитесь в мир искусства и криптовалют с нашей коллекцией'
 tech:
   - React
   - JavaScript

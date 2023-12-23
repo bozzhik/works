@@ -1,5 +1,7 @@
 ---
 import {getCollection} from 'astro:content'
+const {lang, slug} = Astro.params
+
 import NewBadge from '../UI/NewBadge.astro'
 
 const data = await getCollection('portfolio')

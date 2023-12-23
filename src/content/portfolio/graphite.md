@@ -3,7 +3,7 @@ new: true
 
 type: 'work'
 title: 'GRAPHITE HOUSE'
-description: 'Landing page for the sale of concert tickets for famous Russian artists.'
+description: 'Лендинг для концерта известных российских артистов с возможостью продажи билетов через Яндекс Афишу.'
 
 image: '/works/graphite.png'
 icon: '/works/icons/graphite.svg'

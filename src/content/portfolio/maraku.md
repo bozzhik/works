@@ -2,7 +2,7 @@
 type: 'work'
 
 title: 'MARAKU'
-description: 'A startup&#39;s landing-slider page for outsourcing company customer search.'
+description: 'Лендинг-слайдер для outsource IT стартапа, который помогает с поиском клиентов.'
 tech:
   - Pug
   - Vite
