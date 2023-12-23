@@ -15,7 +15,7 @@ import TextMono from '../components/UI/TextMono.astro'
   <HeaderMin />
 
   <section class="inset-0 flex flex-col justify-center h-screen mx-auto text-center">
-    <TextMono transition="hero_text" content="hey! i'm doing my cv.." classes="lg:w-4/5 mx-auto leading-[110%] text-white sm:text-xl mt-0 text-gray-500" />
+    <TextMono transition="hero_text" content="привет! мое резюме в разработке.." classes="lg:w-4/5 mx-auto leading-[110%] text-white sm:text-xl mt-0 text-gray-500" />
     <div class="mt-5 flex gap-2 justify-center">
       <a href="https://astro.build/" target="_blank">
         <TechBadge text="Astro" icon="/tech/astro.svg" classes="hover:scale-105 duration-300 cursor-pointer" />
@@ -31,6 +31,12 @@ import TextMono from '../components/UI/TextMono.astro'
       </a>
       <a href="https://vitejs.dev/" target="_blank">
         <TechBadge text="Vite" icon="/tech/vite.svg" classes="hover:scale-105 duration-300 cursor-pointer" />
+      </a>
+    </div>
+    <div class="flex flex-col mt-14 gap-3">
+      <TextMono transition="hero_text" content="Заказать создание сайта ↓" classes="lg:w-4/5 mx-auto leading-[110%] text-purple-400 text-white sm:text-xl mt-0 text-gray-500" />
+      <a transition:name="hero_btn" href="https://t.me/bozzhik" target="_blank">
+        <TechBadge text="Заказать разработку сайта →" icon="" classes="hover:scale-105 duration-300 cursor-pointer mx-auto px-2 animate-pulse" />
       </a>
     </div>
   </section>
