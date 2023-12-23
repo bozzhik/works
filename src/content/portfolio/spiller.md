@@ -2,7 +2,7 @@
 type: 'work'
 
 title: 'Dr. Spiller'
-description: 'A multi-page website for the official distributor of premium German cosmetics Dr. Spiller in Kazakhstan and Kyrgyzstan.'
+description: 'Многостраничный веб-сайт для официального дистрибьютора немецкой косметики Dr.Spiller.'
 tech:
   - Astro
   - React

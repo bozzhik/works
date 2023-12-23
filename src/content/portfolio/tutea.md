@@ -3,7 +3,7 @@ new: true
 
 type: 'work'
 title: 'TUTEA'
-description: 'A startup&#39;s landing page for bulk special tea sales and a tea catalog based on CMS.'
+description: 'Лэндинг и каталог на CMS для стартапа, который занимается оптовой продажей специального чая из Китая и Индии.'
 
 image: '/works/tutea.png'
 icon: '/works/icons/tutea.svg'

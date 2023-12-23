@@ -1,33 +1,29 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import HeaderMin from '../components/Header/HeaderMin.astro'
+import Layout from '../../layouts/Layout.astro'
+import HeaderMin from '../../components/Header/HeaderMin.astro'
 
 const pageData = {
   page_path: 'works',
   description: 'Привет! Я - веб-разработчик и дизайнер, занимаюсь созданием креативных и функциональных веб-сайтов. Мои проекты сочетают в себе уникальный дизайн и высокую производительность, чтобы помочь вашему бизнесу выделиться в онлайн-мире. Посмотрите мое портфолио, чтобы узнать больше о моих навыках и достижениях в веб-разработке и дизайне. Я являюсь фрилансером с более 3 годами опыта работы.',
 }
 
-import {cardsStyle} from '../components/index/ProjectsCards.astro'
-import TextMono from '../components/UI/TextMono.astro'
+import {cardsStyle} from '../../components/index/ProjectsCards.astro'
+import TextMono from '../../components/UI/TextMono.astro'
 
 const classes = '!h-[100svh] h-[100vh]'
 
 const links = {
   telegram: {
-    title: 'Телеграм',
+    title: 'Telegram',
     href: 'https://t.me/bozzhik',
   },
   vkontakte: {
-    title: 'ВКонтакте',
+    title: 'VKontakte',
     href: 'https://vk.com/bozzhik',
   },
   email: {
     title: 'bozzhik@ya.ru',
     href: 'mailto:bozzhik@ya.ru',
-  },
-  tel: {
-    title: '+7 (995) 120-03-13',
-    href: 'tel:+79951200313',
   },
 }
 ---
@@ -36,7 +32,7 @@ const links = {
   <HeaderMin />
 
   <section class="inset-0 flex flex-col justify-center w-1/4 mx-auto text-center sm:w-[70%]" class:list={classes}>
-    <TextMono transition="hero_text" content="Связаться со мной" classes="lg:w-4/5 text-purple-400 mx-auto leading-[110%] sm:text-xl mt-0 text-gray-500" />
+    <TextMono transition="hero_text" content="FIND ME" classes="lg:w-4/5 mx-auto leading-[110%] sm:text-xl mt-0 text-gray-500" />
     <div class="flex flex-col gap-5 mt-10 sm:gap-5">
       {
         Object.entries(links).map(

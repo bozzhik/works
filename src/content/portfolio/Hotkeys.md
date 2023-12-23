@@ -3,7 +3,7 @@
 
 type: 'project'
 title: 'HOTKEYS'
-description: 'A media service for computer shortcuts, made for those who want to improve their computer work.'
+description: 'Медиа-сервис компьютерных шорткатов, созданный для тех, кто хочет ускорить и облегчить свою работу за компьютером.'
 tech:
   - React
   - Javascript
