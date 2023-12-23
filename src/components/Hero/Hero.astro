@@ -17,11 +17,11 @@ const classes = '!h-[100svh] h-[100vh]'
 
 <section data-section="HERO" class="w-full inset-0 flex flex-col justify-center mx-auto text-center" class:list={classes}>
   <HeroTitle />
-  <TextMono transition:name="hero_text" content={textmono_content} classes="lg:w-4/5 mx-auto leading-[110%] xl:mt-4 mt-6" />
+  <TextMono transition:name="hero_text" content={textmono_content} classes="lg:w-4/5 mx-auto leading-[110%] xl:mt-4 mt-0 mb-2" />
 
   <div class="flex gap-2 justify-center">
     <a transition:name="hero_btn" href="/contacts/">
-      <TechBadge text="Заказать разработку сайта →" icon="" classes="hover:scale-105 duration-300 cursor-pointer mx-auto mt-5 px-3 animate-pulse" />
+      <TechBadge text="Заказать разработку сайта →" icon="" classes="hover:scale-105 duration-300 cursor-pointer mx-auto mt-5 !px-3 animate-pulse" />
     </a>
   </div>
 </section>
