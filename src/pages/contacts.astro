@@ -1,4 +1,6 @@
 ---
+import {badgeStyles} from '../components/UI/NewBadge.astro'
+
 import Layout from '../layouts/Layout.astro'
 import HeaderMin from '../components/Header/HeaderMin.astro'
 
@@ -36,7 +38,7 @@ const links = {
   <HeaderMin />
 
   <section class="inset-0 flex flex-col justify-center w-1/4 mx-auto text-center sm:w-[70%]" class:list={classes}>
-    <TextMono transition="hero_text" content="Связаться со мной" classes="lg:w-4/5 text-purple-400 mx-auto leading-[110%] sm:text-xl mt-0 text-gray-500" />
+    <TextMono transition="hero_text" content="Свяжитесь со мной, чтобы заказть разработку сайта" classes="lg:w-4/5 mx-auto leading-[110%] sm:text-xl mt-0 text-gray-500 animate-pulse" />
     <div class="flex flex-col gap-5 mt-10 sm:gap-5">
       {
         Object.entries(links).map(
@@ -52,5 +54,77 @@ const links = {
         )
       }
     </div>
+    <div class="mt-14 flex flex-col gap-3">
+      <TextMono transition="hero_text" content="Или оставьте заявку и я свяжусь с вами самостоятельно" classes="lg:w-4/5 mx-auto leading-[110%] sm:text-xl mt-0 text-gray-500 animate-pulse" />
+      <form id="FORM" class="flex sm:flex-col h-fit gap-2 w-full justify-between mt-3 font-mono">
+        <input id="INPUT_CONTACT" class="outline-none placeholder:text-white w-[70%] text-xl sm:w-full duration-300 hover:bg-white/20" class:list={[badgeStyles]} placeholder="Введите ваш контакт" type="text" name="contact" />
+        <div id="FORM_BTN" class="cursor-pointer w-[30%] sm:w-full px-3 py-3 text-xl duration-300 hover:bg-white/20" class:list={[badgeStyles]}>Отправить</div>
+      </form>
+    </div>
   </section>
 </Layout>
+
+<script>
+  const apiKey = 'patW8fpCsPGoVtCsW.a52d6743531fb40c32fa0d9767489da677f405ec018b7b643c4825956bce150a'
+  const baseId = 'appB4f4cDN9hnpulN'
+  const tableName = 'Form'
+
+  interface FormData {
+    Contact: string
+    Type?: string
+  }
+
+  const form = document.querySelector('#FORM') as HTMLFormElement
+
+  const submitData = async (event: Event) => {
+    event.preventDefault()
+    const inputContact = document.getElementById('INPUT_CONTACT') as HTMLInputElement
+
+    const data: {
+      fields: FormData
+    } = {
+      fields: {
+        Contact: inputContact.value,
+      },
+    }
+
+    const url = `https://api.airtable.com/v0/${baseId}/${tableName}`
+    const headers = {
+      Authorization: `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+    }
+
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(data),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to submit data')
+      }
+
+      const record = await response.json()
+      console.log(`Record created: ${record.id} | Record content: ${JSON.stringify(data)}`)
+      form.reset()
+    } catch (err) {
+      console.error('Url:', url)
+      console.error('Error:', err)
+      console.error('Response:', err.response)
+    }
+  }
+
+  form?.addEventListener('keypress', function (event: KeyboardEvent) {
+    const key = event.key
+    if (key === 'Enter') {
+      submitData(event)
+    }
+  })
+
+  const formBtn = document.querySelector('#FORM_BTN')
+
+  formBtn?.addEventListener('click', function (event) {
+    submitData(event)
+  })
+</script>
