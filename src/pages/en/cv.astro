@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import HeaderMin from '../../components/Header/HeaderMin.astro'
+import TechBadge from '../../components/UI/TechBadge.astro'
+
+const pageData = {
+  page_path: 'works',
+  description: 'Привет! Я - веб-разработчик и дизайнер, занимаюсь созданием креативных и функциональных веб-сайтов. Мои проекты сочетают в себе уникальный дизайн и высокую производительность, чтобы помочь вашему бизнесу выделиться в онлайн-мире. Посмотрите мое портфолио, чтобы узнать больше о моих навыках и достижениях в веб-разработке и дизайне. Я являюсь фрилансером с более 3 годами опыта работы.',
+}
+
+import TextMono from '../../components/UI/TextMono.astro'
+---
+
+<Layout page_path={pageData.page_path} description={pageData.description}>
+  <HeaderMin />
+
+  <section class="inset-0 flex flex-col justify-center h-screen mx-auto text-center">
+    <TextMono transition="hero_text" content="hey! i'm doing my cv.." classes="lg:w-4/5 mx-auto leading-[110%] text-white sm:text-xl mt-0 text-gray-500" />
+    <div class="mt-5 flex gap-2 justify-center">
+      <a href="https://astro.build/" target="_blank">
+        <TechBadge text="Astro" icon="/tech/astro.svg" classes="hover:scale-105 duration-300 cursor-pointer" />
+      </a>
+      <a href="https://react.dev/" target="_blank">
+        <TechBadge text="React" icon="/tech/react.svg" classes="hover:scale-105 duration-300 cursor-pointer" />
+      </a>
+      <a href="https://www.typescriptlang.org/" target="_blank">
+        <TechBadge text="Typescript" icon="/tech/typescript.svg" classes="hover:scale-105 duration-300 cursor-pointer" />
+      </a>
+      <a href="https://tailwindcss.com/" target="_blank">
+        <TechBadge text="Tailwind" icon="/tech/tailwind.svg" classes="hover:scale-105 duration-300 cursor-pointer" />
+      </a>
+      <a href="https://vitejs.dev/" target="_blank">
+        <TechBadge text="Vite" icon="/tech/vite.svg" classes="hover:scale-105 duration-300 cursor-pointer" />
+      </a>
+    </div>
+  </section>
+</Layout>

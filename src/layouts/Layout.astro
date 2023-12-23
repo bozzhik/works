@@ -1,7 +1,8 @@
 ---
 import {ViewTransitions} from 'astro:transitions'
+import {getLangFromUrl} from '../i18n/utils'
+
 import BackgroundStars from '../components/BackgroundStars.astro'
-import Header from '../components/Header/Header.astro'
 import Fonts from './Fonts.astro'
 import Analytics from './Analytics.astro'
 
@@ -15,10 +16,12 @@ interface Props {
 const {page_name = '', description, page_path = '', keywords} = Astro.props
 
 const siteName = 'BOZZHIK'
+
+const lang = getLangFromUrl(Astro.url)
 ---
 
 <!doctype html>
-<html lang="ru" class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

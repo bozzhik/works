@@ -8,4 +8,11 @@ export default defineConfig({
     port: 2000,
     open: true,
   },
+  i18n: {
+    defaultLocale: 'ru',
+    locales: ['ru', 'en'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
 })
