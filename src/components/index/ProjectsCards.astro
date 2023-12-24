@@ -2,7 +2,7 @@
 import {getCollection} from 'astro:content'
 const {lang, slug} = Astro.params
 
-import NewBadge from '../UI/NewBadge.astro'
+import Badge from '../UI/Badge.astro'
 
 const data = await getCollection('portfolio')
 
@@ -22,7 +22,7 @@ export const cardsStyle = 'rounded-[35px] sm:rounded-[20px] border-[1px] border-
         .sort((a, b) => cardPositions[a.data.title] - cardPositions[b.data.title])
         .map((i) => (
           <a data-card class="relative flex flex-col items-center overflow-hidden duration-500 hover:-translate-y-5" class:list={cardsStyle} href={i.data.link} target={i.data.external_target ? '_blank' : '_self'}>
-            {i.data.new && <NewBadge classes="left-6 top-6" />}
+            {i.data.new && <Badge text="NEW" icon="" classes="left-6 top-6 animate-pulse absolute pt-2 left-16 sm:left-auto sm:right-6 sm:top-[34px] top-10 s-fit animate-pulse text-base sm:text-sm" />}
             <img class="object-cover object-top w-full h-auto" src={i.data.image} alt={i.data.title} />
             <div class="flex flex-col justify-center items-center text-center text-custom-light-1 max-w-[70%] sm:max-w-[100%] sm:p-4 sm:pb-8 pt-4 px-8 pb-14 mt-auto">
               <h4 class="text-3xl font-medium sm:text-2xl">{i.data.title}</h4>

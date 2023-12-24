@@ -3,7 +3,7 @@ import HeroArrow from './HeroArrow.astro'
 import HeroTitle from './HeroTitle.astro'
 import TextMono from '../UI/TextMono.astro'
 // import HeroCaption from './HeroCaption.astro'
-import TechBadge from '../UI/TechBadge.astro'
+import Badge from '../UI/Badge.astro'
 
 interface Props {
   textmono_content: string
@@ -21,7 +21,7 @@ const classes = '!h-[100svh] h-[100vh]'
 
   <div class="flex gap-2 justify-center">
     <a transition:name="hero_btn" href="/contacts/">
-      <TechBadge text="Заказать разработку сайта →" icon="" classes="hover:scale-105 duration-300 cursor-pointer mx-auto mt-5 !px-3 animate-pulse" />
+      <Badge text="Заказать разработку сайта →" icon="" classes="hover:scale-105 duration-300 cursor-pointer mx-auto mt-5 !px-3 animate-pulse" />
     </a>
   </div>
 </section>

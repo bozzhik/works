@@ -4,8 +4,8 @@ import {getCollection} from 'astro:content'
 const data = await getCollection('portfolio')
 
 import {cardsStyle} from '../index/ProjectsCards.astro'
-import NewBadge from '../UI/NewBadge.astro'
-import TechBadge from '../UI/TechBadge.astro'
+
+import Badge from '../UI/Badge.astro'
 
 const cardsPositioning = {
   TUTEA: 1,
@@ -24,7 +24,7 @@ const cardsPositioning = {
         .sort((a, b) => cardsPositioning[a.data.title] - cardsPositioning[b.data.title])
         .map((i) => (
           <a data-card class="relative flex sm:flex-col group flex-row h-[31rem] items-center justify-between overflow-hidden duration-500 hover:scale-105" class:list={cardsStyle} href={i.data.link} target={i.data.external_target ? '_blank' : '_self'}>
-            {i.data.new && <NewBadge />}
+            {i.data.new && <Badge text="NEW" icon="" classes="left-16 top-9 animate-pulse absolute left-16 sm:left-auto sm:right-6 sm:top-[34px] s-fit text-base sm:text-sm" />}
             <div class="z-10 w-[35%] sm:w-full flex flex-col justify-center pl-16 sm:pl-7 sm:pt-7 text-custom-light-1">
               <img class="object-cover s-10" src={i.data.icon} alt={`${i.data.title} LOGO`} />
               <h4 class="mt-5 text-4xl font-medium sm:text-2xl">{i.data.title}</h4>
@@ -33,7 +33,7 @@ const cardsPositioning = {
               {i.data.tech && (
                 <div class="flex flex-wrap gap-2 mt-5 pr-7">
                   {i.data.tech.map((badge) => (
-                    <TechBadge text={badge} icon={`/tech/${badge.toLowerCase()}.svg`} />
+                    <Badge text={badge} icon={`/tech/${badge.toLowerCase()}.svg`} classes="!bg-neutral-800/60" />
                   ))}
                 </div>
               )}
