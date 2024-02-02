@@ -15,17 +15,17 @@ cd works
 3. Install dependencies
 
 ```bash
-npm i
+pnpm i
 ```
 
 3. Start the development server
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
-&nbsp; *4. Or run the git command chain
+&nbsp; \*4. Or run the git command chain
 
 ```bash
-git clone https://github.com/bozzhik/works.git && cd works && npm i && code .
+git clone https://github.com/bozzhik/works.git && cd works && pnpm i && code .
 ```
